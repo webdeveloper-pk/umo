@@ -1,0 +1,602 @@
+.App {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.homepage-container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+  line-height: normal;
+}
+
+.font-Montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.custom-font-300 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.custom-font-400 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.custom-font-500 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.custom-font-600 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.custom-font-700 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+}
+
+.overflow-body {
+  overflow: hidden;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.filled-btn {
+  border-radius: 35px;
+  background: #fedb0d;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  height: 70px;
+  width: 225px;
+  cursor: pointer;
+}
+
+.z-top {
+  z-index: 999;
+}
+
+/* navbar */
+
+header {
+  width: 100%;
+  height: 115px;
+  background: #fdfdfd;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  z-index: 9999;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.shrink {
+  height: 90px;
+  background: #fdfdfd;
+}
+
+nav ul li a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #000;
+  display: block;
+  padding: 11px 15px;
+  font-size: 18px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: #1c6de4;
+}
+
+nav.shift ul li a {
+  position: relative;
+  z-index: 1;
+}
+
+nav.shift ul li a:hover {
+  color: #1c6de4;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav.shift ul li a:after {
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: ".";
+  color: transparent;
+  background: #fedb0d;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 16px;
+}
+
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+/* hero */
+
+.hero-wrapper-margin {
+  margin-top: 115px;
+}
+
+.hero-inner-wrapper {
+  border-radius: 17.34px;
+  border: 0.847px solid #dedede;
+  background: #fdfdfd;
+  position: relative;
+  z-index: 999;
+}
+
+.scanner-wrapper {
+  border-radius: 17.281px;
+  border: 0.55px solid #dedede;
+  background: #fdfdfd;
+}
+
+.leftBox {
+  left: 0px;
+  top: -120px;
+}
+
+.rightBox {
+  right: 0px;
+  bottom: 200px;
+}
+
+/* price */
+
+.price-wrapper {
+  width: 100%;
+}
+
+.price-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* about */
+
+.about-wrapper {
+  width: 100%;
+}
+
+/* faq */
+
+.faq-wrapper
+  .ant-collapse
+  > .ant-collapse-item:last-child
+  > .ant-collapse-header {
+  border-radius: 14px;
+  border: 1px solid #e3e3e3;
+}
+
+.faq-wrapper .ant-collapse-header {
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e3e3e3 !important;
+  color: #444 !important;
+  font-size: 18px;
+  padding: 25px !important;
+}
+
+.faq-wrapper .ant-collapse-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.faq-wrapper .ant-collapse-item > .ant-collapse-header:focus {
+  border: 1px solid #e3e3e3;
+  background: white;
+  color: #444 !important;
+}
+
+.faq-wrapper .ant-collapse-item > .ant-collapse-header:active {
+  border: 1px solid #e3e3e3;
+  background: white;
+  color: #444 !important;
+}
+
+.faq-wrapper .ant-collapse-header {
+  border: 1px solid #e3e3e3;
+}
+
+.faq-wrapper .ant-collapse-item-active .ant-collapse-header {
+  border: 1px solid #e3e3e3;
+  background: white;
+  color: #444 !important;
+}
+
+/* footer */
+
+.footer-logo-wrapper {
+  background: rgba(246, 246, 246, 0.97);
+  backdrop-filter: blur(11px);
+}
+
+/* media queries */
+
+@media screen and (min-width: 1920px) {
+  .hero-description {
+    width: 70%;
+  }
+  .about-wrapper {
+    width: 65%;
+  }
+  .price-wrapper {
+    width: 65%;
+  }
+  .faq-wrapper {
+    width: 70%;
+  }
+  .leftBox {
+    left: 0px;
+    top: -120px;
+  }
+  .rightBox {
+    right: 0px;
+    bottom: 200px;
+  }
+  .blueCircle {
+    left: 170px;
+  }
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1700px) {
+  .price-wrapper {
+    width: 67%;
+  }
+  .about-wrapper {
+    width: 70%;
+  }
+  .faq-wrapper {
+    width: 75%;
+  }
+  .hero-description {
+    width: 80%;
+  }
+  .leftBox {
+    left: 0px;
+    top: -120px;
+  }
+  .rightBox {
+    right: 0px;
+    bottom: 200px;
+  }
+  .blueCircle {
+    left: 150px;
+  }
+}
+
+@media screen and (max-width: 1699px) and (min-width: 1536px) {
+  .price-wrapper {
+    width: 80%;
+  }
+  .about-wrapper {
+    width: 80%;
+  }
+  .faq-wrapper {
+    width: 85%;
+  }
+  .hero-description {
+    width: 90%;
+  }
+  .leftBox {
+    left: -30px;
+    top: -130px;
+  }
+  .rightBox {
+    right: 0px;
+    bottom: 200px;
+  }
+  .blueCircle {
+    left: 130px;
+  }
+}
+
+@media screen and (max-width: 1535px) and (min-width: 1280px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+  .faq-wrapper .ant-collapse-header {
+    margin-bottom: 15px;
+    border-radius: 14px;
+    font-size: 17px;
+    padding: 25px !important;
+  }
+  .filled-btn {
+    border-radius: 32px;
+    font-size: 15px;
+    height: 65px;
+    width: 220px;
+  }
+  .faq-wrapper .ant-collapse-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero-description {
+    width: 100%;
+  }
+  .about-wrapper {
+    width: 85%;
+  }
+  .price-wrapper {
+    width: 85%;
+  }
+  .faq-wrapper {
+    width: 90%;
+  }
+  .leftBox {
+    left: -60px;
+    top: -160px;
+    width: 30%;
+  }
+  .rightBox {
+    right: 0px;
+    bottom: 200px;
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  header {
+    height: 100px;
+  }
+  .hero-wrapper-margin {
+    margin-top: 100px;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+  .faq-wrapper .ant-collapse-header {
+    margin-bottom: 15px;
+    border-radius: 14px;
+    font-size: 16px;
+    padding: 24px !important;
+  }
+  .filled-btn {
+    border-radius: 30px;
+    font-size: 15px;
+    height: 62px;
+    width: 210px;
+  }
+  .faq-wrapper .ant-collapse-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero-description {
+    width: 100%;
+  }
+  .about-wrapper {
+    width: 90%;
+  }
+  .price-wrapper {
+    width: 90%;
+  }
+  .faq-wrapper {
+    width: 95%;
+  }
+  .leftBox {
+    left: -50px;
+    top: -140px;
+    width: 30%;
+  }
+  .rightBox {
+    right: 0px;
+    bottom: 180px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 900px) {
+  nav ul li a {
+    font-size: 15px;
+  }
+  .faq-wrapper .ant-collapse-header {
+    margin-bottom: 15px;
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 20px !important;
+  }
+
+  .faq-wrapper .ant-collapse-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .leftBox {
+    left: -100px;
+    top: -130px;
+    width: 35%;
+  }
+  .rightBox {
+    right: 0px;
+    bottom: 180px;
+  }
+}
+
+@media screen and (max-width: 899px) and (min-width: 768px) {
+  .mobile-header {
+    position: relative;
+  }
+  header {
+    position: relative;
+    height: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .hero-wrapper-margin {
+    margin-top: 0;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+  .filled-btn {
+    border-radius: 25px;
+    font-size: 14px;
+    height: 60px;
+    width: 200px;
+  }
+  .faq-wrapper .ant-collapse-header {
+    margin-bottom: 15px;
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 20px !important;
+  }
+
+  .faq-wrapper .ant-collapse-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .leftBox {
+    left: -100px;
+    top: -130px;
+  }
+  .rightBox {
+    right: -20px;
+    bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 426px) {
+  .mobile-header {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  header {
+    position: relative;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .hero-wrapper-margin {
+    margin-top: auto;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  .filled-btn {
+    border-radius: 25px;
+    font-size: 14px;
+    height: 60px;
+    width: 200px;
+  }
+  .faq-wrapper .ant-collapse-header {
+    margin-bottom: 13px;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 15px !important;
+  }
+  .faq-wrapper .ant-collapse-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .leftBox {
+    left: -100px;
+    top: -130px;
+    width: 35%;
+  }
+  .rightBox {
+    right: 0px;
+    bottom: 180px;
+  }
+  .rightBox {
+    right: -20px;
+    bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .mobile-header {
+    position: relative;
+  }
+  header {
+    position: relative;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .hero-wrapper-margin {
+    margin-top: auto;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  .filled-btn {
+    border-radius: 25px;
+    font-size: 14px;
+    height: 60px;
+    width: 200px;
+  }
+  .faq-wrapper .ant-collapse-header {
+    margin-bottom: 13px;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 15px !important;
+  }
+  .faq-wrapper .ant-collapse-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .faq-wrapper
+    :where(.css-dev-only-do-not-override-18iikkb).ant-collapse
+    > .ant-collapse-item
+    > .ant-collapse-header
+    .ant-collapse-arrow
+    svg {
+    margin-top: 25px;
+  }
+  .leftBox {
+    left: -70px;
+    top: -20px;
+    width: 40%;
+  }
+  .rightBox {
+    right: -30px;
+    bottom: 150px;
+  }
+}

@@ -1,4 +1,6 @@
 import React from "react";
+import { Tilt } from "react-tilt";
+import { ArrowRightOutlined } from "@ant-design/icons";
 import ButtonFilled from "../common/ButtonFilled";
 import hero from "../../assets/images/hero.png";
 import scanner from "../../assets/images/scanner.png";
@@ -17,7 +19,9 @@ const Hero = () => {
         data-aos-easing="linear"
         data-aos-duration="3000"
       >
-        <img src={leftBox} alt="box" className="" />
+        <Tilt className="Tilt" options={{ max: 50 }}>
+          <img src={leftBox} alt="box" className="" />
+        </Tilt>
       </div>
       <div
         className="absolute rightBox"
@@ -109,21 +113,25 @@ const Hero = () => {
               data-aos-easing="linear"
               data-aos-duration="2000"
             >
-              <img
-                src={hero}
-                alt="hero"
-                className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto"
-              />
+              <Tilt className="Tilt" options={{ max: 10 }}>
+                <img
+                  src={hero}
+                  alt="hero"
+                  className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto"
+                />
+              </Tilt>
             </div>
             <div className="scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px]">
-              <img
-                src={scanner}
-                alt="scanner"
-                className="w-[200px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
-                data-aos="zoom-out"
-                data-aos-easing="linear"
-                data-aos-duration="2000"
-              />
+              <Tilt className="Tilt" options={{ max: 20 }}>
+                <img
+                  src={scanner}
+                  alt="scanner"
+                  className="w-[200px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
+                  data-aos="zoom-out"
+                  data-aos-easing="linear"
+                  data-aos-duration="2000"
+                />
+              </Tilt>
               <div className="text-center text-black text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] custom-font-500 -mt-[10px] lg:-mt-[20px]">
                 SCAN ME
               </div>
@@ -137,17 +145,20 @@ const Hero = () => {
             <ButtonFilled text="Get started Now" />
           </div>
           <button
-            className="mt-[20px]"
+            className="mt-[20px] relative group"
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
             <a
               href="#!"
-              className="text-black text-[14px] md:text-[15px] 2xl:text-[16px] uppercase custom-font-500 cursor-pointer"
+              className="text-black text-[14px] md:text-[15px] 2xl:text-[16px] uppercase custom-font-500 cursor-pointer group-hover:text-[#156CEB] transition duration-700 ease-in-out delay-50"
             >
               Learn More
             </a>
+            <span className="absolte ml-[5px]">
+              <ArrowRightOutlined className="text-white group-hover:text-[#156CEB] transition duration-700 ease-in-out delay-50" />
+            </span>
           </button>
         </div>
       </div>

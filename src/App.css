@@ -68,6 +68,14 @@ h1 {
 }
 
 .filled-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.7s ease;
+  z-index: 1;
   border-radius: 35px;
   background: #fedb0d;
   color: #000;
@@ -80,6 +88,30 @@ h1 {
   height: 70px;
   width: 225px;
   cursor: pointer;
+}
+
+.filled-btn:before,
+.filled-btn:after {
+  background: #156ceb;
+  transition: 0.7s ease;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 35px;
+}
+
+.middle-out:before {
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+  left: 50%;
+}
+
+.middle-out:hover:before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .z-top {
@@ -220,8 +252,8 @@ nav.shift ul li a:hover:after {
   margin-bottom: 15px;
   background: white;
   border-radius: 14px;
-  border: 1px solid #e3e3e3 !important;
-  color: #444 !important;
+  border: 1px solid #e3e3e3;
+  color: #444;
   font-size: 18px;
   padding: 25px !important;
 }
@@ -232,23 +264,23 @@ nav.shift ul li a:hover:after {
 }
 
 .faq-wrapper .ant-collapse-item > .ant-collapse-header:focus {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #156ceb !important;
   background: white;
   color: #444 !important;
 }
 
 .faq-wrapper .ant-collapse-item > .ant-collapse-header:active {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #156ceb !important;
   background: white;
   color: #444 !important;
 }
 
 .faq-wrapper .ant-collapse-header {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #e3e3e3 !important;
 }
 
 .faq-wrapper .ant-collapse-item-active .ant-collapse-header {
-  border: 1px solid #e3e3e3;
+  border: 1px solid #156ceb !important;
   background: white;
   color: #444 !important;
 }
@@ -356,6 +388,10 @@ nav.shift ul li a:hover:after {
     height: 65px;
     width: 220px;
   }
+  .filled-btn:before,
+  .filled-btn:after {
+    border-radius: 32px;
+  }
   .faq-wrapper .ant-collapse-content {
     padding-left: 20px;
     padding-right: 20px;
@@ -404,6 +440,10 @@ nav.shift ul li a:hover:after {
     font-size: 15px;
     height: 62px;
     width: 210px;
+  }
+  .filled-btn:before,
+  .filled-btn:after {
+    border-radius: 30px;
   }
   .faq-wrapper .ant-collapse-content {
     padding-left: 20px;
@@ -480,6 +520,10 @@ nav.shift ul li a:hover:after {
     height: 60px;
     width: 200px;
   }
+  .filled-btn:before,
+  .filled-btn:after {
+    border-radius: 25px;
+  }
   .faq-wrapper .ant-collapse-header {
     margin-bottom: 15px;
     border-radius: 12px;
@@ -524,6 +568,10 @@ nav.shift ul li a:hover:after {
     font-size: 14px;
     height: 60px;
     width: 200px;
+  }
+  .filled-btn:before,
+  .filled-btn:after {
+    border-radius: 25px;
   }
   .faq-wrapper .ant-collapse-header {
     margin-bottom: 13px;
@@ -571,6 +619,10 @@ nav.shift ul li a:hover:after {
     font-size: 14px;
     height: 60px;
     width: 200px;
+  }
+  .filled-btn:before,
+  .filled-btn:after {
+    border-radius: 25px;
   }
   .faq-wrapper .ant-collapse-header {
     margin-bottom: 13px;

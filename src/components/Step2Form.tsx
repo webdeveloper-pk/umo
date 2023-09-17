@@ -4,7 +4,7 @@ import preview from "../assets/images/hero.png";
 import ButtonFilled from "./common/ButtonFilled";
 
 const Step2Form = ({ onNextStep, onBackStep }: any) => {
-  const [value, setValue] = React.useState("address");
+  const [value, setValue] = React.useState("social-media");
   const onChange = (e: any) => {
     setValue(e.target.value);
   };

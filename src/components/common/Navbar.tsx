@@ -37,9 +37,9 @@ const Navbar = () => {
         <div className="mx-auto flex flex-col lg:flex-row justify-between homepage-container">
           <div className="flex flex-row justify-between items-center gap-x-4">
             <div
-              data-aos="fade-right"
-              data-aos-easing="linear"
-              data-aos-duration="1000"
+            // data-aos="fade-right"
+            // data-aos-easing="linear"
+            // data-aos-duration="1000"
             >
               <Link to="/">
                 <img

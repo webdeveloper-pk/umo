@@ -12,7 +12,7 @@ const Faq = () => {
         data-aos-easing="linear"
         data-aos-duration="1000"
       >
-        <p className="font-poppins text-[20px] md:text-[22px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] text-black uppercase text-center mb-[20px] md:mb-[30px]">
+        <p className="landing-section-title text-[20px] md:text-[22px] lg:text-[24px] xl:text-[28px] 2xl:text-[28px] text-center mb-[20px] md:mb-[30px]">
           Faqs
         </p>
         <div>

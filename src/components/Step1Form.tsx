@@ -1,9 +1,10 @@
 import React from "react";
-import { Row, Col, Input, Select, Radio } from "antd";
+import { Row, Col, Input, Radio } from "antd";
 import preview from "../assets/images/hero.png";
 import ButtonFilled from "./common/ButtonFilled";
+import { Link } from "react-router-dom";
 
-const Step1Form = () => {
+const Step1Form = ({ onNextStep }: any) => {
   const [value, setValue] = React.useState("email");
   const onChange = (e: any) => {
     setValue(e.target.value);
@@ -111,10 +112,13 @@ const Step1Form = () => {
               </Radio.Group>
             </Row>
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
-              <button className="back-btn">
+              <Link to="/select-city" className="back-btn">
                 <span className="back-btn-inner">Back</span>
-              </button>
-              <ButtonFilled text="Next" />
+              </Link>
+              <ButtonFilled
+                text="Next"
+                handleClick={(event: any) => onNextStep(event)}
+              />
             </div>
           </form>
         </div>

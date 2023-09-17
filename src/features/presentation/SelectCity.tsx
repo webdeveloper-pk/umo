@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import leftBox from "../../assets/images/city-yellow-box.png";
 import rightBox from "../../assets/images/city-blue-box.png";
 import leftCircle from "../../assets/images/light-blue-circle.png";
@@ -91,23 +91,25 @@ const SlectCity = ({ searchedCity }: any) => {
               <div className="hero-inner-wrapper bg-white  flex flex-col items-center py-[50px] xl:py-[48px] 2xl:py-[56px] px-4 lg:px-[30px] xl:px-[40px] 2xl:px-[50px] relative mt-[10px] mr-[10px] md:ml-[-19px] md:mb-[-19px] md:mt-[19px] md:mr-[19px]">
                 <div className="absolute top-[30px] lg:left-[22px] xl:left-[38px] lg:top-[45px] xl:top-[52px]">
                   <div className="flex items-center gap-x-[13px]">
-                    <button className="w-[50px] h-[50px] rounded-full bg-[#F6F6F6] flex justify-center items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          d="M15 19L8 12L15 5"
-                          stroke="black"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                    <Link to="/sales-code">
+                      <button className="w-[50px] h-[50px] rounded-full bg-[#F6F6F6] flex justify-center items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M15 19L8 12L15 5"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </Link>
                     <span className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[16px] custom-font-400 text-black uppercase">
                       Back
                     </span>

@@ -3,7 +3,7 @@ import { Row, Col, Input, Upload, Button, message } from "antd";
 import preview from "../assets/images/hero.png";
 import ButtonFilled from "./common/ButtonFilled";
 
-const Step3Form = () => {
+const Step3Form = ({ onNextStep, onBackStep }: any) => {
   const props = {
     name: "file",
     action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
@@ -112,10 +112,16 @@ const Step3Form = () => {
               </Col>
             </Row>
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
-              <button className="back-btn">
+              <button
+                className="back-btn"
+                onClick={(event) => onBackStep(event)}
+              >
                 <span className="back-btn-inner">Back</span>
               </button>
-              <ButtonFilled text="Next" />
+              <ButtonFilled
+                text="Next"
+                handleClick={(event: any) => onNextStep(event)}
+              />
             </div>
           </form>
         </div>

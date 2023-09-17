@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Input, Upload, Button, message, Select } from "antd";
+import { Row, Col, Input, Select } from "antd";
 import preview from "../assets/images/hero.png";
 import ButtonFilled from "./common/ButtonFilled";
 
@@ -14,7 +14,7 @@ const paymentOptions = [
   },
 ];
 
-const Step4Form = () => {
+const Step4Form = ({ onNextStep, onBackStep }: any) => {
   return (
     <div>
       <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-y-[40px] gap-x-[20px]">
@@ -55,10 +55,16 @@ const Step4Form = () => {
               </Col>
             </Row>
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
-              <button className="back-btn">
+              <button
+                className="back-btn"
+                onClick={(event) => onBackStep(event)}
+              >
                 <span className="back-btn-inner">Back</span>
               </button>
-              <ButtonFilled text="Next" />
+              <ButtonFilled
+                text="Next"
+                handleClick={(event: any) => onNextStep(event)}
+              />
             </div>
           </form>
         </div>

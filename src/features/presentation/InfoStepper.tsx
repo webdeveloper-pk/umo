@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tilt } from "react-tilt";
 import leftBox from "../../assets/images/yellow-box.png";
 import rightBox from "../../assets/images/city-blue-box.png";
@@ -6,13 +6,53 @@ import leftCircle from "../../assets/images/light-blue-circle.png";
 import rightCircle from "../../assets/images/yellow-circle.png";
 import blueCircle from "../../assets/images/blue-circle.png";
 import Navbar from "../../components/common/Navbar";
-// import Step1Form from "../../components/Step1Form";
-// import Step2Form from "../../components/Step2Form";
-// import Step3Form from "../../components/Step3Form";
+import Step1Form from "../../components/Step1Form";
+import Step2Form from "../../components/Step2Form";
+import Step3Form from "../../components/Step3Form";
 import Step4Form from "../../components/Step4Form";
-// import Step5Form from "../../components/Step5Form";
+import Step5Form from "../../components/Step5Form";
+import { Link } from "react-router-dom";
 
-const InfoStepper = ({ searchedCity }: any) => {
+const InfoStepper = () => {
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const handleNextStep = (event: any) => {
+    event.preventDefault();
+    setTimeout(() => {
+      setCurrentStep((prevStep) => prevStep + 1);
+    }, 300);
+  };
+
+  const handleBackStep = (event: any) => {
+    event.preventDefault();
+    setTimeout(() => {
+      setCurrentStep((prevStep) => prevStep - 1);
+    }, 300);
+  };
+
+  const renderComponent = () => {
+    switch (currentStep) {
+      case 1:
+        return (
+          <Step1Form onNextStep={handleNextStep} onBackStep={handleBackStep} />
+        );
+      case 2:
+        return (
+          <Step2Form onNextStep={handleNextStep} onBackStep={handleBackStep} />
+        );
+      case 3:
+        return (
+          <Step3Form onNextStep={handleNextStep} onBackStep={handleBackStep} />
+        );
+      case 4:
+        return (
+          <Step4Form onNextStep={handleNextStep} onBackStep={handleBackStep} />
+        );
+      case 5:
+        return <Step5Form />;
+    }
+  };
+
   return (
     <div className="hero-wrapper-margin">
       <Navbar />
@@ -110,23 +150,49 @@ const InfoStepper = ({ searchedCity }: any) => {
               <div className="hero-inner-wrapper bg-white  flex flex-col items-center py-[50px] xl:py-[48px] 2xl:py-[56px] px-4 lg:px-[30px] xl:px-[40px] 2xl:px-[50px] relative mt-[10px] mr-[10px] md:ml-[-19px] md:mb-[-19px] md:mt-[19px] md:mr-[19px] lg:min-h-[800px]">
                 <div className="absolute top-[30px] lg:left-[22px] xl:left-[38px] lg:top-[45px] xl:top-[52px]">
                   <div className="flex items-center gap-x-[13px]">
-                    <button className="w-[50px] h-[50px] rounded-full bg-[#F6F6F6] flex justify-center items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
+                    {currentStep === 1 ? (
+                      <Link to="/select-city">
+                        <button className="w-[50px] h-[50px] rounded-full bg-[#F6F6F6] flex justify-center items-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M15 19L8 12L15 5"
+                              stroke="black"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </Link>
+                    ) : (
+                      <button
+                        className="w-[50px] h-[50px] rounded-full bg-[#F6F6F6] flex justify-center items-center"
+                        onClick={(event) => handleBackStep(event)}
                       >
-                        <path
-                          d="M15 19L8 12L15 5"
-                          stroke="black"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M15 19L8 12L15 5"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    )}
+
                     <span className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[16px] custom-font-400 text-black uppercase">
                       Back
                     </span>
@@ -150,7 +216,7 @@ const InfoStepper = ({ searchedCity }: any) => {
                   Mauris ut ex ac est laoreet mattis.
                 </p>
                 <div className="mt-[25px] lg:mt-[30px] w-full xl:ml-[20px] 2xl:ml-[50px]">
-                  <Step4Form />
+                  {renderComponent()}
                 </div>
               </div>
             </div>

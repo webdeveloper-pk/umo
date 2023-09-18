@@ -62,7 +62,7 @@ const Step4Form = ({ onNextStep, onBackStep }: any) => {
                 <span className="back-btn-inner">Back</span>
               </button>
               <ButtonFilled
-                text="Next"
+                text="Finish"
                 handleClick={(event: any) => onNextStep(event)}
               />
             </div>

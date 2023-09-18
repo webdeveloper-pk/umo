@@ -119,7 +119,7 @@ const Step3Form = ({ onNextStep, onBackStep }: any) => {
                 <span className="back-btn-inner">Back</span>
               </button>
               <ButtonFilled
-                text="Next"
+                text="PAY NOW"
                 handleClick={(event: any) => onNextStep(event)}
               />
             </div>

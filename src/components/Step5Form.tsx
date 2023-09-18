@@ -1,6 +1,8 @@
 import React from "react";
 import hero from "../assets/images/hero.png";
 import scanner from "../assets/images/scanner.png";
+import ButtonFilled from "./common/ButtonFilled";
+import { Link } from "react-router-dom";
 
 const Step5Form = () => {
   return (
@@ -32,6 +34,11 @@ const Step5Form = () => {
             SCAN ME
           </div>
         </div>
+      </div>
+      <div className="flex justify-center mt-[30px] lg:mt-[35px]">
+        <Link to="/">
+          <ButtonFilled text="All done" />
+        </Link>
       </div>
     </div>
   );

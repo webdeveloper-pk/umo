@@ -2,10 +2,11 @@ import React from "react";
 import AOS from "aos";
 import Navbar from "../components/common/Navbar";
 import Hero from "../components/landingPage/Hero";
-import Footer from "../components/common/Footer";
 import Price from "../components/landingPage/Price";
 import About from "../components/landingPage/About";
+import Contact from "../components/landingPage/Contact";
 import Faq from "../components/landingPage/Faq";
+import Footer from "../components/common/Footer";
 import circles from "../assets/images/price-circles.png";
 
 const Homepage = () => {
@@ -28,6 +29,7 @@ const Homepage = () => {
           <Price />
           <About />
         </div>
+        <Contact />
         <Faq />
         <Footer />
       </div>

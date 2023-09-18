@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="bg-lighter-white relative">
+    <div className="bg-lighter-white relative" id="home">
       <div
         className="absolute leftBox"
         data-aos="fade-right"
@@ -116,7 +116,7 @@ const Hero = () => {
             Boost Your Business!
           </p>
           <p
-            className="w-full hero-description px-[10px] lg:px-0 text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] text-center"
+            className="w-full hero-description px-[15px] lg:px-0 text-[15px] md:text-[16px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] text-center"
             data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500"

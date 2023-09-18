@@ -273,7 +273,6 @@ nav.shift ul li a:hover:after {
   color: #444;
   text-align: center;
   font-family: Montserrat;
-  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -309,6 +308,10 @@ nav.shift ul li a:hover:after {
 .rightBox {
   right: 0px;
   bottom: 200px;
+}
+.contact-rightBox {
+  right: 0px;
+  bottom: 120px;
 }
 .step-rightBox {
   right: 0px;
@@ -384,6 +387,82 @@ nav.shift ul li a:hover:after {
 .video-wrapper {
   border-radius: 52px;
   background: #f2f2f2;
+}
+
+/* contact */
+
+.contact-title {
+  color: #000;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.contact-description {
+  color: #444;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.contact-custom-input {
+  border-radius: 17.34px;
+  border: 1px solid #e3e3e3;
+  background: #fcfcfc;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 69px;
+}
+
+.contact-custom-input:hover {
+  border: 1px solid #092642;
+  box-shadow: 0 0 0 0.5px #092642 !important;
+}
+
+.contact-custom-input:focus {
+  border: 1px solid #092642;
+  box-shadow: 0 0 0 0.5px #092642 !important;
+}
+
+.contact-custom-input:active {
+  border: 1px solid #092642;
+  box-shadow: 0 0 0 0.5px #092642 !important;
+}
+
+.contact-custom-input::placeholder {
+  color: #8b8b8b;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.contact-custom-textarea {
+  padding: 20px 25px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contact-btn {
+  border-radius: 34.5px;
+  border: 0.847px solid #e3e3e3;
+  background: var(--Blue, #1d6de6);
+  width: 169px;
+  height: 69px;
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* faq */
@@ -810,6 +889,10 @@ nav.shift ul li a:hover:after {
     right: 0px;
     bottom: 200px;
   }
+  .contact-rightBox {
+    right: 0px;
+    bottom: 120px;
+  }
   .step-rightBox {
     right: 0px;
     bottom: 200px;
@@ -835,6 +918,30 @@ nav.shift ul li a:hover:after {
     font-weight: 400;
     line-height: normal;
     height: 69px;
+  }
+  .contact-custom-input {
+    border-radius: 17.34px;
+    border: 1px solid #e3e3e3;
+    background: #fcfcfc;
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 69px;
+  }
+  .contact-custom-textarea {
+    border-radius: 17.34px;
+    padding: 14px 25px;
+    font-size: 20px;
+  }
+  .contact-title {
+    color: #000;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
   .step-preview {
     border-radius: 17.34px;
@@ -890,6 +997,10 @@ nav.shift ul li a:hover:after {
     right: 0px;
     bottom: 200px;
   }
+  .contact-rightBox {
+    right: 0px;
+    bottom: 120px;
+  }
   .step-rightBox {
     right: 0px;
     bottom: 200px;
@@ -907,6 +1018,24 @@ nav.shift ul li a:hover:after {
   .step-custom-input {
     border-radius: 17.34px;
     height: 67px;
+  }
+  .contact-custom-input {
+    border-radius: 17.34px;
+    font-size: 19px;
+    height: 67px;
+  }
+  .contact-title {
+    color: #000;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 48px;
+  }
+  .contact-custom-textarea {
+    border-radius: 17.34px;
+    padding: 14px 20px;
+    font-size: 20px;
   }
   .custom-radio-wrapper {
     height: 67px;
@@ -949,6 +1078,10 @@ nav.shift ul li a:hover:after {
     right: 0px;
     bottom: 200px;
   }
+  .contact-rightBox {
+    right: 0px;
+    bottom: 120px;
+  }
   .step-rightBox {
     right: 0px;
     bottom: 200px;
@@ -963,6 +1096,24 @@ nav.shift ul li a:hover:after {
   .step-custom-input {
     border-radius: 16px;
     height: 65px;
+  }
+  .contact-custom-input {
+    border-radius: 16px;
+    font-size: 18px;
+    height: 65px;
+  }
+  .contact-title {
+    color: #000;
+    font-size: 44px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .contact-custom-textarea {
+    border-radius: 16px;
+    padding: 13px 20px;
+    font-size: 19px;
   }
   .step-preview {
     border-radius: 16px;
@@ -999,6 +1150,11 @@ nav.shift ul li a:hover:after {
     font-size: 15px;
     height: 65px;
     width: 220px;
+  }
+  .contact-btn {
+    border-radius: 32px;
+    width: 165px;
+    height: 65px;
   }
   .back-btn {
     border-radius: 32px;
@@ -1038,6 +1194,10 @@ nav.shift ul li a:hover:after {
     right: 0px;
     bottom: 200px;
   }
+  .contact-rightBox {
+    right: 0px;
+    bottom: 120px;
+  }
   .step-rightBox {
     right: 0px;
     bottom: 200px;
@@ -1050,6 +1210,24 @@ nav.shift ul li a:hover:after {
     border-radius: 15px;
     height: 60px;
     font-size: 15px;
+  }
+  .contact-custom-input {
+    border-radius: 15px;
+    font-size: 17px;
+    height: 60px;
+  }
+  .contact-title {
+    color: #000;
+    font-size: 40px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .contact-custom-textarea {
+    border-radius: 15px;
+    padding: 12px 20px;
+    font-size: 17px;
   }
   .step-preview {
     border-radius: 15px;
@@ -1093,6 +1271,11 @@ nav.shift ul li a:hover:after {
     height: 62px;
     width: 210px;
   }
+  .contact-btn {
+    border-radius: 30px;
+    width: 165px;
+    height: 62px;
+  }
   .back-btn {
     border-radius: 30px;
     font-size: 15px;
@@ -1131,6 +1314,10 @@ nav.shift ul li a:hover:after {
     right: 0px;
     bottom: 180px;
   }
+  .contact-rightBox {
+    right: 0px;
+    bottom: 120px;
+  }
   .step-rightBox {
     right: 0px;
     bottom: 180px;
@@ -1145,6 +1332,24 @@ nav.shift ul li a:hover:after {
   .step-custom-input {
     border-radius: 15px;
     height: 58px;
+    font-size: 15px;
+  }
+  .contact-custom-input {
+    border-radius: 15px;
+    font-size: 16px;
+    height: 58px;
+  }
+  .contact-title {
+    color: #000;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .contact-custom-textarea {
+    border-radius: 15px;
+    padding: 10px 20px;
     font-size: 15px;
   }
   .step-preview {
@@ -1188,8 +1393,12 @@ nav.shift ul li a:hover:after {
     width: 35%;
   }
   .rightBox {
-    right: 0px;
+    right: -20px;
     bottom: 180px;
+  }
+  .contact-rightBox {
+    right: -20px;
+    bottom: 120px;
   }
   .step-rightBox {
     right: -30px;
@@ -1207,6 +1416,25 @@ nav.shift ul li a:hover:after {
     border-radius: 15px;
     height: 58px;
     font-size: 15px;
+  }
+  .contact-custom-input {
+    border-radius: 15px;
+    font-size: 16px;
+    height: 58px;
+  }
+  .contact-custom-textarea {
+    border-radius: 15px;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+  .contact-title {
+    color: #000;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
   }
   .step-preview {
     border-radius: 15px;
@@ -1245,10 +1473,15 @@ nav.shift ul li a:hover:after {
     font-size: 15px;
   }
   .filled-btn {
-    border-radius: 25px;
+    border-radius: 28px;
     font-size: 14px;
     height: 60px;
     width: 200px;
+  }
+  .contact-btn {
+    border-radius: 28px;
+    width: 165px;
+    height: 60px;
   }
   .back-btn {
     border-radius: 25px;
@@ -1279,6 +1512,10 @@ nav.shift ul li a:hover:after {
     right: -20px;
     bottom: 150px;
   }
+  .contact-rightBox {
+    right: -20px;
+    bottom: 120px;
+  }
   .step-rightBox {
     right: -30px;
     bottom: 150px;
@@ -1294,6 +1531,16 @@ nav.shift ul li a:hover:after {
   .step-custom-input {
     border-radius: 13px;
     height: 55px;
+    font-size: 14px;
+  }
+  .contact-custom-input {
+    border-radius: 13px;
+    font-size: 15px;
+    height: 55px;
+  }
+  .contact-custom-textarea {
+    border-radius: 13px;
+    padding: 10px 12px;
     font-size: 14px;
   }
   .step-preview {
@@ -1335,10 +1582,15 @@ nav.shift ul li a:hover:after {
     font-size: 14px;
   }
   .filled-btn {
-    border-radius: 20px;
+    border-radius: 25px;
     font-size: 14px;
     height: 55px;
     width: 180px;
+  }
+  .contact-btn {
+    border-radius: 25px;
+    width: 150px;
+    height: 55px;
   }
   .back-btn {
     border-radius: 20px;
@@ -1369,6 +1621,10 @@ nav.shift ul li a:hover:after {
     right: -20px;
     bottom: 150px;
   }
+  .contact-rightBox {
+    right: -20px;
+    bottom: 120px;
+  }
   .step-rightBox {
     right: -20px;
     bottom: 150px;
@@ -1391,6 +1647,16 @@ nav.shift ul li a:hover:after {
   .step-custom-input {
     border-radius: 12px;
     height: 50px;
+    font-size: 14px;
+  }
+  .contact-custom-input {
+    border-radius: 12px;
+    font-size: 14px;
+    height: 50px;
+  }
+  .contact-custom-textarea {
+    border-radius: 12px;
+    padding: 10px 12px;
     font-size: 14px;
   }
   .step-preview {
@@ -1430,10 +1696,15 @@ nav.shift ul li a:hover:after {
     font-size: 14px;
   }
   .filled-btn {
-    border-radius: 20px;
+    border-radius: 25px;
     font-size: 14px;
     height: 55px;
     width: 180px;
+  }
+  .contact-btn {
+    border-radius: 25px;
+    width: 150px;
+    height: 55px;
   }
   .back-btn {
     border-radius: 20px;
@@ -1472,6 +1743,10 @@ nav.shift ul li a:hover:after {
     right: -30px;
     bottom: 150px;
   }
+  .contact-rightBox {
+    right: -30px;
+    bottom: 120px;
+  }
   .step-rightBox {
     right: -30px;
     bottom: 150px;
@@ -1494,6 +1769,16 @@ nav.shift ul li a:hover:after {
   .step-custom-input {
     border-radius: 12px;
     height: 50px;
+    font-size: 14px;
+  }
+  .contact-custom-input {
+    border-radius: 12px;
+    font-size: 14px;
+    height: 50px;
+  }
+  .contact-custom-textarea {
+    border-radius: 12px;
+    padding: 10px 12px;
     font-size: 14px;
   }
   .step-preview {

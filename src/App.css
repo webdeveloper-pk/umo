@@ -327,6 +327,112 @@ nav.shift ul li a:hover:after {
   top: 200px;
 }
 
+.card-title {
+  color: #fedb0d;
+  font-family: Montserrat;
+  font-size: 30.12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 131.5%;
+}
+
+.light-gray-line1 {
+  width: 312.494px;
+  height: 6.024px;
+  border-radius: 4.518px;
+  background: rgba(235, 235, 235, 0.2);
+}
+
+.light-gray-line2 {
+  width: 241.712px;
+  height: 6.024px;
+  border-radius: 4.518px;
+  background: rgba(235, 235, 235, 0.2);
+}
+
+.card-off-text {
+  margin-top: 30px;
+  color: #fedb0d;
+  font-family: Montserrat;
+  font-size: 38.643px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 131.5%; /* 50.816px */
+}
+
+.light-yellow-line1 {
+  width: 246.23px;
+  height: 6.024px;
+  border-radius: 4.518px;
+  background: #fedb0d;
+}
+
+.light-yellow-line2 {
+  width: 212.345px;
+  height: 6.024px;
+  border-radius: 4.518px;
+  background: #fedb0d;
+}
+
+.card-phone-svg {
+  width: 32.379px;
+  height: 32.379px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-phone-text {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18.072px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 131.5%; /* 23.765px */
+}
+
+.right-logo-wrapper {
+  padding-top: 10px;
+}
+
+.right-logo-image {
+  width: 100%;
+}
+
+.card-button {
+  width: 240.206px;
+  height: 44.427px;
+  border-radius: 26.355px;
+  border: 0.638px solid #fedb0d;
+  background-color: transparent;
+  color: #fedb0d;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 18.072px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 131.5%; /* 23.765px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-button:hover {
+  border: 0.638px solid #fedb0d;
+  background-color: #fedb0d;
+  color: #156ceb;
+}
+
+.card-date {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 15.06px;
+  font-style: normal;
+  font-weight: 500;
+}
+
 /* price */
 
 .price-wrapper {
@@ -971,6 +1077,110 @@ nav.shift ul li a:hover:after {
     bottom: 30px;
     z-index: 999;
   }
+  .card-title {
+    color: #fedb0d;
+    font-family: Montserrat;
+    font-size: 30.12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 131.5%;
+  }
+
+  .light-gray-line1 {
+    width: 312.494px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: rgba(235, 235, 235, 0.2);
+  }
+
+  .light-gray-line2 {
+    width: 241.712px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: rgba(235, 235, 235, 0.2);
+  }
+
+  .card-off-text {
+    margin-top: 30px;
+    color: #fedb0d;
+    font-family: Montserrat;
+    font-size: 38.643px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 131.5%; /* 50.816px */
+  }
+
+  .light-yellow-line1 {
+    width: 246.23px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: #fedb0d;
+  }
+
+  .light-yellow-line2 {
+    width: 212.345px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: #fedb0d;
+  }
+
+  .card-phone-svg {
+    width: 32.379px;
+    height: 32.379px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-phone-text {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18.072px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 131.5%; /* 23.765px */
+  }
+  .right-logo-wrapper {
+    padding-top: 10px;
+  }
+
+  .right-logo-image {
+    width: 75%;
+  }
+
+  .card-button {
+    width: 240.206px;
+    height: 44.427px;
+    border-radius: 26.355px;
+    border: 0.638px solid #fedb0d;
+    background-color: transparent;
+    color: #fedb0d;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 18.072px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 131.5%; /* 23.765px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-button:hover {
+    border: 0.638px solid #fedb0d;
+    background-color: #fedb0d;
+    color: #156ceb;
+  }
+
+  .card-date {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 15.06px;
+    font-style: normal;
+    font-weight: 500;
+  }
 }
 
 @media screen and (max-width: 1919px) and (min-width: 1700px) {
@@ -1052,6 +1262,9 @@ nav.shift ul li a:hover:after {
     bottom: 30px;
     z-index: 999;
   }
+  .right-logo-image {
+    width: 75%;
+  }
 }
 
 @media screen and (max-width: 1699px) and (min-width: 1536px) {
@@ -1132,6 +1345,19 @@ nav.shift ul li a:hover:after {
     right: 45px;
     bottom: 25px;
     z-index: 999;
+  }
+  .card-title {
+    font-size: 28.12px;
+  }
+  .card-off-text {
+    font-size: 35.643px;
+    margin-top: 25px;
+  }
+  .right-logo-wrapper {
+    padding-top: 0px;
+  }
+  .right-logo-image {
+    width: 75%;
   }
 }
 
@@ -1246,6 +1472,57 @@ nav.shift ul li a:hover:after {
     right: 30px;
     bottom: 30px;
     z-index: 999;
+  }
+  .card-title {
+    font-size: 20.12px;
+  }
+
+  .light-gray-line1 {
+    width: 200px;
+    height: 5.024px;
+  }
+
+  .light-gray-line2 {
+    width: 170px;
+    height: 5.024px;
+  }
+
+  .card-off-text {
+    font-size: 22.643px;
+    margin-top: 15px;
+  }
+
+  .light-yellow-line1 {
+    width: 170px;
+    height: 5.024px;
+  }
+
+  .light-yellow-line2 {
+    width: 140px;
+    height: 5.024px;
+  }
+
+  .card-phone-svg {
+    width: 28.379px;
+    height: 28.379px;
+  }
+  .card-phone-text {
+    font-size: 16.072px;
+  }
+  .right-logo-wrapper {
+    padding-top: 0px;
+  }
+  .right-logo-image {
+    width: 70%;
+  }
+  .card-button {
+    width: 170.206px;
+    height: 40.427px;
+    border-radius: 24.355px;
+    font-size: 16.072px;
+  }
+  .card-date {
+    font-size: 14.06px;
   }
 }
 
@@ -1370,6 +1647,57 @@ nav.shift ul li a:hover:after {
     top: calc(100vh - 100px);
     z-index: 999;
   }
+  .card-title {
+    font-size: 16.12px;
+  }
+  .light-gray-line1 {
+    width: 150px;
+    height: 3.024px;
+  }
+
+  .light-gray-line2 {
+    width: 120px;
+    height: 3.024px;
+  }
+
+  .card-off-text {
+    font-size: 18.643px;
+    margin-top: 13px;
+  }
+
+  .light-yellow-line1 {
+    width: 120px;
+    height: 3.024px;
+  }
+
+  .light-yellow-line2 {
+    width: 90px;
+    height: 3.024px;
+  }
+
+  .card-phone-svg {
+    width: 26.379px;
+    height: 26.379px;
+  }
+  .card-phone-text {
+    font-size: 13.072px;
+  }
+  .right-logo-wrapper {
+    padding-top: 0px;
+  }
+  .right-logo-image {
+    width: 60%;
+  }
+  .card-button {
+    width: 130.206px;
+    height: 30.427px;
+    border-radius: 20.355px;
+    font-size: 14.072px;
+    margin: 0 auto;
+  }
+  .card-date {
+    font-size: 13.06px;
+  }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 900px) {
@@ -1453,6 +1781,66 @@ nav.shift ul li a:hover:after {
     right: 10px;
     top: calc(100vh - 70px);
     z-index: 999;
+  }
+  .card-left-position {
+    position: absolute;
+    left: 110px;
+    top: 30px;
+  }
+  .card-right-position {
+    position: absolute;
+    right: 80px;
+    top: 30px;
+  }
+  .card-title {
+    font-size: 22.12px;
+  }
+  .light-gray-line1 {
+    width: 150px;
+    height: 3.024px;
+  }
+
+  .light-gray-line2 {
+    width: 120px;
+    height: 3.024px;
+  }
+
+  .card-off-text {
+    font-size: 28.643px;
+    margin-top: 13px;
+  }
+
+  .light-yellow-line1 {
+    width: 120px;
+    height: 3.024px;
+  }
+
+  .light-yellow-line2 {
+    width: 90px;
+    height: 3.024px;
+  }
+  .card-phone-svg {
+    width: 26.379px;
+    height: 26.379px;
+  }
+  .card-phone-text {
+    font-size: 13.072px;
+  }
+  .right-logo-wrapper {
+    padding-top: 0px;
+  }
+  .right-logo-image {
+    width: 75%;
+  }
+  .card-button {
+    width: 150.206px;
+    height: 35.427px;
+    border-radius: 20.355px;
+    font-size: 15.072px;
+    margin: 0 auto;
+  }
+  .card-date {
+    font-size: 14.06px;
   }
 }
 
@@ -1560,6 +1948,57 @@ nav.shift ul li a:hover:after {
     right: 10px;
     top: calc(100vh - 70px);
     z-index: 999;
+  }
+  .card-title {
+    font-size: 16.12px;
+  }
+  .light-gray-line1 {
+    width: 150px;
+    height: 3.024px;
+  }
+
+  .light-gray-line2 {
+    width: 120px;
+    height: 3.024px;
+  }
+
+  .card-off-text {
+    font-size: 18.643px;
+    margin-top: 13px;
+  }
+
+  .light-yellow-line1 {
+    width: 120px;
+    height: 3.024px;
+  }
+
+  .light-yellow-line2 {
+    width: 90px;
+    height: 3.024px;
+  }
+
+  .card-phone-svg {
+    width: 26.379px;
+    height: 26.379px;
+  }
+  .card-phone-text {
+    font-size: 13.072px;
+  }
+  .right-logo-wrapper {
+    padding-top: 0px;
+  }
+  .right-logo-image {
+    width: 65%;
+  }
+  .card-button {
+    width: 130.206px;
+    height: 30.427px;
+    border-radius: 20.355px;
+    font-size: 14.072px;
+    margin: 0 auto;
+  }
+  .card-date {
+    font-size: 13.06px;
   }
 }
 
@@ -1676,6 +2115,57 @@ nav.shift ul li a:hover:after {
     right: 25px;
     top: calc(100vh - 70px);
     z-index: 999;
+  }
+  .card-title {
+    font-size: 12.12px;
+  }
+  .light-gray-line1 {
+    width: 110px;
+    height: 2.024px;
+  }
+
+  .light-gray-line2 {
+    width: 80px;
+    height: 2.024px;
+  }
+
+  .card-off-text {
+    font-size: 15.643px;
+    margin-top: 8px;
+  }
+
+  .light-yellow-line1 {
+    width: 80px;
+    height: 2.024px;
+  }
+
+  .light-yellow-line2 {
+    width: 60px;
+    height: 2.024px;
+  }
+
+  .card-phone-svg {
+    width: 20.379px;
+    height: 20.379px;
+  }
+  .card-phone-text {
+    font-size: 10.072px;
+  }
+  .right-logo-wrapper {
+    padding-top: 0px;
+  }
+  .right-logo-image {
+    width: 45%;
+  }
+  .card-button {
+    width: 110.206px;
+    height: 28.427px;
+    border-radius: 20.355px;
+    font-size: 12.072px;
+    margin: 0 auto;
+  }
+  .card-date {
+    font-size: 12.06px;
   }
 }
 
@@ -1799,4 +2289,66 @@ nav.shift ul li a:hover:after {
     top: calc(100vh - 70px);
     z-index: 999;
   }
+  .card-logo-width {
+    width: 30px;
+  }
+  .card-title {
+    font-size: 11.12px;
+  }
+  .light-gray-line1 {
+    width: 100px;
+    height: 1.024px;
+  }
+  .light-gray-line2 {
+    width: 70px;
+    height: 1.024px;
+  }
+  .card-off-text {
+    font-size: 13.643px;
+    margin-top: 7px;
+  }
+
+  .light-yellow-line1 {
+    width: 70px;
+    height: 1.024px;
+  }
+
+  .light-yellow-line2 {
+    width: 50px;
+    height: 1.024px;
+  }
+
+  .card-phone-svg {
+    width: 18.379px;
+    height: 18.379px;
+  }
+  .card-phone-text {
+    font-size: 9.072px;
+  }
+  .right-logo-wrapper {
+    padding-top: 0px;
+  }
+  .right-logo-image {
+    width: 40%;
+  }
+  .card-button {
+    width: 100.206px;
+    height: 24.427px;
+    border-radius: 18.355px;
+    font-size: 10.072px;
+    margin: 0 auto;
+  }
+  .card-date {
+    font-size: 10.06px;
+  }
+  .card-right-position {
+    position: absolute;
+    top: 10px;
+    right: -30px;
+  }
 }
+
+/* @media screen and (max-width: 767px) and (min-width: 390px) {
+}
+
+@media screen and (max-width: 389px) {} */

@@ -1,42 +1,44 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import scanner from "../assets/images/scanner.png";
 import ButtonFilled from "./common/ButtonFilled";
-import { Link } from "react-router-dom";
+import hero from "../assets/images/hero.png";
 import logo from "../assets/images/card-logo.png";
 import rightLogo from "../assets/images/card-right-logo.png";
-import cutter from "../assets/images/step-card-cutter.png";
 
 const Step5Form = () => {
   return (
     <div className="mt-[20px]">
-      <div className="flex flex-col lg:flex-row items-center gap-[22px] justify-center w-full md:w-[80%] lg:w-[80%] xl:w-[70%] 2xl:w-[65%] mx-auto">
-        <div className="step-card-wrapper py-[15px] lg:py-[20px] px-[15px] md:px-[30px] lg:px-[20px] xl:px-[25px] 2xl:px-[30px] w-full relative">
-          <div className="absolute left-[-7px] md:left-[-10px] lg:left-[-10px] top-0">
-            <img src={cutter} alt="design" className="w-[60%] md:w-[100%]" />
-          </div>
-          <div className="flex justify-between">
-            <div className="">
+      <div className="flex flex-col lg:flex-row items-center gap-y-[30px] xl:gap-x-[20px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
+        <div className="flex justify-start relative">
+          <img
+            src={hero}
+            alt="hero"
+            className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto"
+          />
+          <div>
+            <div className="absolute card-left-position top-[12px] md:top-[20px] lg:top-[15px] xl:top-[18px] 2xl:top-[22px] left-[24px] md:left-[95px] lg:left-[60px] xl:left-[70px] 2xl:left-[50px]">
               <div className="">
                 <img
                   src={logo}
                   alt="logo"
-                  className="w-[50px] lg:w-[40px] 2xl:w-[60px]"
+                  className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width"
                 />
               </div>
-              <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[10px]">
-                <p className="step-card-title">
+              <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[18px]">
+                <p className="card-title">
                   Lloyds <br /> Pharmacy
                 </p>
               </div>
-              <div className="step-light-gray-line1 mt-[4px] md:mt-[7px]"></div>
-              <div className="step-light-gray-line2 mt-[4px] md:mt-[7px]"></div>
-              <div className="mt-[-10px]">
-                <p className="step-card-off-text">15% Off</p>
+              <div className="light-gray-line1 mt-[4px] md:mt-[8px]"></div>
+              <div className="light-gray-line2 mt-[4px] md:mt-[8px]"></div>
+              <div className="">
+                <p className="card-off-text">15% Off</p>
               </div>
-              <div className="step-light-yellow-line1 mt-[0px]"></div>
-              <div className="step-light-yellow-line2 mt-[4px] md:mt-[7px]"></div>
-              <div className="flex items-center gap-x-[10px] 2xl:gap-x-[15px] mt-[15px] 2xl:mt-[15px]">
-                <div className="step-card-phone-svg">
+              <div className="light-yellow-line1 mt-[0px]"></div>
+              <div className="light-yellow-line2 mt-[4px] md:mt-[8px]"></div>
+              <div className="flex items-center gap-x-[10px] 2xl:gap-x-[15px] mt-[15px] 2xl:mt-[19px]">
+                <div className="card-phone-svg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="19"
@@ -51,40 +53,30 @@ const Step5Form = () => {
                     />
                   </svg>
                 </div>
-                <p className="step-card-phone-text">+1 234 5678</p>
+                <p className="card-phone-text">+1 234 5678</p>
               </div>
             </div>
-            <div className="flex flex-col items-end">
-              <div className="flex justify-end">
-                <img
-                  src={rightLogo}
-                  alt="logo"
-                  className="step-card-right-logo-image"
-                />
+            <div className="absolute card-right-position top-[13px] xl:top-[20px] 2xl:top-[30px] right-[-15px] md:right-[50px] lg:right-[20px] xl:right-[35px] 2xl:right-[39px]">
+              <div className="flex justify-center right-logo-wrapper">
+                <img src={rightLogo} alt="logo" className="right-logo-image" />
               </div>
-              <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[25px] step-right-div">
-                <button className="step-card-button">UMHOO16</button>
-                <p className="step-card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
+              <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[38px]">
+                <button className="card-button ">UMHOO16</button>
+                <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
                   01, 2023
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px]">
-          <div>
-            <img
-              src={scanner}
-              alt="scanner"
-              className="finish-scanner-image"
-              // data-aos="zoom-out"
-              // data-aos-easing="linear"
-              // data-aos-duration="2000"
-            />
-
-            <div className="text-center text-black text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] custom-font-500 -mt-[10px] lg:-mt-[20px]">
-              SCAN ME
-            </div>
+        <div className="scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px]">
+          <img
+            src={scanner}
+            alt="scanner"
+            className="w-[200px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
+          />
+          <div className="text-center text-black text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] custom-font-500 -mt-[10px] lg:-mt-[20px]">
+            SCAN ME
           </div>
         </div>
       </div>

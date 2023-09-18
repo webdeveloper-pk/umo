@@ -53,6 +53,40 @@ const InfoStepper = () => {
     }
   };
 
+  const renderTitle = () => {
+    switch (currentStep) {
+      case 1:
+        return "Enter Personal/Business Info";
+      case 2:
+        return "Enter Address Or Social Address";
+      case 3:
+        return "Offer Configuration";
+      case 4:
+        return "Payment Method";
+      case 5:
+        return "Thank You!";
+      default:
+        return "Enter Personal/Business Info";
+    }
+  };
+
+  const renderSubTitle = () => {
+    switch (currentStep) {
+      case 1:
+        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+      case 2:
+        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+      case 3:
+        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+      case 4:
+        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+      case 5:
+        return "You have done it successfully. Thank you for being with us. Share you valuable feedback.";
+      default:
+        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+    }
+  };
+
   return (
     <div className="hero-wrapper-margin">
       <Navbar />
@@ -204,7 +238,7 @@ const InfoStepper = () => {
                   //   data-aos-easing="linear"
                   //   data-aos-duration="1500"
                 >
-                  Enter Personal/Business Info
+                  {renderTitle()}
                 </p>
                 <p
                   className="w-full sidepage-descriptions px-[10px] lg:px-0 text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] text-center"
@@ -212,8 +246,7 @@ const InfoStepper = () => {
                   //   data-aos-easing="linear"
                   //   data-aos-duration="1500"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris ut ex ac est laoreet mattis.
+                  {renderSubTitle()}
                 </p>
                 <div className="mt-[25px] lg:mt-[30px] w-full xl:ml-[20px] 2xl:ml-[50px]">
                   {renderComponent()}

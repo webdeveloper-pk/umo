@@ -183,7 +183,6 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
                   lg={{ span: 20 }}
                   xl={{ span: 20 }}
                   xxl={{ span: 18 }}
-                  className="mb-[20px] xl:mb-[23px]"
                 >
                   <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                     Enter Your Address

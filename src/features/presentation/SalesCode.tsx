@@ -126,7 +126,7 @@ const SalesCode = () => {
                   //   data-aos-easing="linear"
                   //   data-aos-duration="1500"
                 >
-                  Select a City to Process
+                  Enter Sales Rep Code
                 </p>
                 {/* <p
                   className="w-full sidepage-descriptions px-[10px] lg:px-0 text-[14px] md:text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] text-center"

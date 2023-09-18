@@ -7,7 +7,10 @@ const { TextArea } = Input;
 
 const Contact = () => {
   return (
-    <div className="homepage-container mx-auto pl-4 pr-4 md:pl-8 md:pr-8 xl:pl-[30px] xl:pr-[40px] 2xl:pl-[35px] 2xl:pr-[55px] pt-[30px] lg:pt-[40px] xl:pt-[50px] pb-[50px] xl:pb-[70px] 2xl:pb-[80px] relative">
+    <div
+      id="contact"
+      className="homepage-container mx-auto pl-4 pr-4 md:pl-8 md:pr-8 xl:pl-[30px] xl:pr-[40px] 2xl:pl-[35px] 2xl:pr-[55px] pt-[30px] lg:pt-[40px] xl:pt-[50px] pb-[50px] xl:pb-[70px] 2xl:pb-[80px] relative"
+    >
       <div
         className="absolute contact-rightBox"
         data-aos="fade-up"

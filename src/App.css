@@ -2721,8 +2721,16 @@ nav.shift ul li a:hover:after {
   }
   .finish-scanner-image {
     /* w-[200px] md:w-[250px] lg:w-auto xl:w-[250px] 2xl:w-[400px] */
-    width: 200px;
+    width: 180px;
   }
+}
+
+.country-dropdown-text {
+  color: #000;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 /* hero image positioning */

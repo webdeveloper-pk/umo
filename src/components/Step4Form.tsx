@@ -18,7 +18,7 @@ const paymentOptions = [
 
 const Step4Form = ({ onNextStep, onBackStep }: any) => {
   return (
-    <div>
+    <div className="md:px-[20px] lg:px-auto">
       <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-y-[40px] gap-x-[20px]">
         <div className="w-[100%] lg:w-[44.5%]">
           <form>

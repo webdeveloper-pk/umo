@@ -11,7 +11,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
     setValue(e.target.value);
   };
   return (
-    <div className="">
+    <div className="md:px-[20px] lg:px-auto">
       <Row>
         <Radio.Group onChange={onChange} value={value} className="min-w-full">
           <Row align="bottom">
@@ -19,7 +19,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
               xs={{ span: 24 }}
               lg={{ span: 9 }}
               xl={{ span: 9 }}
-              xxl={{ span: 8 }}
+              xxl={{ span: 9 }}
               className={`mb-[25px] lg:mb-0 rounded-[12px] md:rounded-[13px] lg:rounded-[15px] xl:rounded-[16px] 2xl:rounded-[17px] custom-radio-wrapper flex justify-start items-center  px-[15px] lg:px-[18px] ${
                 value === "address"
                   ? "bg-[#FEFEFE] border border-[#092642] text-black"
@@ -34,7 +34,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
               xs={{ span: 24 }}
               lg={{ span: 9, offset: 1 }}
               xl={{ span: 9, offset: 1 }}
-              xxl={{ span: 8, offset: 1 }}
+              xxl={{ span: 9, offset: 1 }}
               className={`rounded-[12px] md:rounded-[13px] lg:rounded-[15px] xl:rounded-[16px] 2xl:rounded-[17px] custom-radio-wrapper flex justify-start items-center  px-[15px] lg:px-[18px] ${
                 value === "social-media"
                   ? "bg-[#FEFEFE] border border-[#092642] text-black"
@@ -63,7 +63,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
                     xs={{ span: 24 }}
                     lg={{ span: 20 }}
                     xl={{ span: 20 }}
-                    xxl={{ span: 18 }}
+                    xxl={{ span: 20 }}
                     className="mb-[20px] xl:mb-[23px]"
                   >
                     <Input
@@ -93,7 +93,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
                     xs={{ span: 24 }}
                     lg={{ span: 20 }}
                     xl={{ span: 20 }}
-                    xxl={{ span: 18 }}
+                    xxl={{ span: 20 }}
                     className="mb-[20px] xl:mb-[23px]"
                   >
                     <Input
@@ -123,7 +123,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
                     xs={{ span: 24 }}
                     lg={{ span: 20 }}
                     xl={{ span: 20 }}
-                    xxl={{ span: 18 }}
+                    xxl={{ span: 20 }}
                     className="mb-[20px] xl:mb-[23px]"
                   >
                     <Input
@@ -153,7 +153,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
                     xs={{ span: 24 }}
                     lg={{ span: 20 }}
                     xl={{ span: 20 }}
-                    xxl={{ span: 18 }}
+                    xxl={{ span: 20 }}
                   >
                     <Input
                       placeholder="Paste link here"
@@ -184,7 +184,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
                   xs={{ span: 24 }}
                   lg={{ span: 20 }}
                   xl={{ span: 20 }}
-                  xxl={{ span: 18 }}
+                  xxl={{ span: 20 }}
                 >
                   <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                     Enter Your Address

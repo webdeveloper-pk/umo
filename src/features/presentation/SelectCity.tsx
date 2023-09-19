@@ -132,7 +132,7 @@ const SlectCity = ({ searchedCity }: any) => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Mauris ut ex ac est laoreet mattis.
                 </p>
-                <div className="mt-[25px] lg:mt-[30px] w-full xl:ml-[20px] 2xl:ml-[50px]">
+                <div className="mt-[25px] lg:mt-[30px] w-full xl:ml-[20px] 2xl:ml-[50px] md:px-[20px] lg:px-auto">
                   <div className="select-input-wrapper md:h-[65px] flex flex-col md:flex-row gap-y-[10px] items-center justify-between pr-[15px] md:pr-[20px] lg:pr-[30px] xl:pr-[40px] py-[20px] md:py-0">
                     <div className="w-full md:w-[45%] lg:w-[55%] xl:w-[60%] 2xl:w-[65%]">
                       <Input

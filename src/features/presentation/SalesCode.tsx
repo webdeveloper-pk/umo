@@ -137,7 +137,7 @@ const SalesCode = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Mauris ut ex ac est laoreet mattis.
                 </p> */}
-                <form className="mt-[40px] lg:mt-[50px] 2xl:mt-[60px] w-full">
+                <form className="mt-[40px] lg:mt-[50px] 2xl:mt-[60px] w-full md:px-[20px] lg:px-auto">
                   <Row>
                     <Radio.Group
                       onChange={onChange}

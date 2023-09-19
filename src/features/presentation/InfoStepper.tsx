@@ -233,7 +233,7 @@ const InfoStepper = () => {
                   </div>
                 </div>
                 <p
-                  className="sidepage-title text-center text-[28px] md:text-[28px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px] mb-[10px] md:mb-[12px] mt-[50px] lg:mt-0"
+                  className="sidepage-title text-center text-[27px] md:text-[28px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px] mb-[10px] md:mb-[12px] mt-[50px] lg:mt-0"
                   //   data-aos="fade-down"
                   //   data-aos-easing="linear"
                   //   data-aos-duration="1500"

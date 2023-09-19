@@ -24,7 +24,7 @@ const Step3Form = ({ onNextStep, onBackStep }: any) => {
     },
   };
   return (
-    <div>
+    <div className="md:px-[20px] lg:px-auto">
       <div>
         <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
           Percentage Off

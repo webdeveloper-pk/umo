@@ -1,18 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Row, Col, Input, Radio } from "antd";
+import { Row, Col, Input, Radio, Select } from "antd";
 import ButtonFilled from "./common/ButtonFilled";
 import logo from "../assets/images/card-logo.png";
 import rightLogo from "../assets/images/card-right-logo.png";
 import cutter from "../assets/images/step-card-cutter.png";
+import flag from "../assets/images/flag.png";
+
+const { Option } = Select;
 
 const Step1Form = ({ onNextStep }: any) => {
   const [value, setValue] = React.useState("email");
+  const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState(null);
+
   const onChange = (e: any) => {
     setValue(e.target.value);
   };
+
+  const getCountries = async () => {
+    try {
+      const res = await fetch("https://restcountries.com/v3.1/all");
+      const data = await res.json();
+      setCountries(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    getCountries();
+  }, []);
+
+  const handleChange = (value: any) => {
+    setSelectedCountry(value);
+  };
+
   return (
-    <div className="">
+    <div className="md:px-[20px] lg:px-auto">
       <div className="border border-[#1D6DE6] searched-list-wrapper flex flex-col gap-y-[15px] md:flex-row md:justify-between md:items-center px-[20px] xl:px-[30px] mb-[15px] py-[20px] md:py-0 bg-[#FCFCFC]">
         <div className="flex items-center justify-center md:justify-start gap-x-[20px] 2xl:gap-x-[25px]">
           <svg
@@ -103,7 +128,57 @@ const Step1Form = ({ onNextStep }: any) => {
                 )}
                 {value === "phone" && (
                   <Row className="mt-[20px] lg:mt-[22px]">
-                    <Col xs={{ span: 24 }}>
+                    <Col
+                      xs={{ span: 10 }}
+                      md={{ span: 6 }}
+                      lg={{ span: 10 }}
+                      xl={{ span: 9 }}
+                      xxl={{ span: 6 }}
+                      className="step-custom-input flex items-center step-custom-select-wrapper"
+                    >
+                      <Select
+                        showSearch
+                        style={{ width: 200 }}
+                        placeholder={
+                          // <>
+                          //   <img src={flag} alt="" className="" />
+                          //   <span>+2</span>
+                          // </>
+                          "Select"
+                        }
+                        className="step-custom-select px-[6px] lg:px-[12px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
+                        optionFilterProp="children"
+                        onChange={handleChange}
+                        value={selectedCountry}
+                      >
+                        {countries.map((country: any) => (
+                          <Option key={country.ccn3} value={country.ccn3}>
+                            <div className="flex items-center gap-x-[8px]">
+                              <img
+                                src={country.flags.png}
+                                alt={country.name.common}
+                                className="w-[22px] h-[22px] lg:w-[28px] lg:h-[28px] rounded-full"
+                              />
+                              <span className="text-[13px] md:text-[15px]">
+                                +
+                                {country?.ccn3 || (
+                                  <span className="country-dropdown-text text-[13px] md:text-[15px] lg:text-[17px] xl:text-[18px]">
+                                    2
+                                  </span>
+                                )}
+                              </span>
+                            </div>
+                          </Option>
+                        ))}
+                      </Select>
+                    </Col>
+                    <Col
+                      xs={{ span: 13, offset: 1 }}
+                      md={{ span: 17, offset: 1 }}
+                      lg={{ span: 13, offset: 1 }}
+                      xl={{ span: 14, offset: 1 }}
+                      xxl={{ span: 17, offset: 1 }}
+                    >
                       <Input
                         placeholder="000 00 0000"
                         className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
@@ -124,8 +199,8 @@ const Step1Form = ({ onNextStep }: any) => {
             </div>
           </form>
         </div>
-        <div className="w-[100%] lg:w-[53%] lg:px-[10px] xl:px-[30px]">
-          <div className=" step-preview pl-[10px] md:pl-[20px] lg:pl-[10px] xl:pl-[27px] pb-[20px] lg:pb-[30px] pr-[10px] md:pr-[20px]  lg:pr-[10px] xl:pr-[20px] pt-[30px] lg:pt-[39px] lg:mt-[40px] xl:mt-[50px]">
+        <div className="w-[100%] lg:w-[54%] lg:px-[10px] xl:px-[30px] bg-red-100">
+          <div className="step-preview pl-[10px] md:pl-[20px] lg:pl-[10px] xl:pl-[27px] pb-[20px] lg:pb-[30px] pr-[10px] md:pr-[20px]  lg:pr-[10px] xl:pr-[20px] pt-[30px] lg:pt-[39px] lg:mt-[40px] xl:mt-[50px]">
             <p className="preview-text text-[15px] md:text-[15px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px]">
               Preview
             </p>

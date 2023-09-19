@@ -201,7 +201,7 @@ const Hero = () => {
                 <img
                   src={scanner}
                   alt="scanner"
-                  className="w-[200px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
+                  className="w-[170px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
                   data-aos="zoom-out"
                   data-aos-easing="linear"
                   data-aos-duration="2000"

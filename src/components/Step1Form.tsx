@@ -198,7 +198,7 @@ const Step1Form = ({ onNextStep }: any) => {
             </div>
           </form>
         </div>
-        <div className="w-[100%] lg:w-[54%] lg:px-[10px] xl:px-[30px] bg-red-100">
+        <div className="w-[100%] lg:w-[54%] lg:px-[10px] xl:px-[30px]">
           <div className="step-preview pl-[10px] md:pl-[20px] lg:pl-[10px] xl:pl-[27px] pb-[20px] lg:pb-[30px] pr-[10px] md:pr-[20px]  lg:pr-[10px] xl:pr-[20px] pt-[30px] lg:pt-[39px] lg:mt-[40px] xl:mt-[50px]">
             <p className="preview-text text-[15px] md:text-[15px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px]">
               Preview

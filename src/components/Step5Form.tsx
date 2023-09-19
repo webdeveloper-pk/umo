@@ -73,7 +73,7 @@ const Step5Form = () => {
           <img
             src={scanner}
             alt="scanner"
-            className="w-[200px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
+            className="w-[170px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
           />
           <div className="text-center text-black text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] custom-font-500 -mt-[10px] lg:-mt-[20px]">
             SCAN ME

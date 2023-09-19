@@ -94,7 +94,7 @@ const Navbar = () => {
                 navbar ? "block" : "hidden"
               }`}
             >
-              <div className="flex flex-col justify-center items-center h-[80vh] lg:h-[100%] bg-red-100">
+              <div className="flex flex-col justify-center items-center h-[80vh] lg:h-[100%]">
                 {/* <ul className="flex flex-col lg:flex-row justify-center items-center gap-y-6 gap-x-4 xl:gap-x-5 2xl:gap-x-6 uppercase text-[15px] lg:text-[13px] xl:text-[15px]">
                   <li>
                     <div className="btn-test from-bottom font-normal">

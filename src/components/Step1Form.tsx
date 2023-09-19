@@ -5,7 +5,6 @@ import ButtonFilled from "./common/ButtonFilled";
 import logo from "../assets/images/card-logo.png";
 import rightLogo from "../assets/images/card-right-logo.png";
 import cutter from "../assets/images/step-card-cutter.png";
-import flag from "../assets/images/flag.png";
 
 const { Option } = Select;
 

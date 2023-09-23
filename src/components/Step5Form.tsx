@@ -9,7 +9,7 @@ import rightLogo from "../assets/images/card-right-logo.png";
 const Step5Form = () => {
   return (
     <div className="mt-[20px]">
-      <div className="flex flex-col lg:flex-row items-center gap-y-[30px] xl:gap-x-[20px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
+      <div className="flex flex-col lg:flex-row items-center gap-y-[0px] xl:gap-x-[0px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
         <div className="flex justify-start relative">
           <img
             src={hero}
@@ -69,6 +69,8 @@ const Step5Form = () => {
             </div>
           </div>
         </div>
+        <div className="hidden lg:block hero-mid-margin w-[25px] 2xl:h-[320px] hero-mid-div py-[20px] rounded-[8px] bg-[#F9F9F9]"></div>
+        <div className="block lg:hidden  h-[20px] w-[90%] md:w-[70%] mx-[30px] rounded-[8px] bg-[#F9F9F9]"></div>
         <div className="scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px]">
           <img
             src={scanner}

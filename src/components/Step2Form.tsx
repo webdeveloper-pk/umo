@@ -22,7 +22,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
               xxl={{ span: 9 }}
               className={`mb-[25px] lg:mb-0 rounded-[12px] md:rounded-[13px] lg:rounded-[15px] xl:rounded-[16px] 2xl:rounded-[17px] custom-radio-wrapper flex justify-start items-center  px-[15px] lg:px-[18px] ${
                 value === "address"
-                  ? "bg-[#FEFEFE] border border-[#092642] text-black"
+                  ? "bg-[#FEFEFE] border border-[#1D6DE6] text-black"
                   : "bg-[#FCFCFC] border border-[#E3E3E3] text-black"
               }`}
             >
@@ -37,7 +37,7 @@ const Step2Form = ({ onNextStep, onBackStep }: any) => {
               xxl={{ span: 9, offset: 1 }}
               className={`rounded-[12px] md:rounded-[13px] lg:rounded-[15px] xl:rounded-[16px] 2xl:rounded-[17px] custom-radio-wrapper flex justify-start items-center  px-[15px] lg:px-[18px] ${
                 value === "social-media"
-                  ? "bg-[#FEFEFE] border border-[#092642] text-black"
+                  ? "bg-[#FEFEFE] border border-[#1D6DE6] text-black"
                   : "bg-[#FCFCFC] border border-[#E3E3E3] text-black"
               }`}
             >

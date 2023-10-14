@@ -219,18 +219,18 @@ const Hero = () => {
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
-            <Link to="/sales-code">
+            <Link to="/select-city">
               <ButtonFilled text="Get started Now" />
             </Link>
           </div>
-          <button
+          {/* <button
             className="mt-[20px] relative group"
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
             <Link
-              to="/sales-code"
+              to="/select-city"
               className="ml-[10px] md:ml-[25px] text-[#1D6DE6] text-[14px] md:text-[15px] 2xl:text-[16px] uppercase custom-font-900 cursor-pointer group-hover:text-[#156CEB] transition duration-700 ease-in-out delay-50"
             >
               Enter sales rep code
@@ -238,7 +238,7 @@ const Hero = () => {
             <span className="absolte ml-[5px]">
               <ArrowRightOutlined className="custom-font-900 text-[#FEDB0D] group-hover:text-[#156CEB] transition duration-700 ease-in-out delay-50" />
             </span>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

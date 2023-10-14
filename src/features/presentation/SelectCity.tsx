@@ -7,7 +7,13 @@ import blueCircle from "../../assets/images/blue-circle.png";
 import Navbar from "../../components/common/Navbar";
 import { Input } from "antd";
 
-const SlectCity = ({ searchedCity }: any) => {
+const SlectCity = ({
+  search,
+  setSearch,
+  locationListWithUsedSpotsReducer,
+  handleGetLocation,
+  handleInputChange,
+}: any) => {
   const navigate = useNavigate();
   return (
     <div className="hero-wrapper-margin">
@@ -27,11 +33,7 @@ const SlectCity = ({ searchedCity }: any) => {
           // data-aos-easing="linear"
           // data-aos-duration="3000"
         >
-          <img
-            src={rightBox}
-            alt="box"
-            className="w-[70%] md:w-[70%] lg:w-[100%]"
-          />
+          <img src={rightBox} alt="box" className="w-[70%] md:w-[70%] lg:w-[100%]" />
         </div>
         <div
           className="absolute left-[1px] md:left-[10px] lg:left-[15px] xl:left-[30px] 2xl:left-[45px] top-[55%]"
@@ -39,11 +41,7 @@ const SlectCity = ({ searchedCity }: any) => {
           // data-aos-easing="linear"
           // data-aos-duration="3000"
         >
-          <img
-            src={leftCircle}
-            alt="box"
-            className="w-[40%] md:w-[70%] lg:w-[100%]"
-          />
+          <img src={leftCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
         </div>
         <div
           className="absolute left-[3px] md:left-[20px] lg:left-[40px] xl:left-[90px] 2xl:left-[110px] city-blueCircle bottom-[80px]"
@@ -52,11 +50,7 @@ const SlectCity = ({ searchedCity }: any) => {
           // data-aos-duration="3000"
           // data-aos-offset="300"
         >
-          <img
-            src={blueCircle}
-            alt="box"
-            className="w-[40%] md:w-[70%] lg:w-[100%]"
-          />
+          <img src={blueCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
         </div>
         <a
           href="#!"
@@ -91,15 +85,9 @@ const SlectCity = ({ searchedCity }: any) => {
               <div className="hero-inner-wrapper bg-[#FEDB0D] flex flex-col items-center py-[50px] xl:py-[48px] 2xl:py-[56px] px-4 lg:px-[30px] xl:px-[40px] 2xl:px-[50px] relative mt-[10px] mr-[10px] md:ml-[-19px] md:mb-[-19px] md:mt-[19px] md:mr-[19px]">
                 <div className="absolute top-[30px] lg:left-[22px] xl:left-[38px] lg:top-[45px] xl:top-[52px]">
                   <div className="flex items-center gap-x-[13px]">
-                    <Link to="/sales-code">
+                    <Link to="/">
                       <button className="w-[50px] h-[50px] rounded-full bg-[#1D6DE6] flex justify-center items-center">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                           <path
                             d="M15 19L8 12L15 5"
                             stroke="#FEDB0D"
@@ -129,8 +117,7 @@ const SlectCity = ({ searchedCity }: any) => {
                   //   data-aos-easing="linear"
                   //   data-aos-duration="1500"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris ut ex ac est laoreet mattis.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.
                 </p>
                 <div className="mt-[25px] lg:mt-[30px] w-full xl:ml-[20px] 2xl:ml-[50px] md:px-[20px] lg:px-auto">
                   <div className="select-input-wrapper md:h-[65px] flex flex-col md:flex-row gap-y-[10px] items-center justify-between pr-[15px] md:pr-[20px] lg:pr-[30px] xl:pr-[40px] py-[20px] md:py-0">
@@ -138,10 +125,14 @@ const SlectCity = ({ searchedCity }: any) => {
                       <Input
                         placeholder="Enter Location"
                         className="location-input pl-[40px] md:pl-[20px] lg:pl-[30px] xl:pl-[40px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
+                        value={search}
+                        onChange={(e) => {
+                          setSearch(e.target.value);
+                        }}
                       />
                     </div>
                     <div className="flex flex-col md:flex-row gap-y-[15px] items-center gap-x-[20px] lg:gap-x-[30px]">
-                      <button className="current-location flex justify-start items-center gap-x-[10px] py-[8px] px-[12px] md:px-[8px] xl:px-[12px]">
+                      {/* <button className="current-location flex justify-start items-center gap-x-[10px] py-[8px] px-[12px] md:px-[8px] xl:px-[12px]">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -157,23 +148,26 @@ const SlectCity = ({ searchedCity }: any) => {
                         <p className="current-location-text text-[14px] lg:text-[15px] 2xl:text-[16px]">
                           Use my current location
                         </p>
-                      </button>
-                      <button className="location-search text-[14px] lg:text-[15px] 2xl:text-[16px]">
+                      </button> */}
+                      <button
+                        className="location-search text-[14px] lg:text-[15px] 2xl:text-[16px]"
+                        onClick={() => {
+                          handleGetLocation();
+                        }}
+                      >
                         Search
                       </button>
                     </div>
                   </div>
                   <div className="mt-[30px] xl:mt-[40px]">
-                    <p className="searched-text ml-[10px] lg:ml-[20px] xl:ml-[30px]">
-                      Searched Results
-                    </p>
+                    <p className="searched-text ml-[10px] lg:ml-[20px] xl:ml-[30px]">Searched Results</p>
                     {/* list of all search results */}
-                    {searchedCity?.map((data: any, index: any) => (
+                    {locationListWithUsedSpotsReducer?.location?.map((data: any, index: any) => (
                       <div
                         className={`cursor-pointer mt-[17px] searched-list-wrapper flex flex-col gap-y-[15px] md:flex-row md:justify-between md:items-center px-[20px] xl:px-[30px] mb-[15px] py-[20px] md:py-0
                     ${index === 0 ? "bg-[#F5F5F5]" : "bg-[#FCFCFC]"}
                     `}
-                        onClick={() => navigate("/info")}
+                        // onClick={() => navigate("/info")}
                       >
                         <div className="flex items-center justify-center md:justify-start gap-x-[20px] 2xl:gap-x-[25px]">
                           <svg
@@ -190,19 +184,29 @@ const SlectCity = ({ searchedCity }: any) => {
                           </svg>
                           <div>
                             <p className="searched-place text-[15px] md:text-[16px] lg:text-[17px] xl:text-[19px] 2xl:text-[20px]">
-                              {data?.city}
+                              {data?.location?.location_name}
                             </p>
                             <div className="flex items-center gap-x-[10px] mt-[6px]">
                               <p className="searched-available-spot text-[13px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px]">
                                 Available Spots:
                               </p>
                               <p className="available-count text-[13px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px]">
-                                {data?.count}
+                                {data?.entry_count}
                               </p>
                             </div>
                           </div>
                         </div>
-                        <button className="searched-select-btn text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-[18px] uppercase">
+                        <button
+                          className="searched-select-btn text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-[18px] uppercase"
+                          onClick={() => {
+                            handleInputChange("location", data?.location?.id);
+                            handleInputChange("selected_city", {
+                              name: data?.location?.location_name,
+                              count: data?.entry_count,
+                            });
+                            navigate("/info");
+                          }}
+                        >
                           select
                         </button>
                       </div>

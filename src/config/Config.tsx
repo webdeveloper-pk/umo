@@ -12,10 +12,10 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <Homepage />,
   },
-  {
-    path: "sales-code",
-    element: <SalesCode />,
-  },
+  // {
+  //   path: "sales-code",
+  //   element: <SalesCode />,
+  // },
   {
     path: "select-city",
     element: <SlectCity />,

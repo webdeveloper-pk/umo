@@ -3,37 +3,23 @@ import { Link } from "react-router-dom";
 import { Row, Col, Input, Radio, Select } from "antd";
 import ButtonFilled from "./common/ButtonFilled";
 import Preview from "./Preview";
+import countries from "../services/data/countries.json";
 
-const { Option } = Select;
+// const { Option } = Select;
 
 const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
   const [value, setValue] = React.useState("email");
-  const [countries, setCountries] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [selectedCountry, setSelectedCountry]: any = useState(null);
 
   const onChange = (e: any) => {
     setValue(e.target.value);
   };
 
-  const getCountries = async () => {
-    try {
-      const res = await fetch("https://restcountries.com/v3.1/all");
-      const data = await res.json();
-      setCountries(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  useEffect(() => {
-    getCountries();
-  }, []);
-
   const handleChange = (value: any) => {
-    setSelectedCountry(value);
+    setSelectedCountry(value.target.value);
     handleInputChange("business_phone", {
       ...formData.business_phone,
-      country_code: `+${value}`,
+      country_code: `+${value.target.value}`,
     });
   };
 
@@ -145,43 +131,19 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
                       lg={{ span: 10 }}
                       xl={{ span: 9 }}
                       xxl={{ span: 6 }}
-                      className="step-custom-input flex items-center step-custom-select-wrapper"
+                      id="select"
+                      className="step-custom-input flex items-center step-custom-select-wrapper px-[10px]"
                     >
-                      <Select
-                        showSearch
-                        style={{ width: 200 }}
-                        placeholder={
-                          // <>
-                          //   <img src={flag} alt="" className="" />
-                          //   <span>+2</span>
-                          // </>
-                          "Select"
-                        }
-                        className="step-custom-select px-[6px] lg:px-[12px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
-                        optionFilterProp="children"
+                      <select
+                        className="w-full countries-custom-dropdown"
                         onChange={handleChange}
-                        value={selectedCountry}
                       >
-                        {countries.map((country: any) => (
-                          <Option key={country.ccn3} value={country.ccn3}>
-                            <div className="flex items-center gap-x-[8px]">
-                              <img
-                                src={country.flags.png}
-                                alt={country.name.common}
-                                className="w-[22px] h-[22px] lg:w-[28px] lg:h-[28px] rounded-full"
-                              />
-                              <span className="text-[13px] md:text-[15px]">
-                                +
-                                {country?.ccn3 || (
-                                  <span className="country-dropdown-text text-[13px] md:text-[15px] lg:text-[17px] xl:text-[18px]">
-                                    2
-                                  </span>
-                                )}
-                              </span>
-                            </div>
-                          </Option>
+                        {countries?.map((country: any) => (
+                          <option value={country.value}>
+                            + {country.label}
+                          </option>
                         ))}
-                      </Select>
+                      </select>
                     </Col>
                     <Col
                       xs={{ span: 13, offset: 1 }}

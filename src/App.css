@@ -874,6 +874,23 @@ nav.shift ul li a:hover:after {
   min-height: 321px;
 }
 
+.countries-custom-dropdown {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.countries-custom-dropdown:focus {
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.countries-custom-dropdown:active {
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: none;
+}
+
 /* animation */
 
 .upload-border {

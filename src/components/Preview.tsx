@@ -31,7 +31,11 @@ const Preview = () => {
                 />
               </div>
               <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[10px]">
-                <p className="step-card-title">{formData?.business_name}</p>
+                <p className="step-card-title">
+                  {formData?.business_name.substring(0, 15)}
+                  <br />
+                  {formData?.business_name.substring(15)}
+                </p>
               </div>
               <div className="step-light-gray-line1 mt-[4px] md:mt-[7px]"></div>
               <div className="step-light-gray-line2 mt-[4px] md:mt-[7px]"></div>

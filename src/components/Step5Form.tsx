@@ -28,6 +28,9 @@ const Step5Form = () => {
               <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[18px]">
                 <p className="card-title">
                   Lloyds <br /> Pharmacy
+                  {/* {formData?.business_name.substring(0, 15)}
+                  <br />
+                  {formData?.business_name.substring(15)} */}
                 </p>
               </div>
               <div className="light-gray-line1 mt-[4px] md:mt-[8px]"></div>

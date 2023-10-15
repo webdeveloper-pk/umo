@@ -403,7 +403,8 @@ nav.shift ul li a:hover:after {
 }
 
 .right-logo-image {
-  width: 75%;
+  width: 168px;
+  height: 168px;
 }
 
 .card-button {
@@ -578,7 +579,10 @@ nav.shift ul li a:hover:after {
 
 /* faq */
 
-.faq-wrapper .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+.faq-wrapper
+  .ant-collapse
+  > .ant-collapse-item:last-child
+  > .ant-collapse-header {
   border-radius: 14px;
   border: 1px solid #e3e3e3;
 }
@@ -801,15 +805,19 @@ nav.shift ul li a:hover:after {
   text-transform: capitalize;
 }
 
-:where(.css-dev-only-do-not-override-18iikkb).ant-radio-wrapper .ant-radio-inner {
+:where(.css-dev-only-do-not-override-18iikkb).ant-radio-wrapper
+  .ant-radio-inner {
   border-color: #092642 !important;
 }
 
-:where(.css-dev-only-do-not-override-18iikkb).ant-radio-wrapper .ant-radio-inner::after {
+:where(.css-dev-only-do-not-override-18iikkb).ant-radio-wrapper
+  .ant-radio-inner::after {
   background-color: #092642 !important;
 }
 
-:where(.css-dev-only-do-not-override-18iikkb).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+:where(.css-dev-only-do-not-override-18iikkb).ant-radio-wrapper
+  .ant-radio-checked
+  .ant-radio-inner {
   background-color: white !important;
 }
 
@@ -841,7 +849,8 @@ nav.shift ul li a:hover:after {
   box-shadow: 0 0 2px white;
 }
 
-:where(.css-dev-only-do-not-override-18iikkb).ant-upload-wrapper .ant-upload-select {
+:where(.css-dev-only-do-not-override-18iikkb).ant-upload-wrapper
+  .ant-upload-select {
   display: inline;
 }
 
@@ -862,6 +871,7 @@ nav.shift ul li a:hover:after {
   border-radius: 10.79px;
   border: 0.492px solid #dedede;
   background: #156ceb;
+  min-height: 321px;
 }
 
 /* animation */
@@ -869,8 +879,10 @@ nav.shift ul li a:hover:after {
 .upload-border {
   /* width: 100%; */
   /* height: auto; */
-  background: linear-gradient(90deg, #1d6de6 50%, transparent 50%), linear-gradient(90deg, #1d6de6 50%, transparent 50%),
-    linear-gradient(0deg, #1d6de6 50%, transparent 50%), linear-gradient(0deg, #1d6de6 50%, transparent 50%);
+  background: linear-gradient(90deg, #1d6de6 50%, transparent 50%),
+    linear-gradient(90deg, #1d6de6 50%, transparent 50%),
+    linear-gradient(0deg, #1d6de6 50%, transparent 50%),
+    linear-gradient(0deg, #1d6de6 50%, transparent 50%);
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
   background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
@@ -893,8 +905,10 @@ nav.shift ul li a:hover:after {
 }
 
 .upload-border:hover {
-  background: linear-gradient(90deg, #092642 50%, transparent 50%), linear-gradient(90deg, #092642 50%, transparent 50%),
-    linear-gradient(0deg, #092642 50%, transparent 50%), linear-gradient(0deg, #092642 50%, transparent 50%);
+  background: linear-gradient(90deg, #092642 50%, transparent 50%),
+    linear-gradient(90deg, #092642 50%, transparent 50%),
+    linear-gradient(0deg, #092642 50%, transparent 50%),
+    linear-gradient(0deg, #092642 50%, transparent 50%);
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
   background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
@@ -902,8 +916,10 @@ nav.shift ul li a:hover:after {
 }
 
 .upload-border:focus {
-  background: linear-gradient(90deg, #092642 50%, transparent 50%), linear-gradient(90deg, #092642 50%, transparent 50%),
-    linear-gradient(0deg, #092642 50%, transparent 50%), linear-gradient(0deg, #092642 50%, transparent 50%);
+  background: linear-gradient(90deg, #092642 50%, transparent 50%),
+    linear-gradient(90deg, #092642 50%, transparent 50%),
+    linear-gradient(0deg, #092642 50%, transparent 50%),
+    linear-gradient(0deg, #092642 50%, transparent 50%);
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
   background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
@@ -923,34 +939,45 @@ nav.shift ul li a:hover:after {
 }
 
 .step-custom-select-wrapper
-  :where(.css-dev-only-do-not-override-18iikkb).ant-select:not(.ant-select-customize-input)
+  :where(.css-dev-only-do-not-override-18iikkb).ant-select:not(
+    .ant-select-customize-input
+  )
   .ant-select-selector {
   background: transparent !important;
   border: 1px solid transparent !important;
 }
 
-.step-custom-select-wrapper :where(.css-dev-only-do-not-override-18iikkb).ant-select-single {
+.step-custom-select-wrapper
+  :where(.css-dev-only-do-not-override-18iikkb).ant-select-single {
   width: 100%;
 }
 
-.step-custom-select-wrapper :where(.css-dev-only-do-not-override-18iikkb).ant-select .ant-select-arrow {
+.step-custom-select-wrapper
+  :where(.css-dev-only-do-not-override-18iikkb).ant-select
+  .ant-select-arrow {
   margin-right: 10px;
   color: #000;
 }
 
 .step-custom-select-wrapper
-  :where(.css-dev-only-do-not-override-18iikkb).ant-select-single.ant-select-show-arrow
+  :where(
+    .css-dev-only-do-not-override-18iikkb
+  ).ant-select-single.ant-select-show-arrow
   .ant-select-selection-item,
-:where(.css-dev-only-do-not-override-18iikkb).ant-select-single.ant-select-show-arrow
+:where(
+    .css-dev-only-do-not-override-18iikkb
+  ).ant-select-single.ant-select-show-arrow
   .ant-select-selection-placeholder {
   font-size: 16px;
   color: #000;
 }
 
 .step-custom-select-wrapper
-  .ant-select-focused:where(.css-dev-only-do-not-override-18iikkb).ant-select:not(.ant-select-disabled):not(
-    .ant-select-customize-input
-  ):not(.ant-pagination-size-changer)
+  .ant-select-focused:where(
+    .css-dev-only-do-not-override-18iikkb
+  ).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(
+    .ant-pagination-size-changer
+  )
   .ant-select-selector {
   box-shadow: 0 0 0 1px transparent !important;
 }
@@ -1054,7 +1081,8 @@ nav.shift ul li a:hover:after {
 }
 
 .step-card-right-logo-image {
-  width: 60%;
+  width: 168px;
+  height: 168px;
 }
 
 /* media queries */
@@ -1265,9 +1293,14 @@ nav.shift ul li a:hover:after {
   }
 
   .step-card-right-logo-image {
-    width: 85%;
-    margin-right: 10px;
+    width: 168px;
+    height: 168px;
   }
+
+  .step-card-right-logo-image img {
+    margin-right: 9px;
+  }
+
   .scanner-wrapper {
     min-height: 360px;
   }
@@ -1357,7 +1390,8 @@ nav.shift ul li a:hover:after {
     z-index: 999;
   }
   .right-logo-image {
-    width: 75%;
+    width: 168px;
+    height: 168px;
   }
   .step-card-title {
     font-size: 15px;
@@ -1409,13 +1443,24 @@ nav.shift ul li a:hover:after {
     font-size: 8.06px;
   }
   .step-card-right-logo-image {
-    width: 65%;
+    width: 125px;
+    height: 125px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: -5px;
   }
   .step-right-div {
     margin-right: 20px;
   }
   .scanner-wrapper {
     min-height: 360px;
+  }
+  .step-card-wrapper {
+    min-height: 240px;
+  }
+  .card-left-cutter {
+    height: 240px;
   }
 }
 
@@ -1509,7 +1554,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 75%;
+    width: 168px;
+    height: 168px;
   }
   .step-card-title {
     font-size: 15px;
@@ -1561,13 +1607,24 @@ nav.shift ul li a:hover:after {
     font-size: 8.06px;
   }
   .step-card-right-logo-image {
-    width: 65%;
+    width: 125px;
+    height: 125px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: -5px;
   }
   .step-right-div {
     margin-right: 20px;
   }
   .scanner-wrapper {
     min-height: 231px;
+  }
+  .step-card-wrapper {
+    min-height: 240px;
+  }
+  .card-left-cutter {
+    height: 240px;
   }
 }
 
@@ -1732,8 +1789,14 @@ nav.shift ul li a:hover:after {
   .step-card-date {
     font-size: 8.06px;
   }
+
   .step-card-right-logo-image {
-    width: 65%;
+    width: 110px;
+    height: 110px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: 5px;
   }
   .step-right-div {
     margin-right: 20px;
@@ -1744,6 +1807,9 @@ nav.shift ul li a:hover:after {
   .finish-scanner-image {
     /* w-[200px] md:w-[250px] lg:w-auto xl:w-[250px] 2xl:w-[400px] */
     width: 320px;
+  }
+  .step-card-wrapper {
+    min-height: 240px;
   }
 }
 
@@ -1917,9 +1983,16 @@ nav.shift ul li a:hover:after {
   .step-card-date {
     font-size: 8.06px;
   }
+
   .step-card-right-logo-image {
-    width: 65%;
+    width: 110px;
+    height: 110px;
   }
+
+  .step-card-right-logo-image img {
+    margin-right: 5px;
+  }
+
   .step-right-div {
     margin-right: 20px;
   }
@@ -1929,6 +2002,9 @@ nav.shift ul li a:hover:after {
   .finish-scanner-image {
     /* w-[200px] md:w-[250px] lg:w-auto xl:w-[250px] 2xl:w-[400px] */
     width: 320px;
+  }
+  .step-card-wrapper {
+    min-height: 240px;
   }
 }
 
@@ -2123,12 +2199,20 @@ nav.shift ul li a:hover:after {
   }
 
   .step-card-right-logo-image {
-    width: 85%;
-    margin-right: 15px;
+    width: 175px;
+    height: 175px;
   }
+
+  .step-card-right-logo-image img {
+    margin-right: 10px;
+  }
+
   .finish-scanner-image {
     /* w-[200px] md:w-[250px] lg:w-auto xl:w-[250px] 2xl:w-[400px] */
     width: 250px;
+  }
+  .step-card-wrapper {
+    min-height: 321px;
   }
 }
 
@@ -2336,12 +2420,20 @@ nav.shift ul li a:hover:after {
   }
 
   .step-card-right-logo-image {
-    width: 85%;
-    margin-right: 15px;
+    width: 175px;
+    height: 175px;
   }
+
+  .step-card-right-logo-image img {
+    margin-right: 10px;
+  }
+
   .finish-scanner-image {
     /* w-[200px] md:w-[250px] lg:w-auto xl:w-[250px] 2xl:w-[400px] */
     width: 250px;
+  }
+  .step-card-wrapper {
+    min-height: 321px;
   }
 }
 
@@ -2509,7 +2601,12 @@ nav.shift ul li a:hover:after {
     font-size: 8.06px;
   }
   .step-card-right-logo-image {
-    width: 65%;
+    width: 115px;
+    height: 115px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: 5px;
   }
   .step-right-div {
     margin-right: 20px;
@@ -2517,6 +2614,9 @@ nav.shift ul li a:hover:after {
   .finish-scanner-image {
     /* w-[200px] md:w-[250px] lg:w-auto xl:w-[250px] 2xl:w-[400px] */
     width: 250px;
+  }
+  .step-card-wrapper {
+    min-height: 195px;
   }
 }
 
@@ -2693,7 +2793,8 @@ nav.shift ul li a:hover:after {
     font-size: 8.06px;
   }
   .step-card-right-logo-image {
-    width: 65%;
+    width: 100px;
+    height: 100px;
   }
   .step-right-div {
     margin-right: 10px;
@@ -2701,6 +2802,10 @@ nav.shift ul li a:hover:after {
   .finish-scanner-image {
     /* w-[200px] md:w-[250px] lg:w-auto xl:w-[250px] 2xl:w-[400px] */
     width: 180px;
+  }
+
+  .step-card-wrapper {
+    min-height: 190px;
   }
 }
 
@@ -2724,7 +2829,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 30px;
-    right: 55px;
+    right: 75px;
   }
   .card-title {
     font-size: 25.12px;
@@ -2768,7 +2873,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 85%;
+    width: 160px;
+    height: 160px;
   }
   .card-button {
     width: 170.206px;
@@ -2789,7 +2895,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 30px;
-    right: 43px;
+    right: 63px;
   }
   .card-title {
     font-size: 23.12px;
@@ -2833,7 +2939,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 75%;
+    width: 150px;
+    height: 150px;
   }
   .card-button {
     width: 170.206px;
@@ -2854,7 +2961,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 30px;
-    right: 33px;
+    right: 53px;
   }
   .card-title {
     font-size: 20.12px;
@@ -2896,7 +3003,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 70%;
+    width: 140px;
+    height: 140px;
   }
   .card-button {
     width: 170.206px;
@@ -2917,7 +3025,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 30px;
-    right: 43px;
+    right: 63px;
   }
 
   .card-title {
@@ -2959,7 +3067,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 80%;
+    width: 140px;
+    height: 140px;
   }
   .card-button {
     width: 150.206px;
@@ -2981,7 +3090,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 30px;
-    right: 35px;
+    right: 55px;
   }
 
   .card-title {
@@ -3023,7 +3132,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 70%;
+    width: 140px;
+    height: 140px;
   }
   .card-button {
     width: 150.206px;
@@ -3045,7 +3155,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 25px;
-    right: 26px;
+    right: 50px;
   }
 
   .card-title {
@@ -3087,7 +3197,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 65%;
+    width: 130px;
+    height: 130px;
   }
   .card-button {
     width: 140.206px;
@@ -3109,7 +3220,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 22px;
-    right: 20px;
+    right: 50px;
   }
 
   .card-title {
@@ -3151,7 +3262,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 60%;
+    width: 120px;
+    height: 120px;
   }
   .card-button {
     width: 130.206px;
@@ -3173,7 +3285,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 35px;
-    right: 90px;
+    right: 100px;
   }
 
   .card-title {
@@ -3214,7 +3326,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 82%;
+    width: 140px;
+    height: 140px;
   }
   .card-button {
     width: 150.206px;
@@ -3236,7 +3349,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 35px;
-    right: 80px;
+    right: 100px;
   }
 
   .card-title {
@@ -3278,7 +3391,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 70%;
+    width: 120px;
+    height: 120px;
   }
   .card-button {
     width: 140.206px;
@@ -3300,7 +3414,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 30px;
-    right: 70px;
+    right: 90px;
   }
 
   .card-title {
@@ -3342,7 +3456,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 70%;
+    width: 120px;
+    height: 120px;
   }
   .card-button {
     width: 130.206px;
@@ -3364,7 +3479,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     top: 27px;
-    right: 60px;
+    right: 85px;
   }
 
   .card-title {
@@ -3406,7 +3521,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 65%;
+    width: 110px;
+    height: 110px;
   }
   .card-button {
     width: 130.206px;
@@ -3430,7 +3546,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 45px;
-    right: 25px;
+    right: 30px;
   }
 
   .card-title {
@@ -3474,7 +3590,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 80%;
+    width: 130px;
+    height: 130px;
     margin-bottom: 10px;
   }
   .card-button {
@@ -3500,7 +3617,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 45px;
-    right: 20px;
+    right: 30px;
   }
 
   .card-title {
@@ -3542,7 +3659,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 75%;
+    width: 120px;
+    height: 120px;
     margin-bottom: 10px;
   }
   .card-button {
@@ -3568,7 +3686,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 45px;
-    right: 5px;
+    right: 25px;
   }
 
   .card-title {
@@ -3610,7 +3728,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 70%;
+    width: 120px;
+    height: 120px;
   }
   .card-button {
     width: 160.206px;
@@ -3634,7 +3753,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 40px;
-    right: 0px;
+    right: 25px;
   }
 
   .card-title {
@@ -3676,7 +3795,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 65%;
+    width: 110px;
+    height: 110px;
   }
   .card-button {
     width: 140.206px;
@@ -3700,6 +3820,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 35px;
+    right: 25px;
   }
 
   .card-title {
@@ -3741,7 +3862,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 60%;
+    width: 110px;
+    height: 110px;
   }
   .card-button {
     width: 130.206px;
@@ -3765,6 +3887,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 35px;
+    right: 25px;
   }
 
   .card-title {
@@ -3806,7 +3929,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 52%;
+    width: 100px;
+    height: 100px;
   }
   .card-button {
     width: 110.206px;
@@ -3829,6 +3953,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 30px;
+    right: 15px;
   }
 
   .card-title {
@@ -3870,7 +3995,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 50%;
+    width: 90px;
+    height: 90px;
   }
   .card-button {
     width: 110.206px;
@@ -3893,6 +4019,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 30px;
+    right: 15px;
   }
 
   .card-title {
@@ -3910,7 +4037,7 @@ nav.shift ul li a:hover:after {
 
   .card-off-text {
     font-size: 15.643px;
-    margin-top: 8px;
+    margin-top: 7px;
   }
 
   .light-yellow-line1 {
@@ -3926,15 +4053,18 @@ nav.shift ul li a:hover:after {
   .card-phone-svg {
     width: 20.379px;
     height: 20.379px;
+    margin-top: -5px;
   }
   .card-phone-text {
     font-size: 10.072px;
+    margin-top: -5px;
   }
   .right-logo-wrapper {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 43%;
+    width: 80px;
+    height: 80px;
   }
   .card-button {
     width: 110.206px;
@@ -3987,7 +4117,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 43%;
+    width: 70px;
+    height: 70px;
   }
   .card-button {
     width: 110.206px;
@@ -3998,6 +4129,11 @@ nav.shift ul li a:hover:after {
   }
   .card-date {
     font-size: 11.06px;
+  }
+  .card-right-position {
+    position: absolute;
+    top: 10px;
+    right: 15px;
   }
 }
 
@@ -4014,7 +4150,7 @@ nav.shift ul li a:hover:after {
     height: 1.024px;
   }
   .card-off-text {
-    font-size: 13.643px;
+    font-size: 12.643px;
     margin-top: 7px;
   }
 
@@ -4031,15 +4167,18 @@ nav.shift ul li a:hover:after {
   .card-phone-svg {
     width: 18.379px;
     height: 18.379px;
+    margin-top: -7px;
   }
   .card-phone-text {
+    margin-top: -7px;
     font-size: 9.072px;
   }
   .right-logo-wrapper {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 40%;
+    width: 60px;
+    height: 60px;
   }
   .card-button {
     width: 100.206px;
@@ -4054,7 +4193,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 10px;
-    right: -30px;
+    right: 15px;
   }
 }
 
@@ -4098,7 +4237,8 @@ nav.shift ul li a:hover:after {
     padding-top: 0px;
   }
   .right-logo-image {
-    width: 30%;
+    width: 60px;
+    height: 60px;
   }
   .card-button {
     width: 80.206px;
@@ -4113,7 +4253,7 @@ nav.shift ul li a:hover:after {
   .card-right-position {
     position: absolute;
     top: 15px;
-    right: -30px;
+    right: 15px;
   }
 }
 

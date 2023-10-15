@@ -58,7 +58,13 @@ const Step5Form = () => {
             </div>
             <div className="absolute card-right-position top-[13px] xl:top-[20px] 2xl:top-[30px] right-[-15px] md:right-[50px] lg:right-[20px] xl:right-[35px] 2xl:right-[39px]">
               <div className="flex justify-center right-logo-wrapper">
-                <img src={rightLogo} alt="logo" className="right-logo-image" />
+                <div className="right-logo-image">
+                  <img
+                    src={rightLogo}
+                    alt="logo"
+                    className="object-cover rounded-full w-full h-full"
+                  />
+                </div>
               </div>
               <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[38px]">
                 <button className="card-button ">UMHOO16</button>

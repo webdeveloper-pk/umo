@@ -6,7 +6,12 @@ import rightLogo from "../assets/images/card-right-logo.png";
 import cutter from "../assets/images/step-card-cutter.png";
 import Preview from "./Preview";
 
-const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any) => {
+const Step3Form = ({
+  onNextStep,
+  onBackStep,
+  formData,
+  handleInputChange,
+}: any) => {
   const [checker, setChecker] = React.useState(false);
 
   const fileProps = {
@@ -19,7 +24,10 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
       if (info.file.status !== "uploading") {
         let reader = new FileReader();
         reader.readAsDataURL(info.file);
-        handleInputChange("configuration", { ...formData.configuration, logo: info.file });
+        handleInputChange("configuration", {
+          ...formData.configuration,
+          logo: info.file,
+        });
         // setAdData((prevData: any) => ({
         //   ...prevData,
         //   files: [...prevData.files, info.file],
@@ -41,11 +49,16 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                 return (
                   <button
                     className={`percent-btn mr-[13px] mb-[20px] lg:mb-[25px] 2xl:mb-[30px] border border-[#e3e3e3] hover:border-[#1D6DE6] ${
-                      formData?.configuration?.percentage_off === val ? `border-[#1D6DE6] activeBtn` : ""
+                      formData?.configuration?.percentage_off === val
+                        ? `border-[#1D6DE6] activeBtn`
+                        : ""
                     }`}
                     key={id}
                     onClick={() => {
-                      handleInputChange("configuration", { ...formData.configuration, percentage_off: val });
+                      handleInputChange("configuration", {
+                        ...formData.configuration,
+                        percentage_off: val,
+                      });
                       setChecker(false);
                     }}
                   >
@@ -55,14 +68,23 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
               })}
             </div>
           </Col>
-          <Col xs={{ span: 24 }} md={{ span: 11 }} lg={{ span: 6 }} xl={{ span: 5 }} xxl={{ span: 5 }}>
+          <Col
+            xs={{ span: 24 }}
+            md={{ span: 11 }}
+            lg={{ span: 6 }}
+            xl={{ span: 5 }}
+            xxl={{ span: 5 }}
+          >
             <div className="mb-[20px] md:mb-0">
               <Input
                 placeholder="Custom Number"
                 className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                 type="number"
                 onChange={(e) => {
-                  handleInputChange("configuration", { ...formData.configuration, percentage_off: e.target.value });
+                  handleInputChange("configuration", {
+                    ...formData.configuration,
+                    percentage_off: e.target.value,
+                  });
                   setChecker(true);
                 }}
                 value={checker ? formData?.configuration?.percentage_off : ""}
@@ -89,7 +111,10 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                   placeholder="Enter here"
                   className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                   onChange={(e) => {
-                    handleInputChange("configuration", { ...formData.configuration, spend: e.target.value });
+                    handleInputChange("configuration", {
+                      ...formData.configuration,
+                      spend: e.target.value,
+                    });
                   }}
                   value={formData?.configuration?.spend}
                   type="number"
@@ -102,7 +127,12 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
               </p>
               <Col xs={{ span: 24 }} className="w-full">
                 <div>
-                  <Upload {...fileProps} multiple={false} showUploadList={false} className="min-w-full">
+                  <Upload
+                    {...fileProps}
+                    multiple={false}
+                    showUploadList={false}
+                    className="min-w-full"
+                  >
                     <Button className="min-w-full upload-custom upload-border">
                       <span>
                         <svg
@@ -128,10 +158,16 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
               </Col>
             </Row>
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
-              <button className="back-btn" onClick={(event) => onBackStep(event)}>
+              <button
+                className="back-btn"
+                onClick={(event) => onBackStep(event)}
+              >
                 <span className="back-btn-inner">Back</span>
               </button>
-              <ButtonFilled text="PAY NOW" handleClick={(event: any) => onNextStep(event)} />
+              <ButtonFilled
+                text="PAY NOW"
+                handleClick={(event: any) => onNextStep(event)}
+              />
             </div>
           </form>
         </div>

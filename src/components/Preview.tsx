@@ -10,21 +10,28 @@ const Preview = () => {
   return (
     <div className="w-[100%] lg:w-[54%] lg:px-[10px] xl:px-[30px]">
       <div className="step-preview pl-[10px] md:pl-[20px] lg:pl-[10px] xl:pl-[27px] pb-[20px] lg:pb-[30px] pr-[10px] md:pr-[20px]  lg:pr-[10px] xl:pr-[20px] pt-[30px] lg:pt-[39px] lg:mt-[40px] xl:mt-[50px]">
-        <p className="preview-text text-[15px] md:text-[15px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px]">Preview</p>
+        <p className="preview-text text-[15px] md:text-[15px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px]">
+          Preview
+        </p>
         <div className="mt-[25px] lg:mt-[34px] step-card-wrapper py-[15px] lg:py-[20px] px-[15px] md:px-[30px] lg:px-[20px] xl:px-[25px] 2xl:px-[30px] w-full relative">
           <div className="absolute left-[-7px] md:left-[-10px] lg:left-[-10px] top-0">
-            <img src={cutter} alt="design" className="w-[60%] md:w-[100%]" />
+            <img
+              src={cutter}
+              alt="design"
+              className="w-[60%] md:w-[100%] lg:max-h-[245px] 2xl:max-h-[306px] card-left-cutter"
+            />
           </div>
-          <div className="flex justify-between">
-            <div className="">
+          <div className="flex justify-betweenw w-full">
+            <div className="w-[50%]">
               <div className="">
-                <img src={logo} alt="logo" className="w-[50px] lg:w-[40px] 2xl:w-[60px]" />
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="w-[50px] lg:w-[40px] 2xl:w-[60px]"
+                />
               </div>
               <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[10px]">
-                <p className="step-card-title">
-                  {/* Lloyds <br /> Pharmacy */}
-                  {formData?.business_name}
-                </p>
+                <p className="step-card-title">{formData?.business_name}</p>
               </div>
               <div className="step-light-gray-line1 mt-[4px] md:mt-[7px]"></div>
               <div className="step-light-gray-line2 mt-[4px] md:mt-[7px]"></div>
@@ -51,20 +58,27 @@ const Preview = () => {
                     </svg>
                   </div>
                   <p className="step-card-phone-text">
-                    {formData?.business_phone?.country_code} {formData?.business_phone?.number}
+                    {formData?.business_phone?.country_code}{" "}
+                    {formData?.business_phone?.number}
                   </p>
                 </div>
               ) : null}
             </div>
-            <div className="flex flex-col items-end">
-              <div className="flex justify-end">
+            <div className="w-[50%] flex flex-col items-end">
+              <div className="flex justify-end step-card-right-logo-image">
                 {logoImg !== null ? (
-                  <img src={URL.createObjectURL(logoImg)} alt="logo" className="step-card-right-logo-image" />
+                  <img
+                    src={URL.createObjectURL(logoImg)}
+                    alt="logo"
+                    className="object-cover rounded-full 2xl:mr-[5px]"
+                  />
                 ) : null}
               </div>
               <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[25px] step-right-div">
                 <button className="step-card-button">UMHOO16</button>
-                <p className="step-card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">01, 2023</p>
+                <p className="step-card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
+                  01, 2023
+                </p>
               </div>
             </div>
           </div>

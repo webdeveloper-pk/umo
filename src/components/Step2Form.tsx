@@ -4,9 +4,14 @@ import ButtonFilled from "./common/ButtonFilled";
 import logo from "../assets/images/card-logo.png";
 import rightLogo from "../assets/images/card-right-logo.png";
 import cutter from "../assets/images/step-card-cutter.png";
-import Preview from "./Preview";
+import Preview from "./preview/Preview";
 
-const Step2Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any) => {
+const Step2Form = ({
+  onNextStep,
+  onBackStep,
+  formData,
+  handleInputChange,
+}: any) => {
   const [value, setValue] = React.useState("social-media");
   const onChange = (e: any) => {
     setValue(e.target.value);
@@ -89,7 +94,10 @@ const Step2Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                       onChange={(e) => {
                         handleInputChange("address", {
                           ...formData.address,
-                          social_media: { ...formData.address.social_media, facebook: `${e.target.value}` },
+                          social_media: {
+                            ...formData.address.social_media,
+                            facebook: `${e.target.value}`,
+                          },
                         });
                       }}
                       value={formData?.address?.social_media?.facebook}
@@ -126,7 +134,10 @@ const Step2Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                       onChange={(e) => {
                         handleInputChange("address", {
                           ...formData.address,
-                          social_media: { ...formData.address.social_media, twitter: `${e.target.value}` },
+                          social_media: {
+                            ...formData.address.social_media,
+                            twitter: `${e.target.value}`,
+                          },
                         });
                       }}
                       value={formData?.address?.social_media?.twitter}
@@ -163,7 +174,10 @@ const Step2Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                       onChange={(e) => {
                         handleInputChange("address", {
                           ...formData.address,
-                          social_media: { ...formData.address.social_media, insta: `${e.target.value}` },
+                          social_media: {
+                            ...formData.address.social_media,
+                            insta: `${e.target.value}`,
+                          },
                         });
                       }}
                       value={formData?.address?.social_media?.insta}
@@ -171,7 +185,12 @@ const Step2Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                   </Col>
                 </Row>
                 <Row>
-                  <Col xs={{ span: 24 }} lg={{ span: 20 }} xl={{ span: 20 }} xxl={{ span: 20 }}>
+                  <Col
+                    xs={{ span: 24 }}
+                    lg={{ span: 20 }}
+                    xl={{ span: 20 }}
+                    xxl={{ span: 20 }}
+                  >
                     <Input
                       placeholder="Paste link here"
                       prefix={
@@ -194,7 +213,10 @@ const Step2Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                       onChange={(e) => {
                         handleInputChange("address", {
                           ...formData.address,
-                          social_media: { ...formData.address.social_media, linkedln: `${e.target.value}` },
+                          social_media: {
+                            ...formData.address.social_media,
+                            linkedln: `${e.target.value}`,
+                          },
                         });
                       }}
                       value={formData?.address?.social_media?.linkedln}
@@ -204,7 +226,12 @@ const Step2Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
               </>
             ) : (
               <Row>
-                <Col xs={{ span: 24 }} lg={{ span: 20 }} xl={{ span: 20 }} xxl={{ span: 20 }}>
+                <Col
+                  xs={{ span: 24 }}
+                  lg={{ span: 20 }}
+                  xl={{ span: 20 }}
+                  xxl={{ span: 20 }}
+                >
                   <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                     Enter Your Address
                   </p>
@@ -224,10 +251,16 @@ const Step2Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
               </Row>
             )}
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
-              <button className="back-btn" onClick={(event) => onBackStep(event)}>
+              <button
+                className="back-btn"
+                onClick={(event) => onBackStep(event)}
+              >
                 <span className="back-btn-inner">Back</span>
               </button>
-              <ButtonFilled text="Next" handleClick={(event: any) => onNextStep(event)} />
+              <ButtonFilled
+                text="Next"
+                handleClick={(event: any) => onNextStep(event)}
+              />
             </div>
           </form>
         </div>

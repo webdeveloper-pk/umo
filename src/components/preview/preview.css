@@ -1,0 +1,1263 @@
+.preview-outer-wrapper {
+  font-family: Montserrat;
+}
+
+.step-preview {
+  border-radius: 17.34px;
+  border: 0.847px solid #dedede;
+  background: #fff;
+}
+
+.preview-text {
+  color: #000;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.step-card-wrapper {
+  border-radius: 10.79px;
+  border: 0.492px solid #dedede;
+  background: #156ceb;
+  min-height: 321px;
+  position: relative;
+  width: 100%;
+}
+
+.preview-cutter {
+  position: absolute;
+  top: 0;
+}
+
+.preview-inner-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.preview-card-left {
+  width: 50%;
+}
+
+.step-card-title {
+  color: #fedb0d;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 131.5%;
+}
+
+.step-light-gray-line1 {
+  width: 250px;
+  height: 6.024px;
+  border-radius: 4.518px;
+  background: rgba(235, 235, 235, 0.2);
+}
+
+.step-light-gray-line2 {
+  width: 220px;
+  height: 6.024px;
+  border-radius: 4.518px;
+  background: rgba(235, 235, 235, 0.2);
+}
+
+.step-card-off-text-margin {
+  margin-top: -10px;
+}
+
+.step-card-off-text {
+  margin-top: 30px;
+  color: #fedb0d;
+  font-family: Montserrat;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 131.5%; /* 50.816px */
+}
+
+.step-light-yellow-line1 {
+  width: 220px;
+  height: 6.024px;
+  border-radius: 4.518px;
+  background: #fedb0d;
+  margin-top: 0px;
+}
+.step-light-yellow-line2 {
+  width: 190.345px;
+  height: 6.024px;
+  border-radius: 4.518px;
+  background: #fedb0d;
+  margin-top: 7px;
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.step-card-phone-svg {
+  width: 30.379px;
+  height: 30.379px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-card-phone-text {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 131.5%; /* 23.765px */
+}
+
+.preview-card-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.step-card-right-logo-image {
+  width: 168px;
+  height: 168px;
+  display: flex;
+  justify-content: end;
+}
+
+.step-card-right-logo-image-class {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.step-card-button {
+  width: 200.206px;
+  height: 40.427px;
+  border-radius: 23.355px;
+  border: 0.638px solid #fedb0d;
+  background-color: transparent;
+  color: #fedb0d;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 16.072px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 131.5%; /* 23.765px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-card-button:hover {
+  border: 0.638px solid #fedb0d;
+  background-color: #fedb0d;
+  color: #156ceb;
+}
+
+.step-card-date {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 13.06px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* media queries */
+
+@media screen and (min-width: 1920px) {
+  .preview-outer-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 54%;
+  }
+
+  .step-preview {
+    border-radius: 17.34px;
+    border: 0.847px solid #dedede;
+    background: #fff;
+    padding-left: 27px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-top: 39px;
+    margin-top: 50px;
+  }
+  .preview-text {
+    font-size: 20px;
+  }
+
+  .step-card-wrapper {
+    min-height: 240px;
+    margin-top: 34px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .preview-cutter {
+    left: -10px;
+  }
+  .card-left-cutter {
+    width: 100%;
+    max-height: 306px;
+  }
+  .preview-card-left-logo {
+    width: 60px;
+  }
+  .preview-card-title {
+    margin-top: 10px;
+  }
+  .step-card-title {
+    color: #fedb0d;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 131.5%;
+  }
+  .step-light-gray-line1 {
+    width: 250px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: rgba(235, 235, 235, 0.2);
+    margin-top: 7px;
+  }
+  .step-light-gray-line2 {
+    width: 220px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: rgba(235, 235, 235, 0.2);
+    margin-top: 7px;
+  }
+  .step-card-off-text {
+    margin-top: 30px;
+    color: #fedb0d;
+    font-family: Montserrat;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 131.5%; /* 50.816px */
+  }
+  .step-light-yellow-line1 {
+    width: 220px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: #fedb0d;
+  }
+  .step-light-yellow-line2 {
+    width: 190.345px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: #fedb0d;
+    margin-top: 7px;
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 15px;
+  }
+  .step-card-phone-svg {
+    width: 30.379px;
+    height: 30.379px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .step-card-phone-text {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 131.5%; /* 23.765px */
+  }
+
+  .step-card-right-logo-image {
+    width: 168px;
+    height: 168px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: 9px;
+  }
+  .step-card-right-logo-image-class {
+    margin-right: 5px;
+  }
+
+  .step-right-div {
+    margin-top: 25px;
+  }
+  .step-card-button {
+    width: 200.206px;
+    height: 40.427px;
+    border-radius: 23.355px;
+    border: 0.638px solid #fedb0d;
+    background-color: transparent;
+    color: #fedb0d;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 16.072px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 131.5%; /* 23.765px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .step-card-button:hover {
+    border: 0.638px solid #fedb0d;
+    background-color: #fedb0d;
+    color: #156ceb;
+  }
+
+  .step-card-date {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 13.06px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 11px;
+  }
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1700px) {
+  .preview-outer-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 54%;
+    padding-left: 27px;
+    padding-bottom: 30px;
+  }
+
+  .step-preview {
+    border-radius: 17.34px;
+    border: 0.847px solid #dedede;
+    background: #fff;
+    padding-left: 27px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-top: 39px;
+    margin-top: 50px;
+  }
+  .preview-text {
+    font-size: 20px;
+  }
+  .step-card-wrapper {
+    min-height: 240px;
+    margin-top: 34px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .preview-cutter {
+    left: -10px;
+  }
+  .card-left-cutter {
+    height: 240px;
+    width: 100%;
+    max-height: 306px;
+  }
+  .preview-card-left-logo {
+    width: 60px;
+  }
+  .preview-card-title {
+    margin-top: 10px;
+  }
+  .step-card-title {
+    font-size: 15px;
+  }
+  .step-light-gray-line1 {
+    width: 110px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .step-light-gray-line2 {
+    width: 80px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+
+  .step-card-off-text {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .step-light-yellow-line1 {
+    width: 80px;
+    height: 3.024px;
+  }
+  .step-light-yellow-line2 {
+    width: 60.345px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 15px;
+  }
+  .step-card-phone-svg {
+    width: 20.379px;
+    height: 20.379px;
+  }
+
+  .step-card-phone-text {
+    font-size: 10px;
+  }
+  .step-card-right-logo-image {
+    width: 125px;
+    height: 125px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: -5px;
+  }
+  .step-card-right-logo-image-class {
+    margin-right: 5px;
+  }
+  .step-right-div {
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+  .step-card-button {
+    width: 80.206px;
+    height: 20.427px;
+    border-radius: 15.355px;
+    font-size: 8.072px;
+    margin: 0 auto;
+  }
+  .step-card-date {
+    font-size: 8.06px;
+    margin-top: 11px;
+  }
+}
+
+@media screen and (max-width: 1699px) and (min-width: 1536px) {
+  .preview-outer-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 54%;
+  }
+  .step-preview {
+    border-radius: 16px;
+    padding-left: 27px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-top: 39px;
+    margin-top: 50px;
+  }
+  .preview-text {
+    font-size: 20px;
+  }
+  .step-card-wrapper {
+    min-height: 240px;
+    margin-top: 34px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .preview-cutter {
+    left: -10px;
+  }
+  .card-left-cutter {
+    height: 240px;
+    width: 100%;
+    max-height: 306px;
+  }
+  .preview-card-left-logo {
+    width: 60px;
+  }
+  .preview-card-title {
+    margin-top: 10px;
+  }
+  .step-card-title {
+    font-size: 15px;
+  }
+  .step-light-gray-line1 {
+    width: 110px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .step-light-gray-line2 {
+    width: 80px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .step-card-off-text {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .step-light-yellow-line1 {
+    width: 80px;
+    height: 3.024px;
+  }
+  .step-light-yellow-line2 {
+    width: 60.345px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-top: 15px;
+  }
+  .step-card-phone-svg {
+    width: 20.379px;
+    height: 20.379px;
+  }
+  .step-card-phone-text {
+    font-size: 10px;
+  }
+  .step-card-right-logo-image {
+    width: 125px;
+    height: 125px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: -5px;
+  }
+  .step-card-right-logo-image-class {
+    margin-right: 5px;
+  }
+  .step-right-div {
+    margin-right: 20px;
+    margin-top: 25px;
+  }
+  .step-card-button {
+    width: 80.206px;
+    height: 20.427px;
+    border-radius: 15.355px;
+    font-size: 8.072px;
+    margin: 0 auto;
+  }
+  .step-card-date {
+    font-size: 8.06px;
+    margin-top: 11px;
+  }
+}
+
+@media screen and (max-width: 1535px) and (min-width: 1280px) {
+  .preview-outer-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 54%;
+  }
+
+  .step-preview {
+    border-radius: 15px;
+    padding-left: 27px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-top: 39px;
+    margin-top: 50px;
+  }
+  .preview-text {
+    font-size: 18px;
+  }
+  .step-card-wrapper {
+    min-height: 240px;
+    margin-top: 34px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .preview-cutter {
+    left: -10px;
+  }
+  .card-left-cutter {
+    width: 100%;
+    max-height: 245px;
+  }
+  .preview-card-left-logo {
+    width: 40px;
+  }
+  .preview-card-title {
+    margin-top: 10px;
+  }
+  .step-card-title {
+    font-size: 15px;
+  }
+  .step-light-gray-line1 {
+    width: 110px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .step-light-gray-line2 {
+    width: 80px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+
+  .step-card-off-text {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .step-light-yellow-line1 {
+    width: 80px;
+    height: 3.024px;
+  }
+  .step-light-yellow-line2 {
+    width: 60.345px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 15px;
+  }
+
+  .step-card-phone-svg {
+    width: 20.379px;
+    height: 20.379px;
+  }
+
+  .step-card-phone-text {
+    font-size: 10px;
+  }
+  .step-card-right-logo-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: 5px;
+  }
+  .step-right-div {
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  .step-card-button {
+    width: 80.206px;
+    height: 20.427px;
+    border-radius: 15.355px;
+    font-size: 8.072px;
+    margin: 0 auto;
+  }
+  .step-card-date {
+    font-size: 8.06px;
+    margin-top: 11px;
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .preview-outer-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 54%;
+  }
+  .step-preview {
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    padding-top: 39px;
+    margin-top: 40px;
+  }
+  .preview-text {
+    font-size: 17px;
+  }
+  .step-card-wrapper {
+    min-height: 240px;
+    margin-top: 34px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .preview-cutter {
+    left: -10px;
+  }
+  .card-left-cutter {
+    width: 100%;
+  }
+  .preview-card-left-logo {
+    width: 40px;
+  }
+  .preview-card-title {
+    margin-top: 7px;
+  }
+  .step-card-title {
+    font-size: 15px;
+  }
+  .step-light-gray-line1 {
+    width: 110px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .step-light-gray-line2 {
+    width: 80px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .step-card-off-text {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .step-light-yellow-line1 {
+    width: 80px;
+    height: 3.024px;
+  }
+
+  .step-light-yellow-line2 {
+    width: 60.345px;
+    height: 3.024px;
+    margin-top: 7px;
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 15px;
+  }
+
+  .step-card-phone-svg {
+    width: 20.379px;
+    height: 20.379px;
+  }
+  .step-card-phone-text {
+    font-size: 10px;
+  }
+  .step-card-right-logo-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: 5px;
+  }
+  .step-right-div {
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  .step-card-button {
+    width: 80.206px;
+    height: 20.427px;
+    border-radius: 15.355px;
+    font-size: 8.072px;
+    margin: 0 auto;
+  }
+  .step-card-date {
+    font-size: 8.06px;
+    margin-top: 9px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 900px) {
+  .preview-outer-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+  .step-preview {
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+  .preview-text {
+    font-size: 15px;
+  }
+  .step-card-wrapper {
+    min-height: 321px;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .preview-cutter {
+    left: -10px;
+  }
+  .card-left-cutter {
+    width: 100%;
+  }
+  .preview-card-left-logo {
+    width: 50px;
+  }
+  .preview-card-title {
+    margin-top: 7px;
+  }
+  .step-card-title {
+    color: #fedb0d;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 131.5%;
+  }
+  .step-light-gray-line1 {
+    width: 250px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: rgba(235, 235, 235, 0.2);
+    margin-top: 7px;
+  }
+  .step-light-gray-line2 {
+    width: 220px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: rgba(235, 235, 235, 0.2);
+    margin-top: 7px;
+  }
+  .step-card-off-text {
+    margin-top: 30px;
+    color: #fedb0d;
+    font-family: Montserrat;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 131.5%; /* 50.816px */
+  }
+
+  .step-light-yellow-line1 {
+    width: 220px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: #fedb0d;
+  }
+  .step-light-yellow-line2 {
+    width: 190.345px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: #fedb0d;
+    margin-top: 7px;
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 15px;
+  }
+  .step-card-phone-svg {
+    width: 30.379px;
+    height: 30.379px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .step-card-phone-text {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 131.5%; /* 23.765px */
+  }
+  .step-card-right-logo-image {
+    width: 175px;
+    height: 175px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: 10px;
+  }
+  .step-right-div {
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  .step-card-button {
+    width: 200.206px;
+    height: 40.427px;
+    border-radius: 23.355px;
+    border: 0.638px solid #fedb0d;
+    background-color: transparent;
+    color: #fedb0d;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 16.072px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 131.5%; /* 23.765px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .step-card-button:hover {
+    border: 0.638px solid #fedb0d;
+    background-color: #fedb0d;
+    color: #156ceb;
+  }
+  .step-card-date {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 13.06px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 899px) and (min-width: 768px) {
+  .preview-outer-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+  .step-preview {
+    border-radius: 13px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+  .preview-text {
+    font-size: 15px;
+  }
+  .step-card-wrapper {
+    min-height: 321px;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .preview-cutter {
+    left: -10px;
+  }
+  .card-left-cutter {
+    width: 100%;
+  }
+  .preview-card-left-logo {
+    width: 50px;
+  }
+  .preview-card-title {
+    margin-top: 7px;
+  }
+  .step-card-title {
+    color: #fedb0d;
+    font-family: Montserrat;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 131.5%;
+  }
+  .step-light-gray-line1 {
+    width: 250px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    margin-top: 7px;
+    background: rgba(235, 235, 235, 0.2);
+  }
+  .step-light-gray-line2 {
+    width: 220px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: rgba(235, 235, 235, 0.2);
+    margin-top: 7px;
+  }
+
+  .step-card-off-text {
+    margin-top: 30px;
+    color: #fedb0d;
+    font-family: Montserrat;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 131.5%; /* 50.816px */
+  }
+  .step-light-yellow-line1 {
+    width: 220px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: #fedb0d;
+  }
+  .step-light-yellow-line2 {
+    width: 190.345px;
+    height: 6.024px;
+    border-radius: 4.518px;
+    background: #fedb0d;
+    margin-top: 7px;
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 15px;
+  }
+  .step-card-phone-svg {
+    width: 30.379px;
+    height: 30.379px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .step-card-phone-text {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 131.5%; /* 23.765px */
+  }
+  .step-card-right-logo-image {
+    width: 175px;
+    height: 175px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: 10px;
+  }
+  .step-right-div {
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  .step-card-button {
+    width: 200.206px;
+    height: 40.427px;
+    border-radius: 23.355px;
+    border: 0.638px solid #fedb0d;
+    background-color: transparent;
+    color: #fedb0d;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 16.072px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 131.5%; /* 23.765px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .step-card-button:hover {
+    border: 0.638px solid #fedb0d;
+    background-color: #fedb0d;
+    color: #156ceb;
+  }
+
+  .step-card-date {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 13.06px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 426px) {
+  .preview-outer-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+  .step-preview {
+    border-radius: 12px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-top: 30px;
+  }
+  .preview-text {
+    font-size: 15px;
+  }
+  .step-card-wrapper {
+    min-height: 195px;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .preview-cutter {
+    left: -7px;
+  }
+  .card-left-cutter {
+    width: 60%;
+  }
+  .preview-card-left-logo {
+    width: 50px;
+  }
+  .preview-card-title {
+    margin-top: 7px;
+  }
+  .step-card-title {
+    font-size: 14px;
+  }
+  .step-light-gray-line1 {
+    width: 100px;
+    height: 2.024px;
+    margin-top: 4px;
+  }
+  .step-light-gray-line2 {
+    width: 70px;
+    height: 2.024px;
+    margin-top: 4px;
+  }
+  .step-card-off-text {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  .step-light-yellow-line1 {
+    width: 70px;
+    height: 2.024px;
+  }
+  .step-light-yellow-line2 {
+    width: 50.345px;
+    height: 2.024px;
+    margin-top: 4px;
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 15px;
+  }
+  .step-card-phone-svg {
+    width: 20.379px;
+    height: 20.379px;
+  }
+
+  .step-card-phone-text {
+    font-size: 10px;
+  }
+  .step-card-right-logo-image {
+    width: 115px;
+    height: 115px;
+  }
+
+  .step-card-right-logo-image img {
+    margin-right: 5px;
+  }
+  .step-right-div {
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  .step-card-button {
+    width: 80.206px;
+    height: 20.427px;
+    border-radius: 15.355px;
+    font-size: 8.072px;
+    margin: 0 auto;
+  }
+  .step-card-date {
+    font-size: 8.06px;
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .preview-outer-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+  .step-preview {
+    border-radius: 12px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-top: 30px;
+  }
+  .preview-text {
+    font-size: 15px;
+  }
+
+  .step-card-wrapper {
+    min-height: 190px;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .preview-cutter {
+    left: -7px;
+  }
+  .card-left-cutter {
+    width: 60%;
+  }
+  .preview-card-left-logo {
+    width: 50px;
+  }
+  .preview-card-title {
+    margin-top: 7px;
+  }
+  .step-card-title {
+    font-size: 12px;
+  }
+  .step-light-gray-line1 {
+    width: 90px;
+    height: 2.024px;
+    margin-top: 4px;
+  }
+  .step-light-gray-line2 {
+    width: 60px;
+    height: 2.024px;
+    margin-top: 4px;
+  }
+  .step-card-off-text {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  .step-light-yellow-line1 {
+    width: 60px;
+    height: 2.024px;
+  }
+
+  .step-light-yellow-line2 {
+    width: 40.345px;
+    height: 2.024px;
+    margin-top: 4px;
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 15px;
+  }
+
+  .step-card-phone-svg {
+    width: 20.379px;
+    height: 20.379px;
+  }
+  .step-card-phone-text {
+    font-size: 10px;
+  }
+  .step-card-right-logo-image {
+    width: 100px;
+    height: 100px;
+  }
+  .step-right-div {
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .step-card-button {
+    width: 80.206px;
+    height: 20.427px;
+    border-radius: 15.355px;
+    font-size: 8.072px;
+    margin: 0 auto;
+  }
+  .step-card-date {
+    font-size: 8.06px;
+    margin-top: 8px;
+  }
+}

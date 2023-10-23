@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Input, Radio, Select } from "antd";
 import ButtonFilled from "./common/ButtonFilled";
-import Preview from "./Preview";
+import Preview from "./preview/Preview";
 import countries from "../services/data/countries.json";
 
 // const { Option } = Select;

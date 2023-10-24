@@ -3,9 +3,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Preloader from "../components/preLoader/PreLoader";
 
 const Homepage = lazy(() => import("../pages/Homepage"));
-const SalesCode = lazy(() => import("../pages/SalesCode"));
+// const SalesCode = lazy(() => import("../pages/SalesCode"));
 const SlectCity = lazy(() => import("../pages/SelectCity"));
 const InfoStepper = lazy(() => import("../pages/infoStepper"));
+const PdfGenerator=lazy(() => import("../pages/PdfGenerator"));
 
 const appRouter = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const appRouter = createBrowserRouter([
   {
     path: "info",
     element: <InfoStepper />,
+  },
+  {
+    path: "pdf",
+    element: <PdfGenerator />,
   },
 ]);
 

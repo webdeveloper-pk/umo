@@ -2,7 +2,7 @@ import React from "react";
 import { useAppSelector } from "services/hooks/hooks";
 import logo from "assets/images/card-logo.png";
 import cutter from "assets/images/step-card-cutter.png";
-import "./preview.css";
+import "assets/styles/preview.css";
 
 const Preview = () => {
   const formData = useAppSelector((state) => state.inputFormData.data);

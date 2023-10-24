@@ -1,0 +1,272 @@
+.pdf-page {
+  width: 297mm;
+  height: 420mm;
+  padding: 10mm 2mm;
+  margin: 10mm auto;
+  border: 1px #d3d3d3 solid;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background: #fedb0c;
+}
+
+.card-outer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 10px;
+  /* display: flex;
+  align-items: center; */
+}
+
+.card-inner-wrapper {
+  display: flex;
+  justify-content: start;
+}
+
+.right-scanner-div {
+  background: #0b5ec6;
+  position: relative;
+  max-width: 150px;
+  min-height: 150px;
+  max-height: 150px;
+  border-left: 1px solid #0b5ec6;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.scanner-wrapper {
+  background: white;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  min-height: 120px;
+  max-height: 120px;
+}
+
+.scanner-image-class {
+  width: 120px;
+  height: 120px;
+}
+
+.small-bottom-cutter-scanner {
+  position: absolute;
+  left: -6px;
+  bottom: -4px;
+}
+
+.small-bottom-cutter-scanner img {
+  width: 10px;
+  height: 10px;
+}
+
+.small-left-cutter-scanner {
+  position: absolute;
+  left: -6px;
+  top: -4px;
+}
+
+.small-left-cutter-scanner img {
+  width: 10px;
+  height: 10px;
+}
+
+.preview-card-left {
+  /* max-width: 65%; */
+  max-width: 110px;
+}
+
+.preview-card-right {
+  /* max-width: 30%; */
+  max-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-card-wrapper {
+  border-radius: 7px;
+  border: 0.492px solid #dedede;
+  background: #156ceb;
+  position: relative;
+  min-height: 150px;
+  max-height: 150px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 8px;
+  border-right: 1px solid #156ceb;
+}
+
+.preview-inner-card {
+  display: flex;
+  width: 100%;
+}
+
+.step-card-title {
+  color: #fedb0d;
+  font-family: Montserrat;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  max-width: 95%;
+}
+
+.step-card-address {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 90%;
+  margin-top: 2px;
+}
+
+.step-card-off-text-wrapper {
+  max-width: 100%;
+}
+
+.step-card-off-text {
+  margin-top: 4px;
+  color: #fedb0d;
+  font-family: Montserrat;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.step-card-off-description {
+  margin-top: 2px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 600;
+  max-width: 90%;
+}
+
+.step-card-right-logo-image {
+  width: 70px;
+  height: 70px;
+}
+
+.step-card-right-logo-image-class {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.step-card-umcode-text {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.step-card-button {
+  width: 75px;
+  height: 17.427px;
+  border-radius: 13.355px;
+  border: 1px solid #fedb0d;
+  background-color: transparent;
+  color: #fedb0d;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-card-date {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.preview-outer-wrapper {
+  font-family: Montserrat;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 54%;
+}
+
+.preview-text {
+  font-size: 20px;
+}
+
+.preview-cutter {
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+
+.cutter-scanner {
+  position: absolute;
+  right: -5px;
+  top: 0;
+}
+
+.cutter-scanner-image {
+  height: 150px;
+}
+
+.card-left-cutter {
+  width: 100%;
+  height: 150px;
+}
+
+.preview-card-left-logo {
+  width: 25px;
+}
+
+.preview-card-title {
+  margin-top: 3px;
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-top: 4px;
+}
+
+.step-card-phone-svg {
+  width: 15.379px;
+  height: 15.379px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-svg-inner {
+  width: 11px;
+  height: 11px;
+}
+
+.step-card-phone-text {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  max-width: 100%;
+}
+
+.step-card-right-logo-image img {
+  margin-right: 9px;
+}
+
+.step-right-div {
+  margin-top: 5px;
+}

@@ -12,7 +12,8 @@
 .card-outer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px 10px;
+  column-gap: 10px;
+  row-gap: 30px;
   /* display: flex;
   align-items: center; */
 }

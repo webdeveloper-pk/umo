@@ -335,10 +335,11 @@ nav.shift ul li a:hover:after {
 .card-title {
   color: #fedb0d;
   font-family: Montserrat;
-  font-size: 30.12px;
+  font-size: 27.12px;
   font-style: normal;
   font-weight: 600;
   line-height: 131.5%;
+  word-break: break-word;
 }
 
 .light-gray-line1 {
@@ -359,7 +360,7 @@ nav.shift ul li a:hover:after {
   margin-top: 30px;
   color: #fedb0d;
   font-family: Montserrat;
-  font-size: 38.643px;
+  font-size: 33.643px;
   font-style: normal;
   font-weight: 800;
   line-height: 131.5%; /* 50.816px */
@@ -396,6 +397,11 @@ nav.shift ul li a:hover:after {
   font-style: normal;
   font-weight: 500;
   line-height: 131.5%; /* 23.765px */
+  word-break: break-word;
+}
+
+.final-off-text-wrapper {
+  word-break: break-word;
 }
 
 .right-logo-wrapper {
@@ -1338,10 +1344,10 @@ nav.shift ul li a:hover:after {
     z-index: 999;
   }
   .card-title {
-    font-size: 28.12px;
+    font-size: 25.12px;
   }
   .card-off-text {
-    font-size: 35.643px;
+    font-size: 31.643px;
     margin-top: 25px;
   }
   .right-logo-wrapper {
@@ -1358,6 +1364,10 @@ nav.shift ul li a:hover:after {
 }
 
 @media screen and (max-width: 1535px) and (min-width: 1280px) {
+  .card-left-position {
+    position: absolute;
+    top: 10px;
+  }
   .final-preview-card-title-loading {
     min-height: 50px;
   }
@@ -2184,7 +2194,7 @@ nav.shift ul li a:hover:after {
 
 @media screen and (max-width: 1535px) and (min-width: 1441px) {
   .card-left-position {
-    top: 35px;
+    top: 25px;
     left: 85px;
   }
 
@@ -2193,7 +2203,7 @@ nav.shift ul li a:hover:after {
     right: 75px;
   }
   .card-title {
-    font-size: 25.12px;
+    font-size: 22.12px;
   }
 
   .light-gray-line1 {
@@ -2207,7 +2217,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 28.643px;
+    font-size: 23.643px;
     margin-top: 15px;
   }
 
@@ -2250,7 +2260,7 @@ nav.shift ul li a:hover:after {
 
 @media screen and (max-width: 1440px) and (min-width: 1361px) {
   .card-left-position {
-    top: 35px;
+    top: 25px;
     left: 80px;
   }
 
@@ -2259,7 +2269,7 @@ nav.shift ul li a:hover:after {
     right: 63px;
   }
   .card-title {
-    font-size: 23.12px;
+    font-size: 21.12px;
   }
 
   .light-gray-line1 {
@@ -2273,7 +2283,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 26.643px;
+    font-size: 22.643px;
     margin-top: 13px;
   }
 
@@ -2316,7 +2326,7 @@ nav.shift ul li a:hover:after {
 
 @media screen and (max-width: 1360px) and (min-width: 1280px) {
   .card-left-position {
-    top: 30px;
+    top: 20px;
     left: 70px;
   }
 
@@ -2325,7 +2335,7 @@ nav.shift ul li a:hover:after {
     right: 53px;
   }
   .card-title {
-    font-size: 20.12px;
+    font-size: 18.12px;
   }
 
   .light-gray-line1 {
@@ -2339,7 +2349,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 22.643px;
+    font-size: 18.643px;
     margin-top: 10px;
   }
 
@@ -2390,7 +2400,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 22.12px;
+    font-size: 20.12px;
   }
   .light-gray-line1 {
     width: 180px;
@@ -2403,7 +2413,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 27.643px;
+    font-size: 23.643px;
     margin-top: 15px;
   }
 
@@ -2418,8 +2428,8 @@ nav.shift ul li a:hover:after {
   }
 
   .card-phone-svg {
-    width: 28.379px;
-    height: 28.379px;
+    width: 25.379px;
+    height: 25.379px;
   }
   .card-phone-text {
     font-size: 14.072px;
@@ -2455,7 +2465,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 20.12px;
+    font-size: 18.12px;
   }
   .light-gray-line1 {
     width: 170px;
@@ -2468,7 +2478,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 22.643px;
+    font-size: 18.643px;
     margin-top: 13px;
   }
 
@@ -2483,8 +2493,8 @@ nav.shift ul li a:hover:after {
   }
 
   .card-phone-svg {
-    width: 28.379px;
-    height: 28.379px;
+    width: 22.379px;
+    height: 22.379px;
   }
   .card-phone-text {
     font-size: 14.072px;
@@ -2533,7 +2543,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 20.643px;
+    font-size: 17.643px;
     margin-top: 11px;
   }
 
@@ -2548,8 +2558,8 @@ nav.shift ul li a:hover:after {
   }
 
   .card-phone-svg {
-    width: 28.379px;
-    height: 28.379px;
+    width: 25.379px;
+    height: 25.379px;
   }
   .card-phone-text {
     font-size: 14.072px;
@@ -2585,7 +2595,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 16.12px;
+    font-size: 15.12px;
   }
   .light-gray-line1 {
     width: 150px;
@@ -2598,7 +2608,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 18.643px;
+    font-size: 15.643px;
     margin-top: 13px;
   }
 
@@ -2613,8 +2623,8 @@ nav.shift ul li a:hover:after {
   }
 
   .card-phone-svg {
-    width: 26.379px;
-    height: 26.379px;
+    width: 22.379px;
+    height: 22.379px;
   }
   .card-phone-text {
     font-size: 13.072px;
@@ -2650,7 +2660,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 24.12px;
+    font-size: 22.12px;
   }
   .light-gray-line1 {
     width: 170px;
@@ -2663,7 +2673,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 30.643px;
+    font-size: 26.643px;
     margin-top: 11px;
   }
 
@@ -2677,8 +2687,8 @@ nav.shift ul li a:hover:after {
     height: 4.024px;
   }
   .card-phone-svg {
-    width: 28.379px;
-    height: 28.379px;
+    width: 23.379px;
+    height: 23.379px;
   }
   .card-phone-text {
     font-size: 13.072px;
@@ -2714,7 +2724,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 20.12px;
+    font-size: 18.12px;
   }
   .light-gray-line1 {
     width: 180px;
@@ -2727,7 +2737,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 23.643px;
+    font-size: 20.643px;
     margin-top: 10px;
   }
 
@@ -2779,7 +2789,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 18.12px;
+    font-size: 16.12px;
   }
   .light-gray-line1 {
     width: 180px;
@@ -2792,7 +2802,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 21.643px;
+    font-size: 18.643px;
     margin-top: 10px;
   }
 
@@ -2844,7 +2854,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 16.12px;
+    font-size: 14.12px;
   }
   .light-gray-line1 {
     width: 150px;
@@ -2857,7 +2867,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 18.643px;
+    font-size: 15.643px;
     margin-top: 13px;
   }
 
@@ -2911,7 +2921,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 27.12px;
+    font-size: 24.12px;
   }
   .light-gray-line1 {
     width: 190px;
@@ -2924,7 +2934,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 37.643px;
+    font-size: 34.643px;
     margin-top: 20px;
   }
 
@@ -2982,7 +2992,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 26.12px;
+    font-size: 23.12px;
   }
   .light-gray-line1 {
     width: 170px;
@@ -2995,7 +3005,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 35.643px;
+    font-size: 30.643px;
     margin-top: 20px;
   }
 
@@ -3051,7 +3061,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 23.12px;
+    font-size: 20.12px;
   }
   .light-gray-line1 {
     width: 150px;
@@ -3064,7 +3074,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 30.643px;
+    font-size: 25.643px;
     margin-top: 17px;
   }
 
@@ -3118,7 +3128,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 20.12px;
+    font-size: 18.12px;
   }
   .light-gray-line1 {
     width: 140px;
@@ -3131,7 +3141,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 27.643px;
+    font-size: 22.643px;
     margin-top: 17px;
   }
 
@@ -3185,7 +3195,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 17.12px;
+    font-size: 15.12px;
   }
   .light-gray-line1 {
     width: 120px;
@@ -3198,7 +3208,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 22.643px;
+    font-size: 18.643px;
     margin-top: 15px;
   }
 
@@ -3252,7 +3262,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 15.12px;
+    font-size: 13.12px;
   }
   .light-gray-line1 {
     width: 110px;
@@ -3265,7 +3275,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 18.643px;
+    font-size: 15.643px;
     margin-top: 10px;
   }
 
@@ -3318,7 +3328,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 14.12px;
+    font-size: 12.12px;
   }
   .light-gray-line1 {
     width: 110px;
@@ -3331,7 +3341,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 17.643px;
+    font-size: 15.643px;
     margin-top: 10px;
   }
 
@@ -3384,7 +3394,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-title {
-    font-size: 12.12px;
+    font-size: 11.12px;
   }
   .light-gray-line1 {
     width: 110px;
@@ -3397,7 +3407,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 15.643px;
+    font-size: 13.643px;
     margin-top: 7px;
   }
 
@@ -3418,7 +3428,7 @@ nav.shift ul li a:hover:after {
   }
   .card-phone-text {
     font-size: 10.072px;
-    margin-top: -5px;
+    margin-top: 0px;
   }
   .right-logo-wrapper {
     padding-top: 0px;
@@ -3440,7 +3450,7 @@ nav.shift ul li a:hover:after {
 }
 @media screen and (max-width: 445px) and (min-width: 400px) {
   .card-title {
-    font-size: 12.12px;
+    font-size: 11.12px;
   }
   .light-gray-line1 {
     width: 110px;
@@ -3453,7 +3463,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-off-text {
-    font-size: 15.643px;
+    font-size: 13.643px;
     margin-top: 8px;
   }
 
@@ -3500,7 +3510,7 @@ nav.shift ul li a:hover:after {
 
 @media screen and (max-width: 399px) and (min-width: 361px) {
   .card-title {
-    font-size: 11.12px;
+    font-size: 10.12px;
   }
   .light-gray-line1 {
     width: 100px;
@@ -3511,7 +3521,7 @@ nav.shift ul li a:hover:after {
     height: 1.024px;
   }
   .card-off-text {
-    font-size: 12.643px;
+    font-size: 10.643px;
     margin-top: 7px;
   }
 
@@ -3531,7 +3541,7 @@ nav.shift ul li a:hover:after {
     margin-top: -7px;
   }
   .card-phone-text {
-    margin-top: -7px;
+    margin-top: 0px;
     font-size: 9.072px;
   }
   .right-logo-wrapper {
@@ -3560,7 +3570,7 @@ nav.shift ul li a:hover:after {
 
 @media screen and (max-width: 360px) {
   .card-title {
-    font-size: 9.12px;
+    font-size: 8.12px;
   }
   .light-gray-line1 {
     width: 90px;
@@ -3571,7 +3581,7 @@ nav.shift ul li a:hover:after {
     height: 1.024px;
   }
   .card-off-text {
-    font-size: 9.643px;
+    font-size: 7.643px;
     margin-top: 5px;
   }
 
@@ -3592,7 +3602,7 @@ nav.shift ul li a:hover:after {
   }
   .card-phone-text {
     font-size: 8.072px;
-    margin-top: -5px;
+    margin-top: 0px;
   }
   .right-logo-wrapper {
     padding-top: 0px;

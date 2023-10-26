@@ -12,7 +12,7 @@ const Step2Form = ({
   formData,
   handleInputChange,
 }: any) => {
-  const [value, setValue] = React.useState("social-media");
+  const [value, setValue] = React.useState("address");
   const onChange = (e: any) => {
     setValue(e.target.value);
   };
@@ -246,6 +246,8 @@ const Step2Form = ({
                     }}
                     value={formData?.address?.plain_address}
                     type="text"
+                    maxLength={40}
+                    showCount
                   />
                 </Col>
               </Row>

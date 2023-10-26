@@ -3,11 +3,12 @@ import { useAppSelector } from "services/hooks/hooks";
 import logo from "assets/images/card-logo.png";
 import cutter from "assets/images/step-card-cutter.png";
 import "assets/styles/preview.css";
+import { formatDate } from "services/utils/formatDate";
 
 const Preview = () => {
   const formData = useAppSelector((state) => state.inputFormData.data);
   const logoImg: any = formData?.configuration?.logo || null;
-
+  const formattedDate = formatDate(formData?.date);
   return (
     <div className="preview-outer-wrapper">
       <div className="step-preview">
@@ -23,16 +24,29 @@ const Preview = () => {
               </div>
               <div className="preview-card-title">
                 <p className="step-card-title">
-                  {formData?.business_name.substring(0, 15)}
-                  <br />
-                  {formData?.business_name.substring(15)}
+                  {formData?.business_name}
                 </p>
               </div>
-              <div className="step-light-gray-line1"></div>
-              <div className="step-light-gray-line2"></div>
-              <div className="step-card-off-text-margin">
-                <p className="step-card-off-text">15% Off</p>
+              {formData?.address?.plain_address ? (
+                formData?.address?.plain_address
+              ) : (
+                <>
+                  <div className="step-light-gray-line1"></div>
+                  <div className="step-light-gray-line2"></div>
+                </>
+              )}
+              {formData?.configuration?.percentage_off ? (
+                
+                <div className="step-card-off-text-margin">
+                <p className="step-card-off-text">{formData?.configuration?.percentage_off}% Off</p>
               </div>
+              ) : (
+                <>
+                  <div className="step-light-yellow-line1"></div>
+                  <div className="step-light-yellow-line2"></div>
+                </>
+              )}
+              
               <div className="step-light-yellow-line1"></div>
               <div className="step-light-yellow-line2"></div>
               {formData?.business_phone?.country_code ? (
@@ -53,8 +67,7 @@ const Preview = () => {
                     </svg>
                   </div>
                   <p className="step-card-phone-text">
-                    {formData?.business_phone?.country_code}{" "}
-                    {formData?.business_phone?.number}
+                    {formData?.business_phone?.country_code} {formData?.business_phone?.number}
                   </p>
                 </div>
               ) : null}
@@ -62,16 +75,12 @@ const Preview = () => {
             <div className="preview-card-right">
               <div className="step-card-right-logo-image">
                 {logoImg !== null ? (
-                  <img
-                    src={URL.createObjectURL(logoImg)}
-                    alt="logo"
-                    className="step-card-right-logo-image-class"
-                  />
+                  <img src={URL.createObjectURL(logoImg)} alt="logo" className="step-card-right-logo-image-class" />
                 ) : null}
               </div>
               <div className="step-right-div">
                 <button className="step-card-button">UMHOO16</button>
-                <p className="step-card-date">01, 2023</p>
+                <p className="step-card-date">{formattedDate}</p>
               </div>
             </div>
           </div>

@@ -1,6 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+interface Data {
+  address: any;
+  contact_info: any;
+  business_name: string;
+  location: number;
+  selected_city: Record<string, any>;
+  business_email: string;
+  business_phone: { country_code: string; number: string };
+  configuration: any;
+  user_email: string;
+  date: Date;
+}
+
+interface InputFormDataState {
+  data: Data;
+  status: string;
+  error: null | string;
+}
+
+const initialState: InputFormDataState = {
   data: {
     address: {},
     contact_info: {},
@@ -11,6 +30,7 @@ const initialState = {
     business_phone: { country_code: "", number: "" },
     configuration: { logo: "" },
     user_email: "",
+    date: new Date(),
   },
   status: "idle",
   error: null,

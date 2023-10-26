@@ -49,7 +49,7 @@ const Step4Form = ({
                 />
               </Col>
             </Row>
-            <Row className="mt-[20px] lg:mt-[25px] 2xl:mt-[30px]">
+            {/* <Row className="mt-[20px] lg:mt-[25px] 2xl:mt-[30px]">
               <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                 Payment Method
               </p>
@@ -66,7 +66,7 @@ const Step4Form = ({
                   options={paymentOptions}
                 />
               </Col>
-            </Row>
+            </Row> */}
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
               <button
                 className="back-btn"
@@ -75,7 +75,8 @@ const Step4Form = ({
                 <span className="back-btn-inner">Back</span>
               </button>
               <ButtonFilled
-                text="Finish"
+                // text="Finish"
+                text="PAY NOW"
                 handleClick={(event: any) => onNextStep(event)}
               />
             </div>

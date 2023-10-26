@@ -88,6 +88,9 @@ const Step3Form = ({
                   setChecker(true);
                 }}
                 value={checker ? formData?.configuration?.percentage_off : ""}
+                maxLength={3}
+                max={999}
+                showCount
               />
             </div>
           </Col>
@@ -165,7 +168,8 @@ const Step3Form = ({
                 <span className="back-btn-inner">Back</span>
               </button>
               <ButtonFilled
-                text="PAY NOW"
+                // text="PAY NOW"
+                text="next"
                 handleClick={(event: any) => onNextStep(event)}
               />
             </div>

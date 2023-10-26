@@ -17,42 +17,45 @@ const Step5Form = () => {
     <div className="mt-[20px]">
       <div className="flex flex-col lg:flex-row items-center gap-y-[0px] xl:gap-x-[0px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
         <div className="flex justify-start relative">
-          <img src={hero} alt="hero" className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto" />
+          <img
+            src={hero}
+            alt="hero"
+            className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto"
+          />
           <div>
             <div className="absolute card-left-position top-[12px] md:top-[20px] lg:top-[15px] xl:top-[18px] 2xl:top-[22px] left-[24px] md:left-[95px] lg:left-[60px] xl:left-[70px] 2xl:left-[50px]">
               <div className="">
-                <img src={logo} alt="logo" className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width" />
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width"
+                />
               </div>
               <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[18px]">
-                <p className="card-title">
-                  {/* Lloyds <br /> Pharmacy */}
+                <p className="card-title min-h-[30px] lg:min-h-[40px] 2xl:min-h-[0px]">
                   {formData?.business_name}
                 </p>
               </div>
               {formData?.address?.plain_address ? (
                 formData?.address?.plain_address
               ) : (
-                <>
-                  <div className="light-gray-line1 mt-[4px] md:mt-[8px]"></div>
-                  <div className="light-gray-line2 mt-[4px] md:mt-[8px]"></div>
-                </>
+                <div className="final-address-loading">
+                  <div className="light-gray-line1 mt-[4px]"></div>
+                  <div className="light-gray-line2 mt-[4px] 2xl:mt-[8px]"></div>
+                </div>
               )}
-
-              {/* <div className="">
-                <p className="card-off-text">15% Off</p>
-              </div> */}
               {formData?.configuration?.percentage_off ? (
                 <div className="">
-                  <p className="card-off-text">{formData?.configuration?.percentage_off}% Off</p>
+                  <p className="card-off-text">
+                    {formData?.configuration?.percentage_off}% Off
+                  </p>
                 </div>
               ) : (
-                <>
-                  <div className="step-light-yellow-line1 mt-[0px]"></div>
-                  <div className="step-light-yellow-line2 mt-[4px] md:mt-[8px]"></div>
-                </>
+                <div className="final-step-card-off-text-margin-loading">
+                  <div className="light-yellow-line1"></div>
+                  <div className="light-yellow-line2 mt-[4px] 2xl:mt-[8px]"></div>
+                </div>
               )}
-              <div className="light-yellow-line1 mt-[0px]"></div>
-              <div className="light-yellow-line2 mt-[4px] md:mt-[8px]"></div>
               {formData?.business_phone?.country_code ? (
                 <div className="flex items-center gap-x-[10px] 2xl:gap-x-[15px] mt-[15px] 2xl:mt-[19px]">
                   <div className="card-phone-svg">
@@ -71,10 +74,16 @@ const Step5Form = () => {
                     </svg>
                   </div>
                   <p className="card-phone-text">
-                    {formData?.business_phone?.country_code} {formData?.business_phone?.number}
+                    {formData?.business_phone?.country_code}{" "}
+                    {formData?.business_phone?.number}
                   </p>
                 </div>
-              ) : null}
+              ) : (
+                <div className="final-contact-wrapper-loading">
+                  <div className="light-gray-line1 mt-[4px]"></div>
+                  <div className="light-gray-line2 mt-[4px] 2xl:mt-[8px]"></div>
+                </div>
+              )}
             </div>
             <div className="absolute card-right-position top-[13px] xl:top-[20px] 2xl:top-[30px] right-[-15px] md:right-[50px] lg:right-[20px] xl:right-[35px] 2xl:right-[39px]">
               <div className="flex justify-center right-logo-wrapper">
@@ -85,37 +94,51 @@ const Step5Form = () => {
                       alt="logo"
                       className="object-cover rounded-full w-full h-full"
                     />
-                  ) : null}
+                  ) : (
+                    <div className="final-step-card-right-logo-image-outer-loading">
+                      <div className="right-logo-image rounded-full bg-white"></div>
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[38px]">
                 <button className="card-button ">UMHOO16</button>
-                <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">01, 2023</p>
+                <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
+                  01, 2023
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div className="hidden lg:block hero-mid-margin w-[25px] 2xl:h-[320px] hero-mid-div py-[20px] rounded-[8px] bg-[#F9F9F9]"></div>
         <div className="block lg:hidden  h-[20px] w-[90%] md:w-[70%] mx-[30px] rounded-[8px] bg-[#F9F9F9]"></div>
-        <div className="scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px]">
-          {/* <img src={scanner} alt="scanner" className="w-[170px] md:w-[250px] lg:w-[100%] 2xl:w-auto" /> */}
-          <QRCodeSVG
-            value={formData?.address?.social_media?.facebook}
-            size={128}
-            bgColor={"#ffffff"}
-            fgColor={"#000000"}
-            level={"L"}
-            includeMargin={false}
-            // imageSettings={{
-            //   src: "https://static.zpao.com/favicon.png",
-            //   x: undefined,
-            //   y: undefined,
-            //   height: 24,
-            //   width: 24,
-            //   excavate: true,
-            // }}
-          />
-          <div className="text-center text-black text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] custom-font-500 -mt-[10px] lg:-mt-[20px]">
+        <div className="scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px] flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center final-qr-wrapper">
+            {/* <img
+            src={scanner}
+            alt="scanner"
+            className="w-[170px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
+          /> */}
+            <QRCodeSVG
+              value={formData?.address?.social_media?.facebook}
+              size={128}
+              bgColor={"#ffffff"}
+              fgColor={"#000000"}
+              level={"L"}
+              includeMargin={false}
+              // imageSettings={{
+              //   src: "https://static.zpao.com/favicon.png",
+              //   x: undefined,
+              //   y: undefined,
+              //   height: 24,
+              //   width: 24,
+              //   excavate: true,
+              // }}
+              className="w-[80%] h-[80%]"
+            />
+          </div>
+          <div className="text-center text-black text-[15px] lg:text-[14px] xl:text-[16px] 2xl:text-[18px] custom-font-500 ">
+            {/* -mt-[10px] lg:-mt-[20px] */}
             SCAN ME
           </div>
         </div>

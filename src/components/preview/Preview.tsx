@@ -23,32 +23,35 @@ const Preview = () => {
                 <img src={logo} alt="logo" className="preview-card-left-logo" />
               </div>
               <div className="preview-card-title">
-                <p className="step-card-title">
-                  {formData?.business_name}
-                </p>
+                {formData?.business_name ? (
+                  <p className="step-card-title">{formData?.business_name}</p>
+                ) : (
+                  <div className="preview-card-title-loading flex flex-col justify-center">
+                    <div className="step-light-yellow-line1"></div>
+                    <div className="step-light-yellow-line2"></div>
+                  </div>
+                )}
               </div>
               {formData?.address?.plain_address ? (
-                formData?.address?.plain_address
+                <p className="step-card-phone-text">
+                  {formData?.address?.plain_address}
+                </p>
               ) : (
-                <>
+                <div className="address-loading flex flex-col justify-center">
                   <div className="step-light-gray-line1"></div>
                   <div className="step-light-gray-line2"></div>
-                </>
+                </div>
               )}
               {formData?.configuration?.percentage_off ? (
-                
                 <div className="step-card-off-text-margin">
-                <p className="step-card-off-text">{formData?.configuration?.percentage_off}% Off</p>
-              </div>
+                  <p className="step-card-off-text">% Off</p>
+                </div>
               ) : (
-                <>
+                <div className="step-card-off-text-margin-loading flex flex-col justify-center">
                   <div className="step-light-yellow-line1"></div>
                   <div className="step-light-yellow-line2"></div>
-                </>
+                </div>
               )}
-              
-              <div className="step-light-yellow-line1"></div>
-              <div className="step-light-yellow-line2"></div>
               {formData?.business_phone?.country_code ? (
                 <div className="contact-wrapper">
                   <div className="step-card-phone-svg">
@@ -67,16 +70,30 @@ const Preview = () => {
                     </svg>
                   </div>
                   <p className="step-card-phone-text">
-                    {formData?.business_phone?.country_code} {formData?.business_phone?.number}
+                    {formData?.business_phone?.country_code}{" "}
+                    {formData?.business_phone?.number}
                   </p>
                 </div>
-              ) : null}
+              ) : (
+                <div className="contact-wrapper-loading flex flex-col justify-center">
+                  <div className="step-light-gray-line1"></div>
+                  <div className="step-light-gray-line2"></div>
+                </div>
+              )}
             </div>
             <div className="preview-card-right">
               <div className="step-card-right-logo-image">
                 {logoImg !== null ? (
-                  <img src={URL.createObjectURL(logoImg)} alt="logo" className="step-card-right-logo-image-class" />
-                ) : null}
+                  <img
+                    src={URL.createObjectURL(logoImg)}
+                    alt="logo"
+                    className="step-card-right-logo-image-class"
+                  />
+                ) : (
+                  <div className="step-card-right-logo-image-outer-loading">
+                    <div className="step-card-right-logo-image rounded-full bg-white"></div>
+                  </div>
+                )}
               </div>
               <div className="step-right-div">
                 <button className="step-card-button">UMHOO16</button>

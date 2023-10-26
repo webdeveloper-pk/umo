@@ -1,6 +1,6 @@
 .pdf-page {
-  width: 297mm;
-  height: 420mm;
+  width: 8.5in;
+  height: 11in;
   padding: 10mm 5mm;
   margin: 10mm auto;
   border: 1px #d3d3d3 solid;
@@ -12,7 +12,7 @@
 .card-outer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 50px;
+  column-gap: 25px;
   row-gap: 30px;
   /* display: flex;
   align-items: center; */
@@ -26,9 +26,9 @@
 .right-scanner-div {
   background: #0b5ec6;
   position: relative;
-  max-width: 125px;
-  min-height: 125px;
-  max-height: 125px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
   border-left: 1px solid #0b5ec6;
   padding: 15px;
   border-radius: 7px;
@@ -39,13 +39,13 @@
   border-radius: 10px;
   width: 100%;
   height: 100%;
-  min-height: 95px;
-  max-height: 95px;
+  min-height: 70px;
+  max-height: 70px;
 }
 
 .scanner-image-class {
-  width: 95px;
-  height: 95px;
+  width: 70px;
+  height: 70px;
 }
 
 .small-bottom-cutter-scanner {
@@ -72,7 +72,7 @@
 
 .preview-card-left {
   /* max-width: 65%; */
-  max-width: 110px;
+  max-width: 90px;
 }
 
 .preview-card-right {
@@ -88,12 +88,12 @@
   /* border: 0.492px solid #dedede; */
   background: #156ceb;
   position: relative;
-  min-height: 125px;
-  max-height: 125px;
-  padding-top: 8px;
-  padding-bottom: 10px;
-  padding-left: 12px;
-  padding-right: 8px;
+  min-height: 100px;
+  max-height: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 5px;
   border-right: 1px solid #156ceb;
 }
 
@@ -103,25 +103,25 @@
 }
 
 .preview-card-title {
-  margin-top: 3px;
+  margin-top: 2.5px;
 }
 
 .step-card-title {
   color: #fedb0d;
   font-family: Montserrat;
-  font-size: 9px;
+  font-size: 7px;
   font-style: normal;
   font-weight: 600;
-  max-width: 90%;
+  max-width: 85%;
 }
 
 .step-card-address {
   color: #fff;
   font-family: Montserrat;
-  font-size: 6px;
+  font-size: 4.5px;
   font-style: normal;
   font-weight: 400;
-  max-width: 85%;
+  max-width: 87%;
   margin-top: 2px;
 }
 
@@ -133,37 +133,69 @@
   margin-top: 4px;
   color: #fedb0d;
   font-family: Montserrat;
-  font-size: 9px;
+  font-size: 7px;
   font-style: normal;
   font-weight: 800;
+  max-width: 87%;
 }
 
 .step-card-off-description {
   margin-top: 2px;
   color: #fff;
   font-family: Montserrat;
-  font-size: 6px;
+  font-size: 4.5px;
   font-style: normal;
   font-weight: 600;
-  max-width: 85%;
+  max-width: 87%;
+}
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+  margin-top: 3px;
+}
+
+.step-card-phone-svg {
+  width: 9.379px;
+  height: 9.379px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-svg-inner {
+  width: 6px;
+  height: 6px;
+}
+
+.step-card-phone-text {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 4.5px;
+  font-style: normal;
+  font-weight: 500;
+  max-width: 87%;
 }
 
 .step-card-right-logo-image {
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
 }
 
 .step-card-right-logo-image-class {
   object-fit: cover;
   border-radius: 50%;
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
 }
 
 .step-card-umcode-text {
   color: #fff;
   font-family: Montserrat;
-  font-size: 6px;
+  font-size: 4.5px;
   font-style: normal;
   font-weight: 600;
   text-align: left;
@@ -171,15 +203,15 @@
 }
 
 .step-card-button {
-  width: 70px;
-  height: 14.427px;
+  width: 50px;
+  height: 10.427px;
   border-radius: 13.355px;
   border: 1px solid #fedb0d;
   background-color: transparent;
   color: #fedb0d;
   text-align: right;
   font-family: Montserrat;
-  font-size: 8px;
+  font-size: 6px;
   font-style: normal;
   font-weight: 700;
   display: flex;
@@ -190,7 +222,7 @@
 .step-card-date {
   color: #fff;
   font-family: Montserrat;
-  font-size: 6px;
+  font-size: 4.5px;
   font-style: normal;
   font-weight: 500;
   text-align: center;
@@ -210,47 +242,16 @@
 }
 
 .cutter-scanner-image {
-  height: 125px;
+  height: 100px;
 }
 
 .card-left-cutter {
   width: 100%;
-  height: 125px;
+  height: 100px;
 }
 
 .preview-card-left-logo {
-  width: 25px;
-}
-
-.contact-wrapper {
-  display: flex;
-  align-items: center;
-  column-gap: 4px;
-  margin-top: 4px;
-}
-
-.step-card-phone-svg {
-  width: 13.379px;
-  height: 13.379px;
-  background-color: #f4f4f4;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.phone-svg-inner {
-  width: 9px;
-  height: 9px;
-}
-
-.step-card-phone-text {
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 6px;
-  font-style: normal;
-  font-weight: 500;
-  max-width: 100%;
+  width: 20px;
 }
 
 .step-right-div {

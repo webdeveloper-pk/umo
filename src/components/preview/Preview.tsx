@@ -44,7 +44,7 @@ const Preview = () => {
               )}
               {formData?.configuration?.percentage_off ? (
                 <div className="step-card-off-text-margin">
-                  <p className="step-card-off-text">% Off</p>
+                  <p className="step-card-off-text">{formData?.configuration?.percentage_off}% Off</p>
                 </div>
               ) : (
                 <div className="step-card-off-text-margin-loading flex flex-col justify-center">

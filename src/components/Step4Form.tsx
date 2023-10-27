@@ -1,28 +1,32 @@
 import React from "react";
 import { Row, Col, Input, Select } from "antd";
 import ButtonFilled from "./common/ButtonFilled";
-import logo from "../assets/images/card-logo.png";
-import rightLogo from "../assets/images/card-right-logo.png";
-import cutter from "../assets/images/step-card-cutter.png";
+// import logo from "../assets/images/card-logo.png";
+// import rightLogo from "../assets/images/card-right-logo.png";
+// import cutter from "../assets/images/step-card-cutter.png";
 import Preview from "./preview/Preview";
+import { useAppSelector, useAppDispatch } from "services/hooks/hooks";
+import { createCheckoutAction, resetStatus } from "store/slices/createCheckoutSlice";
 
-const paymentOptions = [
-  {
-    value: "cash",
-    label: "Cash",
-  },
-  {
-    value: "card",
-    label: "Card",
-  },
-];
+// const paymentOptions = [
+//   {
+//     value: "cash",
+//     label: "Cash",
+//   },
+//   {
+//     value: "card",
+//     label: "Card",
+//   },
+// ];
 
-const Step4Form = ({
-  onNextStep,
-  onBackStep,
-  formData,
-  handleInputChange,
-}: any) => {
+const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any) => {
+  const dispatch = useAppDispatch();
+
+  const createCheckoutReducer = useAppSelector((state) => ({
+    status: state.createCheckout.status,
+    checkout: state.createCheckout.checkout,
+    error: state.createCheckout.error,
+  }));
   return (
     <div className="md:px-[20px] lg:px-auto">
       <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-y-[40px] gap-x-[20px]">
@@ -32,12 +36,7 @@ const Step4Form = ({
               <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                 Enter your Email
               </p>
-              <Col
-                xs={{ span: 24 }}
-                lg={{ span: 24 }}
-                xl={{ span: 24 }}
-                xxl={{ span: 24 }}
-              >
+              <Col xs={{ span: 24 }} lg={{ span: 24 }} xl={{ span: 24 }} xxl={{ span: 24 }}>
                 <Input
                   placeholder="Enter here"
                   className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
@@ -68,16 +67,16 @@ const Step4Form = ({
               </Col>
             </Row> */}
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
-              <button
-                className="back-btn"
-                onClick={(event) => onBackStep(event)}
-              >
+              <button className="back-btn" onClick={(event) => onBackStep(event)}>
                 <span className="back-btn-inner">Back</span>
               </button>
               <ButtonFilled
                 // text="Finish"
                 text="PAY NOW"
-                handleClick={(event: any) => onNextStep(event)}
+                handleClick={(event: any) => {
+                  // onNextStep(event);
+                  dispatch(createCheckoutAction(formData));
+                }}
               />
             </div>
           </form>

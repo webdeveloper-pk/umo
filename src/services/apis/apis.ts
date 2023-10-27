@@ -8,8 +8,10 @@ export const getLocationListWithUsedSpots = (search: any) => {
   if (search) {
     url += `?location=${search}`;
   }
-
   return api.get(url);
 };
 
 export const login = (formData: any) => api.post("/accounts/login/", formData);
+
+export const createCheckout = (formData: any) => api.post("/subscription/checkout/", formData);
+

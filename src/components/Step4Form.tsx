@@ -7,19 +7,36 @@ import ButtonFilled from "./common/ButtonFilled";
 import Preview from "./preview/Preview";
 import { useAppSelector, useAppDispatch } from "services/hooks/hooks";
 import { createCheckoutAction, resetStatus } from "store/slices/createCheckoutSlice";
+import SpinnerGrow from "./common/spinners/SpinnerGrow";
 
-// const paymentOptions = [
-//   {
-//     value: "cash",
-//     label: "Cash",
-//   },
-//   {
-//     value: "card",
-//     label: "Card",
-//   },
-// ];
+const qrCodePreference = [
+  {
+    value: "email",
+    label: "Email",
+  },
+  {
+    value: "address",
+    label: "Address",
+  },
+  {
+    value: "facebook",
+    label: "Facebook",
+  },
+  {
+    value: "instagram",
+    label: "Instagram",
+  },
+  {
+    value: "linkedin",
+    label: "Linkedln",
+  },
+  {
+    value: "twitter",
+    label: "Twitter",
+  },
+];
 
-const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any) => {
+const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCurrentStep }: any) => {
   const dispatch = useAppDispatch();
 
   const createCheckoutReducer = useAppSelector((state) => ({
@@ -27,6 +44,22 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
     checkout: state.createCheckout.checkout,
     error: state.createCheckout.error,
   }));
+  console.log("createCheckoutReducer::: ", createCheckoutReducer);
+
+  React.useEffect(() => {
+    if (createCheckoutReducer.status === "succeeded") {
+      if (createCheckoutReducer?.checkout?.data?.url) {
+        const newWindow = window.open(createCheckoutReducer.checkout.data.url, "_blank");
+
+        if (newWindow) {
+          newWindow.opener = null;
+        }
+      }
+      setCurrentStep((prevStep: any) => prevStep + 1);
+      dispatch(resetStatus());
+    }
+  }, [createCheckoutReducer.status, dispatch]);
+
   return (
     <div className="md:px-[20px] lg:px-auto">
       <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-y-[40px] gap-x-[20px]">
@@ -48,9 +81,9 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                 />
               </Col>
             </Row>
-            {/* <Row className="mt-[20px] lg:mt-[25px] 2xl:mt-[30px]">
+            <Row className="mt-[20px] lg:mt-[25px] 2xl:mt-[30px]">
               <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
-                Payment Method
+                QrCode preference *
               </p>
               <Col
                 xs={{ span: 24 }}
@@ -60,21 +93,35 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                 className="step-custom-input flex items-center step-custom-select-wrapper"
               >
                 <Select
-                  placeholder="Select a Payment Method"
+                  placeholder="Select a QrCode Preference"
                   className="step-custom-select px-[12px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
-                  options={paymentOptions}
+                  options={qrCodePreference}
+                  onChange={(value) => {
+                    handleInputChange("qrCodePreference", value);
+                  }}
+                  value={formData?.qrCodePreference}
+                  // status="error"
                 />
               </Col>
-            </Row> */}
+            </Row>
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
               <button className="back-btn" onClick={(event) => onBackStep(event)}>
                 <span className="back-btn-inner">Back</span>
               </button>
               <ButtonFilled
-                // text="Finish"
-                text="PAY NOW"
+                text={
+                  <>
+                    {createCheckoutReducer.status === "loading" ? (
+                      <div className="flex justify-center items-center gap-1">
+                        <SpinnerGrow />
+                        Loading...
+                      </div>
+                    ) : (
+                      "PAY NOW"
+                    )}
+                  </>
+                }
                 handleClick={(event: any) => {
-                  // onNextStep(event);
                   dispatch(createCheckoutAction(formData));
                 }}
               />

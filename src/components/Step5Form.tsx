@@ -7,29 +7,31 @@ import logo from "../assets/images/card-logo.png";
 import rightLogo from "../assets/images/card-right-logo.png";
 import { useAppSelector } from "services/hooks/hooks";
 import { QRCodeSVG } from "qrcode.react";
+import { formatDate } from "services/utils/formatDate";
 
 const Step5Form = () => {
   const formData = useAppSelector((state) => state.inputFormData.data);
   const logoImg: any = formData?.configuration?.logo || null;
   // console.log('formData?.address?.social_media?.facebook::: ', formData?.address?.social_media?.facebook);
-
+  const qrCodePreferenceMappings: any = {
+    email: formData.business_email,
+    address: formData.address?.plain_address,
+    facebook: formData.address?.social_media?.facebook,
+    instagram: formData.address?.social_media?.insta,
+    linkedin: formData.address?.social_media?.linkedln,
+    twitter: formData.address?.social_media?.twitter,
+    // phone: {`${formData.business_phone?.country_code}+${formData.business_phone?.number}`}
+  };
+  const formattedDate = formatDate(formData?.date);
   return (
     <div className="mt-[20px]">
       <div className="flex flex-col lg:flex-row items-center gap-y-[0px] xl:gap-x-[0px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
         <div className="flex justify-start relative">
-          <img
-            src={hero}
-            alt="hero"
-            className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto"
-          />
+          <img src={hero} alt="hero" className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto" />
           <div>
             <div className="absolute card-left-position top-[12px] md:top-[20px] lg:top-[15px] xl:top-[18px] 2xl:top-[22px] left-[24px] md:left-[95px] lg:left-[60px] xl:left-[70px] 2xl:left-[50px]">
               <div className="">
-                <img
-                  src={logo}
-                  alt="logo"
-                  className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width"
-                />
+                <img src={logo} alt="logo" className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width" />
               </div>
               <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[15px]">
                 <p className="card-title min-h-[30px] lg:min-h-[40px] 2xl:min-h-[0px] w-[80%] md:w-[70%] xl:w-[60%]">
@@ -49,9 +51,7 @@ const Step5Form = () => {
               <div className="final-off-text-wrapper w-[80%] md:w-[70%] xl:w-[60%]">
                 {formData?.configuration?.percentage_off ? (
                   <div className="">
-                    <p className="card-off-text">
-                      {formData?.configuration?.percentage_off}% Off
-                    </p>
+                    <p className="card-off-text">{formData?.configuration?.percentage_off}% Off</p>
                   </div>
                 ) : (
                   <div className="final-step-card-off-text-margin-loading flex flex-col justify-center">
@@ -78,8 +78,7 @@ const Step5Form = () => {
                     </svg>
                   </div>
                   <p className="card-phone-text">
-                    {formData?.business_phone?.country_code}{" "}
-                    {formData?.business_phone?.number}
+                    {formData?.business_phone?.country_code} {formData?.business_phone?.number}
                   </p>
                 </div>
               ) : (
@@ -107,9 +106,7 @@ const Step5Form = () => {
               </div>
               <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[38px]">
                 <button className="card-button ">UMHOO16</button>
-                <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
-                  01, 2023
-                </p>
+                <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">{formattedDate}</p>
               </div>
             </div>
           </div>
@@ -124,20 +121,12 @@ const Step5Form = () => {
             className="w-[170px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
           /> */}
             <QRCodeSVG
-              value={formData?.address?.social_media?.facebook}
+              value={qrCodePreferenceMappings[formData.qrCodePreference]}
               size={128}
               bgColor={"#ffffff"}
               fgColor={"#000000"}
               level={"L"}
               includeMargin={false}
-              // imageSettings={{
-              //   src: "https://static.zpao.com/favicon.png",
-              //   x: undefined,
-              //   y: undefined,
-              //   height: 24,
-              //   width: 24,
-              //   excavate: true,
-              // }}
               className="w-[80%] h-[80%]"
             />
           </div>

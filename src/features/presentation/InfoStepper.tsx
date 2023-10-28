@@ -66,6 +66,7 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
             onBackStep={handleBackStep}
             formData={formData}
             handleInputChange={handleInputChange}
+            setCurrentStep={setCurrentStep}
           />
         );
       case 5:

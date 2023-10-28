@@ -11,6 +11,7 @@ interface Data {
   configuration: any;
   user_email: string;
   date: Date;
+  qrCodePreference: any;
 }
 
 interface InputFormDataState {
@@ -31,6 +32,7 @@ const initialState: InputFormDataState = {
     configuration: { logo: "" },
     user_email: "",
     date: new Date(),
+    qrCodePreference: "",
   },
   status: "idle",
   error: null,

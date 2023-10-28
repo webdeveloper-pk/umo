@@ -1,11 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { createCheckout } from "services/apis/apis";
 export const createCheckoutAction = createAsyncThunk("createCheckout", async (checkoutData: any, thunkAPI) => {
-  console.log("checkoutData::: ", checkoutData);
   try {
     const formData = new FormData();
-    // const { data } = await createCheckout(formData);
-    // return data;
+    for (const key in checkoutData) {
+      formData.append(key, checkoutData[key]);
+    }
+    const { data } = await createCheckout(formData);
+    return data;
   } catch (error: any) {
     return thunkAPI.rejectWithValue(error.response.data);
   }

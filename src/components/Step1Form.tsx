@@ -9,17 +9,15 @@ import countries from "../services/data/countries.json";
 
 const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
   const [value, setValue] = React.useState("email");
-  const [selectedCountry, setSelectedCountry]: any = useState(null);
 
   const onChange = (e: any) => {
     setValue(e.target.value);
   };
 
   const handleChange = (value: any) => {
-    setSelectedCountry(value.target.value);
     handleInputChange("business_phone", {
       ...formData.business_phone,
-      country_code: `+${value.target.value}`,
+      country_code: `${value.target.value}`,
     });
   };
 
@@ -130,9 +128,16 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
                       id="select"
                       className="step-custom-input flex items-center step-custom-select-wrapper px-[10px]"
                     >
-                      <select className="w-full countries-custom-dropdown" onChange={handleChange}>
+                      <select
+                        className="w-full countries-custom-dropdown"
+                        onChange={handleChange}
+                        value={formData.business_phone?.country_code}
+                      >
+                        <option value="">Select Country Code</option>
                         {countries?.map((country: any) => (
-                          <option value={country.value}>+ {country.label}</option>
+                          <option key={country.value} value={country.value}>
+                            + {country.label}
+                          </option>
                         ))}
                       </select>
                     </Col>

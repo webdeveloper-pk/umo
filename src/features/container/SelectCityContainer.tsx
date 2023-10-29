@@ -6,8 +6,8 @@ import { updateField } from "store/slices/inputFormDataSlice";
 
 const SelectCityContainer = () => {
   const dispatch = useAppDispatch();
-  const formData = useAppSelector((state) => state.inputFormData.data);
-  console.log("formData::: ", formData);
+  // const formData = useAppSelector((state) => state.inputFormData.data);
+  // console.log("formData::: ", formData);
   const [search, setSearch] = React.useState("");
   const locationListWithUsedSpotsReducer = useAppSelector((state) => ({
     status: state.locationListWithUsedSpots.status,

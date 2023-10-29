@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import scanner from "../assets/images/scanner.png";
 import ButtonFilled from "./common/ButtonFilled";
 import hero from "../assets/images/hero.png";
 import logo from "../assets/images/card-logo.png";
-import rightLogo from "../assets/images/card-right-logo.png";
 import { useAppSelector } from "services/hooks/hooks";
 import { QRCodeSVG } from "qrcode.react";
 import { formatDate } from "services/utils/formatDate";
@@ -115,11 +113,6 @@ const Step5Form = () => {
         <div className="block lg:hidden  h-[20px] w-[90%] md:w-[70%] mx-[30px] rounded-[8px] bg-[#F9F9F9]"></div>
         <div className="scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px] flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center final-qr-wrapper">
-            {/* <img
-            src={scanner}
-            alt="scanner"
-            className="w-[170px] md:w-[250px] lg:w-[100%] 2xl:w-auto"
-          /> */}
             <QRCodeSVG
               value={qrCodePreferenceMappings[formData.qrCodePreference]}
               size={128}

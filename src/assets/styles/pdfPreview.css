@@ -1,6 +1,8 @@
 .pdf-page {
-  width: 8.5in;
-  height: 11in;
+  /* width: 8.5in;
+  height: 11in; */
+  width: 210mm;
+  height: 297mm;
   padding: 10mm 5mm;
   margin: 10mm auto;
   border: 1px #d3d3d3 solid;
@@ -232,12 +234,12 @@
 .preview-cutter {
   position: absolute;
   top: 0;
-  left: -5px;
+  left: -2.5px;
 }
 
 .cutter-scanner {
   position: absolute;
-  right: -5px;
+  right: -3px;
   top: 0;
 }
 
@@ -256,4 +258,9 @@
 
 .step-right-div {
   margin-top: 5px;
+}
+
+.pdf-wrapper iframe {
+  width: 100%;
+  height: calc(100vh);
 }

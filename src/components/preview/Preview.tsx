@@ -7,7 +7,7 @@ import { formatDate } from "services/utils/formatDate";
 
 const Preview = () => {
   const formData = useAppSelector((state) => state.inputFormData.data);
-  const logoImg: any = formData?.configuration?.logo || null;
+  const logoImg: any = formData?.logo || null;
   const formattedDate = formatDate(formData?.date);
   return (
     <div className="preview-outer-wrapper">
@@ -42,9 +42,9 @@ const Preview = () => {
                   <div className="step-light-gray-line2"></div>
                 </div>
               )}
-              {formData?.configuration?.percentage_off ? (
+              {formData?.percentage_off ? (
                 <div className="step-card-off-text-margin">
-                  <p className="step-card-off-text">{formData?.configuration?.percentage_off}% Off</p>
+                  <p className="step-card-off-text">{formData?.percentage_off}% Off</p>
                 </div>
               ) : (
                 <div className="step-card-off-text-margin-loading flex flex-col justify-center">
@@ -52,7 +52,7 @@ const Preview = () => {
                   <div className="step-light-yellow-line2"></div>
                 </div>
               )}
-              {formData?.business_phone?.country_code ? (
+              {formData?.contact_info?.business_phone?.country_code ? (
                 <div className="contact-wrapper">
                   <div className="step-card-phone-svg">
                     <svg
@@ -70,8 +70,8 @@ const Preview = () => {
                     </svg>
                   </div>
                   <p className="step-card-phone-text">
-                    {formData?.business_phone?.country_code}{" "}
-                    {formData?.business_phone?.number}
+                    {formData?.contact_info?.business_phone?.country_code}{" "}
+                    {formData?.contact_info?.business_phone?.number}
                   </p>
                 </div>
               ) : (

@@ -15,9 +15,11 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
   };
 
   const handleChange = (value: any) => {
-    handleInputChange("business_phone", {
-      ...formData.business_phone,
-      country_code: `${value.target.value}`,
+    handleInputChange("contact_info", {
+      business_phone: {
+        ...formData.contact_info.business_phone,
+        country_code: `${value.target.value}`,
+      },
     });
   };
 
@@ -33,14 +35,14 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
           </svg>
           <div>
             <p className="searched-place text-[15px] md:text-[16px] lg:text-[17px] xl:text-[19px] 2xl:text-[20px]">
-              {formData?.selected_city?.name}
+              {formData?.address?.selected_city?.name}
             </p>
             <div className="flex items-center gap-x-[10px] mt-[6px]">
               <p className="searched-available-spot text-[13px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px]">
                 Available Spots:
               </p>
               <p className="available-count text-[13px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px]">
-                {formData?.selected_city?.count}
+                {formData?.address?.selected_city?.count}
               </p>
             </div>
           </div>
@@ -110,9 +112,9 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
                         placeholder="Enter Email here"
                         className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                         onChange={(e) => {
-                          handleInputChange("business_email", e.target.value);
+                          handleInputChange("email", e.target.value);
                         }}
-                        value={formData?.business_email}
+                        value={formData?.email}
                       />
                     </Col>
                   </Row>
@@ -131,7 +133,7 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
                       <select
                         className="w-full countries-custom-dropdown"
                         onChange={handleChange}
-                        value={formData.business_phone?.country_code}
+                        value={formData?.contact_info?.business_phone?.country_code}
                       >
                         <option value="">Select Country Code</option>
                         {countries?.map((country: any) => (
@@ -152,12 +154,14 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
                         placeholder="000 00 0000"
                         className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                         onChange={(e) => {
-                          handleInputChange("business_phone", {
-                            ...formData.business_phone,
-                            number: `${e.target.value}`,
+                          handleInputChange("contact_info", {
+                            business_phone: {
+                              ...formData.contact_info.business_phone,
+                              number: `${e.target.value}`,
+                            },
                           });
                         }}
-                        value={formData?.business_phone?.number}
+                        value={formData?.contact_info?.business_phone?.number}
                         type="number"
                       />
                     </Col>

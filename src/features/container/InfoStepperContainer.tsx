@@ -6,7 +6,7 @@ import { updateField } from "store/slices/inputFormDataSlice";
 const InfoStepperContainer = () => {
   const dispatch = useAppDispatch();
   const formData = useAppSelector((state) => state.inputFormData.data);
-  // console.log("formData::: ", formData);
+  console.log("formData::: ", formData);
 
   const handleInputChange = (field: any, value: any) => {
     dispatch(updateField({ field, value }));

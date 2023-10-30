@@ -9,15 +9,15 @@ import { formatDate } from "services/utils/formatDate";
 
 const Step5Form = () => {
   const formData = useAppSelector((state) => state.inputFormData.data);
-  const logoImg: any = formData?.configuration?.logo || null;
+  const logoImg: any = formData?.logo || null;
   // console.log('formData?.address?.social_media?.facebook::: ', formData?.address?.social_media?.facebook);
   const qrCodePreferenceMappings: any = {
-    email: formData.business_email,
+    email: formData.email,
     address: formData.address?.plain_address,
-    facebook: formData.address?.social_media?.facebook,
-    instagram: formData.address?.social_media?.insta,
-    linkedin: formData.address?.social_media?.linkedln,
-    twitter: formData.address?.social_media?.twitter,
+    facebook: formData.contact_info?.social_media?.facebook,
+    instagram: formData.contact_info?.social_media?.insta,
+    linkedin: formData.contact_info?.social_media?.linkedln,
+    twitter: formData.contact_info?.social_media?.twitter,
     // phone: {`${formData.business_phone?.country_code}+${formData.business_phone?.number}`}
   };
   const formattedDate = formatDate(formData?.date);
@@ -47,9 +47,9 @@ const Step5Form = () => {
                 </div>
               )}
               <div className="final-off-text-wrapper w-[80%] md:w-[70%] xl:w-[60%]">
-                {formData?.configuration?.percentage_off ? (
+                {formData?.percentage_off ? (
                   <div className="">
-                    <p className="card-off-text">{formData?.configuration?.percentage_off}% Off</p>
+                    <p className="card-off-text">{formData?.percentage_off}% Off</p>
                   </div>
                 ) : (
                   <div className="final-step-card-off-text-margin-loading flex flex-col justify-center">
@@ -58,7 +58,7 @@ const Step5Form = () => {
                   </div>
                 )}
               </div>
-              {formData?.business_phone?.country_code ? (
+              {formData?.address?.business_phone?.country_code ? (
                 <div className="flex items-center gap-x-[10px] 2xl:gap-x-[15px] mt-[5px] md:mt-[1px] 2xl:mt-[5px] w-[80%] md:w-[70%] xl:w-[60%]">
                   <div className="card-phone-svg">
                     <svg
@@ -76,7 +76,7 @@ const Step5Form = () => {
                     </svg>
                   </div>
                   <p className="card-phone-text">
-                    {formData?.business_phone?.country_code} {formData?.business_phone?.number}
+                    {formData?.address?.business_phone?.country_code} {formData?.address?.business_phone?.number}
                   </p>
                 </div>
               ) : (

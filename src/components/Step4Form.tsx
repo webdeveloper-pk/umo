@@ -65,7 +65,7 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCur
       <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-y-[40px] gap-x-[20px]">
         <div className="w-[100%] lg:w-[44.5%]">
           <form>
-            <Row>
+            {/* <Row>
               <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                 Enter your Email
               </p>
@@ -80,7 +80,7 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCur
                   type="email"
                 />
               </Col>
-            </Row>
+            </Row> */}
             <Row className="mt-[20px] lg:mt-[25px] 2xl:mt-[30px]">
               <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                 QrCode preference *

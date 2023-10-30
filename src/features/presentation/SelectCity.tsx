@@ -15,7 +15,7 @@ const SlectCity = ({
   handleInputChange,
 }: any) => {
   const navigate = useNavigate();
-  console.log("locationListWithUsedSpotsReducer::: ", locationListWithUsedSpotsReducer);
+  // console.log("locationListWithUsedSpotsReducer::: ", locationListWithUsedSpotsReducer);
   return (
     <div className="hero-wrapper-margin">
       <Navbar />
@@ -173,9 +173,11 @@ const SlectCity = ({
                               className="searched-select-btn text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-[18px] uppercase"
                               onClick={() => {
                                 handleInputChange("location", data?.location?.id);
-                                handleInputChange("selected_city", {
-                                  name: data?.location?.location_name,
-                                  count: data?.entry_count,
+                                handleInputChange("address", {
+                                  selected_city: {
+                                    name: data?.location?.location_name,
+                                    count: data?.entry_count,
+                                  },
                                 });
                                 navigate("/info");
                               }}

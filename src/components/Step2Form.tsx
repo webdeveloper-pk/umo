@@ -92,15 +92,15 @@ const Step2Form = ({
                       }
                       className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                       onChange={(e) => {
-                        handleInputChange("address", {
-                          ...formData.address,
+                        handleInputChange("contact_info", {
+                          ...formData.contact_info,
                           social_media: {
-                            ...formData.address.social_media,
+                            ...formData.contact_info.social_media,
                             facebook: `${e.target.value}`,
                           },
                         });
                       }}
-                      value={formData?.address?.social_media?.facebook}
+                      value={formData?.contact_info?.social_media?.facebook}
                     />
                   </Col>
                 </Row>
@@ -132,15 +132,15 @@ const Step2Form = ({
                       }
                       className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                       onChange={(e) => {
-                        handleInputChange("address", {
-                          ...formData.address,
+                        handleInputChange("contact_info", {
+                          ...formData.contact_info,
                           social_media: {
-                            ...formData.address.social_media,
+                            ...formData.contact_info.social_media,
                             twitter: `${e.target.value}`,
                           },
                         });
                       }}
-                      value={formData?.address?.social_media?.twitter}
+                      value={formData?.contact_info?.social_media?.twitter}
                     />
                   </Col>
                 </Row>
@@ -172,15 +172,15 @@ const Step2Form = ({
                       }
                       className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                       onChange={(e) => {
-                        handleInputChange("address", {
-                          ...formData.address,
+                        handleInputChange("contact_info", {
+                          ...formData.contact_info,
                           social_media: {
-                            ...formData.address.social_media,
+                            ...formData.contact_info.social_media,
                             insta: `${e.target.value}`,
                           },
                         });
                       }}
-                      value={formData?.address?.social_media?.insta}
+                      value={formData?.contact_info?.social_media?.insta}
                     />
                   </Col>
                 </Row>
@@ -211,15 +211,15 @@ const Step2Form = ({
                       }
                       className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                       onChange={(e) => {
-                        handleInputChange("address", {
-                          ...formData.address,
+                        handleInputChange("contact_info", {
+                          ...formData.contact_info,
                           social_media: {
-                            ...formData.address.social_media,
+                            ...formData.contact_info.social_media,
                             linkedln: `${e.target.value}`,
                           },
                         });
                       }}
-                      value={formData?.address?.social_media?.linkedln}
+                      value={formData?.contact_info?.social_media?.linkedln}
                     />
                   </Col>
                 </Row>

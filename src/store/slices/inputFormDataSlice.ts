@@ -5,13 +5,11 @@ interface Data {
   contact_info: any;
   business_name: string;
   location: number;
-  selected_city: Record<string, any>;
-  business_email: string;
-  business_phone: { country_code: string; number: string };
-  configuration: any;
-  user_email: string;
+  email: string;
+  logo: any;
   date: Date;
   qrCodePreference: any;
+  percentage_off: any;
 }
 
 interface InputFormDataState {
@@ -22,17 +20,17 @@ interface InputFormDataState {
 
 const initialState: InputFormDataState = {
   data: {
-    address: {},
+    address: {
+      selected_city: {},
+    },
     contact_info: {},
     business_name: "",
     location: 0,
-    selected_city: {},
-    business_email: "",
-    business_phone: { country_code: "", number: "" },
-    configuration: { logo: "" },
-    user_email: "",
+    email: "",
+    logo: "",
     date: new Date(),
     qrCodePreference: "",
+    percentage_off: "",
   },
   status: "idle",
   error: null,

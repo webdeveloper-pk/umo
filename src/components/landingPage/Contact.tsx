@@ -54,9 +54,8 @@ const Contact = () => {
             for our platform.
           </p>
           <p className="w-full lg:w-[90%] xl:w-[90%] 2xl:w-[80%] text-center lg:text-left contact-description text-[15px] md:text-[16px] lg:text-[17px] xl:etxt-[18px] 2xl:text-[20px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            dapibus ante Lorem ionsectetr sit amet, consectetur adipisc
-            inonsecte td.
+            Dive into our movement. Be the first to know about our innovative
+            campaigns, partnerships, and community stories
           </p>
         </div>
         <div

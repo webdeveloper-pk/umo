@@ -94,15 +94,15 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
   const renderSubTitle = () => {
     switch (currentStep) {
       case 1:
-        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+        return "Connect with us. Let's create impactful campaigns that resonate";
       case 2:
         return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
       case 3:
         return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
       case 4:
-        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+        return "Invest in a movement. Affordable, transparent, and for a great cause.";
       case 5:
-        return "You have done it successfully. Thank you for being with us. Share you valuable feedback.";
+        return "You've taken a step towards building a stronger community. Let's journey together, shaping a brighter economic future for all.";
       default:
         return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
     }
@@ -128,7 +128,11 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
           // data-aos-easing="linear"
           // data-aos-duration="3000"
         >
-          <img src={rightBox} alt="box" className="w-[70%] md:w-[70%] lg:w-[100%]" />
+          <img
+            src={rightBox}
+            alt="box"
+            className="w-[70%] md:w-[70%] lg:w-[100%]"
+          />
         </div>
         <div
           className="absolute left-[3px] md:left-[20px] lg:left-[20px] xl:left-[50px] bottom-[85px]"
@@ -136,7 +140,11 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
           // data-aos-easing="linear"
           // data-aos-duration="3000"
         >
-          <img src={leftCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
+          <img
+            src={leftCircle}
+            alt="box"
+            className="w-[40%] md:w-[70%] lg:w-[100%]"
+          />
         </div>
         <div
           className="absolute right-[-35px] md:right-[2px] lg:right-[30px] xl:right-[50px] 2xl:right-[80px] top-[90px]"
@@ -145,7 +153,11 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
           // data-aos-duration="3000"
           // data-aos-offset="800"
         >
-          <img src={rightCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
+          <img
+            src={rightCircle}
+            alt="box"
+            className="w-[40%] md:w-[70%] lg:w-[100%]"
+          />
         </div>
         <div
           className="absolute left-[3px] md:left-[40px] lg:left-[60px] xl:left-[110px] blueCircle top-[50%]"
@@ -154,7 +166,11 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
           // data-aos-duration="3000"
           // data-aos-offset="300"
         >
-          <img src={blueCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
+          <img
+            src={blueCircle}
+            alt="box"
+            className="w-[40%] md:w-[70%] lg:w-[100%]"
+          />
         </div>
         <a
           href="#!"
@@ -214,7 +230,13 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
                         className="w-[50px] h-[50px] rounded-full bg-[#1D6DE6] flex justify-center items-center"
                         onClick={(event) => handleBackStep(event)}
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
                           <path
                             d="M15 19L8 12L15 5"
                             stroke="#FEDB0D"
@@ -247,7 +269,9 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
                 >
                   {renderSubTitle()}
                 </p>
-                <div className="mt-[25px] lg:mt-[30px] w-full xl:ml-[20px] 2xl:ml-[50px]">{renderComponent()}</div>
+                <div className="mt-[25px] lg:mt-[30px] w-full xl:ml-[20px] 2xl:ml-[50px]">
+                  {renderComponent()}
+                </div>
               </div>
             </div>
           </div>

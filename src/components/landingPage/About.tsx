@@ -29,11 +29,13 @@ const About = () => {
             About US
           </p>
           <p className="about-description px-[14px] lg:px-0 text-[14px] md:text-[15px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            dapibus ante mauris, a posuere erat facilisis at. Proin enim ex,
-            vulputate sed ipsum vitae, porttitor cursus enim. Duis id ex porta,
-            pulvinar mi sit amet, suscipit orci. Sed tempor lorem ut elementum
-            porta. Nunc ac iaculis diam.
+            Founded on the principles of community, collaboration, and customer
+            focus, UMO is not your typical marketing platform. We envisage a
+            world where businesses and consumers unite, navigating economic
+            challenges hand in hand. Every leaflet we distribute is a testament
+            to our commitment – bringing together businesses, fostering
+            community spirit, and echoing our motto:{" "}
+            <span className="font-semibold">"Stronger Together."</span>
           </p>
           <div>
             <div className="video-wrapper relative min-h-[350px] lg:min-h-[600px] flex justify-center items-center mt-[30px] lg:mt-[40px] 2xl:mt-[50px]">

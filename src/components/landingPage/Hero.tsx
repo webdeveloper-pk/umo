@@ -107,7 +107,8 @@ const Hero = () => {
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
-            Welcome to UMO Leaflets:
+            {/* Welcome to UMO Leaflets: */}
+            Empowering Communities with Every Leaflet
           </p>
           <p
             className="hero-title text-center text-[30px] md:text-[36px] lg:text-[36px] xl:text-[39px] 2xl:text-[41px] uppercase mb-[10px] md:mb-[15px]"
@@ -115,7 +116,8 @@ const Hero = () => {
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
-            Boost Your Business!
+            {/* Boost Your Business! */}
+            Stronger Together
           </p>
           <p
             className="w-full hero-description px-[15px] lg:px-0 text-[15px] md:text-[16px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] text-center"
@@ -123,9 +125,12 @@ const Hero = () => {
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
-            At UMO, we're dedicated to helping your business thrive through
+            At UMO, we’re dedicated to helping your business thrive through
             effective leaflet marketing. Our platform makes it easy for you to
-            reach your target audience and grow your brand.
+            reach your target audience and grow your brand. In an era where
+            every penny counts, our coupon leaflets allow businesses to stand
+            alongside their communities, making essential goods and services
+            more affordable
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-y-[0px] xl:gap-x-[0px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
             <div

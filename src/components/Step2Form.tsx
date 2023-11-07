@@ -246,8 +246,8 @@ const Step2Form = ({
                     }}
                     value={formData?.address?.plain_address}
                     type="text"
-                    maxLength={40}
-                    showCount
+                    // maxLength={40}
+                    // showCount
                   />
                 </Col>
               </Row>

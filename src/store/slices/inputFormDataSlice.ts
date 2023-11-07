@@ -7,9 +7,10 @@ interface Data {
   location: number;
   email: string;
   logo: any;
-  date: Date;
+  // date: Date;
   // qrCodePreference: any;
   percentage_off: any;
+  umo_code:string
 }
 
 interface InputFormDataState {
@@ -28,9 +29,10 @@ const initialState: InputFormDataState = {
     location: 0,
     email: "",
     logo: "",
-    date: new Date(),
+    // date: new Date(),
     // qrCodePreference: "",
     percentage_off: "",
+    umo_code:""
   },
   status: "idle",
   error: null,

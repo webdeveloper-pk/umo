@@ -20,7 +20,7 @@ const Step5Form = () => {
     twitter: formData.contact_info?.social_media?.twitter,
     // phone: {`${formData.business_phone?.country_code}+${formData.business_phone?.number}`}
   };
-  const formattedDate = formatDate(formData?.date);
+  const formattedDate = formatDate(formData?.contact_info?.expiryDate?.dateString);
   return (
     <div className="mt-[20px]">
       <div className="flex flex-col lg:flex-row items-center gap-y-[0px] xl:gap-x-[0px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
@@ -76,7 +76,8 @@ const Step5Form = () => {
                     </svg>
                   </div>
                   <p className="card-phone-text">
-                    {formData?.contact_info?.business_phone?.country_code} {formData?.contact_info?.business_phone?.number}
+                    {formData?.contact_info?.business_phone?.country_code}{" "}
+                    {formData?.contact_info?.business_phone?.number}
                   </p>
                 </div>
               ) : (
@@ -103,8 +104,10 @@ const Step5Form = () => {
                 </div>
               </div>
               <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[38px]">
-                <button className="card-button ">UMHOO16</button>
-                <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">{formattedDate}</p>
+                <button className="card-button ">{formData?.umo_code}</button>
+                <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
+                  {formData?.contact_info?.expiryDate?.dateString ? formattedDate : null}
+                </p>
               </div>
             </div>
           </div>

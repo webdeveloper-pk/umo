@@ -6,6 +6,7 @@ import leftCircle from "../../assets/images/light-blue-circle.png";
 import blueCircle from "../../assets/images/blue-circle.png";
 import Navbar from "../../components/common/Navbar";
 import { Input } from "antd";
+import { generateUniqueCode } from "services/utils/generateUniqueCode";
 
 const SlectCity = ({
   search,
@@ -204,6 +205,7 @@ const SlectCity = ({
                                       count: data?.entry_count,
                                     },
                                   });
+                                  handleInputChange("umo_code",generateUniqueCode(data?.location?.location_name))
                                   navigate("/info");
                                 }}
                               >

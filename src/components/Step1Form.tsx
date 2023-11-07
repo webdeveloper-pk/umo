@@ -71,8 +71,8 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
                     handleInputChange("business_name", e.target.value);
                   }}
                   value={formData?.business_name}
-                  maxLength={32}
-                  showCount
+                  // maxLength={32}
+                  // showCount
                   required
                 />
               </Col>

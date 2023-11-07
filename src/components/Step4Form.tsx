@@ -8,7 +8,11 @@ import Preview from "./preview/Preview";
 import { useAppSelector, useAppDispatch } from "services/hooks/hooks";
 import { createCheckoutAction, resetStatus } from "store/slices/createCheckoutSlice";
 import SpinnerGrow from "./common/spinners/SpinnerGrow";
-
+import type { DatePickerProps } from "antd";
+import { DatePicker } from "antd";
+import dayjs from "dayjs";
+import { formatDate } from "services/utils/formatDate";
+const dateFormat = "MM/DD/YYYY";
 const qrCodePreference = [
   {
     value: "email",
@@ -44,8 +48,14 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCur
     checkout: state.createCheckout.checkout,
     error: state.createCheckout.error,
   }));
-  console.log("createCheckoutReducer::: ", createCheckoutReducer);
-
+  // console.log("createCheckoutReducer::: ", createCheckoutReducer);
+  const onChange: DatePickerProps["onChange"] = (date, dateString) => {
+    // console.log(dateString);
+    handleInputChange("contact_info", {
+      ...formData.contact_info,
+      expiryDate: { dateString: dateString, date: date },
+    });
+  };
   React.useEffect(() => {
     if (createCheckoutReducer.status === "succeeded") {
       if (createCheckoutReducer?.checkout?.data?.url) {
@@ -65,22 +75,25 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCur
       <div className="flex flex-col lg:flex-row lg:justify-between items-start gap-y-[40px] gap-x-[20px]">
         <div className="w-[100%] lg:w-[44.5%]">
           <form>
-            {/* <Row>
+            <Row className="mt-[20px] lg:mt-[25px] 2xl:mt-[30px]">
               <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
-                Enter your Email
+                Coupon expiry *
               </p>
-              <Col xs={{ span: 24 }} lg={{ span: 24 }} xl={{ span: 24 }} xxl={{ span: 24 }}>
-                <Input
-                  placeholder="Enter here"
-                  className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
-                  onChange={(e) => {
-                    handleInputChange("user_email", e.target.value);
-                  }}
-                  value={formData?.user_email}
-                  type="email"
+              <Col
+                xs={{ span: 24 }}
+                lg={{ span: 24 }}
+                xl={{ span: 24 }}
+                xxl={{ span: 24 }}
+                className="step-custom-input flex items-center step-custom-select-wrapper"
+              >
+                <DatePicker
+                  onChange={onChange}
+                  format={dateFormat}
+                  placeholder="Coupon Expiry"
+                  value={formData?.contact_info?.expiryDate?.date}
                 />
               </Col>
-            </Row> */}
+            </Row>
             <Row className="mt-[20px] lg:mt-[25px] 2xl:mt-[30px]">
               <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                 QrCode preference *

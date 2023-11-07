@@ -7,9 +7,9 @@ import { formatDate } from "services/utils/formatDate";
 
 const Preview = () => {
   const formData = useAppSelector((state) => state.inputFormData.data);
-  console.log('formData::: ', formData);
+  console.log("formData::: ", formData);
   const logoImg: any = formData?.logo || null;
-  const formattedDate = formatDate(formData?.date);
+  const formattedDate = formatDate(formData?.contact_info?.expiryDate?.dateString);
   return (
     <div className="preview-outer-wrapper">
       <div className="step-preview">
@@ -34,9 +34,7 @@ const Preview = () => {
                 )}
               </div>
               {formData?.address?.plain_address ? (
-                <p className="step-card-phone-text mt-[5px]">
-                  {formData?.address?.plain_address}
-                </p>
+                <p className="step-card-phone-text mt-[5px]">{formData?.address?.plain_address}</p>
               ) : (
                 <div className="address-loading flex flex-col justify-center">
                   <div className="step-light-gray-line1"></div>
@@ -85,11 +83,7 @@ const Preview = () => {
             <div className="preview-card-right">
               <div className="step-card-right-logo-image">
                 {logoImg !== null ? (
-                  <img
-                    src={URL.createObjectURL(logoImg)}
-                    alt="logo"
-                    className="step-card-right-logo-image-class"
-                  />
+                  <img src={URL.createObjectURL(logoImg)} alt="logo" className="step-card-right-logo-image-class" />
                 ) : (
                   <div className="step-card-right-logo-image-outer-loading">
                     <div className="step-card-right-logo-image rounded-full bg-white"></div>
@@ -97,8 +91,10 @@ const Preview = () => {
                 )}
               </div>
               <div className="step-right-div">
-                <button className="step-card-button">UMHOO16</button>
-                <p className="step-card-date">{formattedDate}</p>
+                <button className="step-card-button">{formData?.umo_code}</button>
+                <p className="step-card-date">
+                  {formData?.contact_info?.expiryDate?.dateString ? formattedDate : null}
+                </p>
               </div>
             </div>
           </div>

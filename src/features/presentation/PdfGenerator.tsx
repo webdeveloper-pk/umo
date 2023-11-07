@@ -45,7 +45,7 @@ const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleC
                   const addressParser = data.address.replace(/'/g, '"');
                   const contact_info = contactParser ? JSON.parse(contactParser) : null;
                   const address = addressParser ? JSON.parse(addressParser) : null;
-                  const formattedDate = formatDate(data?.entry_start_date);
+                  const formattedDate = formatDate(contact_info?.expiryDate?.dateString);
 
                   return (
                     <View style={styles.cardInnerWrapper} key={index}>
@@ -84,7 +84,7 @@ const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleC
                             <View style={styles.stepCardButton}>
                               <Text style={styles.stepCardButtonText}>UMH0016</Text>
                             </View>
-                            <Text style={styles.stepCardDate}>{formattedDate}</Text>
+                            <Text style={styles.stepCardDate}>{contact_info?.expiryDate?.dateString?formattedDate:null}</Text>
                           </View>
                         </View>
                       </View>

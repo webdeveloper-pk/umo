@@ -1,7 +1,8 @@
 import { Image } from "@react-pdf/renderer";
 import React from "react";
 
-const QrCode = ({ styles, index }: any) => {
+const QrCode = ({ styles, index, data }: any) => {
+  // console.log("data::: ", data);
   const [svg, setSvg] = React.useState<any>([]);
   React.useEffect(() => {
     let svg1: any = document.getElementsByTagName("canvas");

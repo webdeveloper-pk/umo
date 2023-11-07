@@ -8,7 +8,7 @@ interface Data {
   email: string;
   logo: any;
   date: Date;
-  qrCodePreference: any;
+  // qrCodePreference: any;
   percentage_off: any;
 }
 
@@ -29,7 +29,7 @@ const initialState: InputFormDataState = {
     email: "",
     logo: "",
     date: new Date(),
-    qrCodePreference: "",
+    // qrCodePreference: "",
     percentage_off: "",
   },
   status: "idle",

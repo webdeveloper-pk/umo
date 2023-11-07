@@ -27,9 +27,8 @@ export const createCheckoutAction = createAsyncThunk("createCheckout", async (ch
     formData.append("business_name", checkoutData.business_name);
     formData.append("location", checkoutData.location);
     formData.append("email", checkoutData.email);
-    formData.append("logo", checkoutData.logo);
     formData.append("date", checkoutData.date);
-    formData.append("qrCodePreference", checkoutData.qrCodePreference);
+    // formData.append("qrCodePreference", checkoutData.qrCodePreference);
     formData.append("percentage_off", checkoutData.percentage_off);
     formData.append("min_spend", checkoutData.min_spend);
     const { data } = await createCheckout(formData);

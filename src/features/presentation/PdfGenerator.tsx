@@ -7,14 +7,9 @@ import phone from "assets/images/phone.png";
 import { QRCodeCanvas } from "qrcode.react";
 import QrCode from "components/pdf/qrCode";
 import { Select } from "antd";
+import { formatDate } from "services/utils/formatDate";
 
-const PdfGenerator = ({
-  locationListReducer,
-  spotsReducer,
-  handleChange,
-  handleChange2,
-  spotsListReducer,
-}: any) => {
+const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleChange2, spotsListReducer }: any) => {
   const options = locationListReducer?.location?.map((location: any) => ({
     value: location.id.toString(),
     label: location.location_name,
@@ -23,7 +18,7 @@ const PdfGenerator = ({
     value: location.spot_group,
     label: location.spot_group,
   }));
-  console.log("spotsListReducer::: ", spotsListReducer);
+  // console.log("spotsListReducer::: ", spotsListReducer);
   return (
     <div>
       <div className="input-wrapper-pdf">
@@ -45,6 +40,13 @@ const PdfGenerator = ({
             <Page size={{ width: 275 * 2.83465, height: 210 * 2.83465 }} style={styles.body}>
               <View style={styles.cardOuterGrid}>
                 {spotsListReducer?.spotsList?.map((data: any, index: number) => {
+                  console.log("data::: ", data);
+                  const contactParser = data.contact_info.replace(/'/g, '"');
+                  const addressParser = data.address.replace(/'/g, '"');
+                  const contact_info = contactParser ? JSON.parse(contactParser) : null;
+                  const address = addressParser ? JSON.parse(addressParser) : null;
+                  const formattedDate = formatDate(data?.entry_start_date);
+
                   return (
                     <View style={styles.cardInnerWrapper} key={index}>
                       <View style={styles.stepCardWrapper}>
@@ -59,18 +61,20 @@ const PdfGenerator = ({
                               <Image style={styles.previewCardLeftLogo} src={logo} />
                             </View>
                             <View style={styles.previewCardTitle}>
-                              <Text style={styles.stepCardTitle}>djhkja adkas kasd akjald adkjd adk</Text>
+                              <Text style={styles.stepCardTitle}>{data?.business_name}</Text>
                             </View>
-                            <Text style={styles.stepCardAddress}>djhkja adkas kasd akjald adkjd adk</Text>
+                            <Text style={styles.stepCardAddress}>{address?.plain_address}</Text>
                             <View style={styles.stepCardOffTextWrapper}>
-                              <Text style={styles.stepCardOffText}>15% Off</Text>
+                              <Text style={styles.stepCardOffText}>{data?.percentage_off}% Off</Text>
                             </View>
-                            <Text style={styles.stepCardOffDescription}>When you spend 20£ or more</Text>
+                            {/* <Text style={styles.stepCardOffDescription}>When you spend 20£ or more</Text> */}
                             <View style={styles.contactWrapper}>
                               <View style={styles.stepCardPhoneSvg}>
                                 <Image style={styles.phoneSvgInner} src={phone} />
                               </View>
-                              <Text style={styles.stepCardPhoneText}>+92 123 2187212</Text>
+                              <Text style={styles.stepCardPhoneText}>
+                                +{contact_info?.business_phone?.country_code} {contact_info?.business_phone?.number}
+                              </Text>
                             </View>
                           </View>
                           <View style={styles.previewCardRight}>
@@ -80,7 +84,7 @@ const PdfGenerator = ({
                             <View style={styles.stepCardButton}>
                               <Text style={styles.stepCardButtonText}>UMH0016</Text>
                             </View>
-                            <Text style={styles.stepCardDate}>01/Nov/2023</Text>
+                            <Text style={styles.stepCardDate}>{formattedDate}</Text>
                           </View>
                         </View>
                       </View>
@@ -98,7 +102,7 @@ const PdfGenerator = ({
                         </View>
                         <View style={styles.scannerWrapper}>
                           {/* <Image src={svg} style={styles.scannerImageClass}></Image> */}
-                          <QrCode styles={styles} index={index} />
+                          <QrCode styles={styles} index={index} data={data} />
                         </View>
                       </View>
                     </View>
@@ -110,9 +114,23 @@ const PdfGenerator = ({
         </PDFViewer>
         <div style={{ visibility: "hidden", height: 0, position: "absolute", left: "-100%" }}>
           {spotsListReducer?.spotsList?.map((val: any, index: number) => {
+            const contactParser = val.contact_info.replace(/'/g, '"');
+            const addressParser = val.address.replace(/'/g, '"');
+            const contact_info = contactParser ? JSON.parse(contactParser) : null;
+            const address = addressParser ? JSON.parse(addressParser) : null;
+            const qrCodePreferenceMappings: any = {
+              email: val?.email,
+              address: address?.plain_address,
+              facebook: contact_info?.social_media?.facebook,
+              instagram: contact_info?.social_media?.insta,
+              linkedin: contact_info?.social_media?.linkedln,
+              twitter: contact_info?.social_media?.twitter,
+              // phone: {`${formData.business_phone?.country_code}+${formData.business_phone?.number}`}
+            };
             return (
               <QRCodeCanvas
-                value={val.qrCode}
+                // value={val.qrCode}
+                value={qrCodePreferenceMappings[contact_info?.qrCodePreference]}
                 size={128}
                 bgColor={"#ffffff"}
                 fgColor={"#000000"}

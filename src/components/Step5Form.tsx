@@ -58,7 +58,7 @@ const Step5Form = () => {
                   </div>
                 )}
               </div>
-              {formData?.address?.business_phone?.country_code ? (
+              {formData?.contact_info?.business_phone?.country_code ? (
                 <div className="flex items-center gap-x-[10px] 2xl:gap-x-[15px] mt-[5px] md:mt-[1px] 2xl:mt-[5px] w-[80%] md:w-[70%] xl:w-[60%]">
                   <div className="card-phone-svg">
                     <svg
@@ -76,7 +76,7 @@ const Step5Form = () => {
                     </svg>
                   </div>
                   <p className="card-phone-text">
-                    {formData?.address?.business_phone?.country_code} {formData?.address?.business_phone?.number}
+                    {formData?.contact_info?.business_phone?.country_code} {formData?.contact_info?.business_phone?.number}
                   </p>
                 </div>
               ) : (
@@ -114,7 +114,7 @@ const Step5Form = () => {
         <div className="scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px] flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center final-qr-wrapper">
             <QRCodeSVG
-              value={qrCodePreferenceMappings[formData.qrCodePreference]}
+              value={qrCodePreferenceMappings[formData.contact_info?.qrCodePreference]}
               size={128}
               bgColor={"#ffffff"}
               fgColor={"#000000"}

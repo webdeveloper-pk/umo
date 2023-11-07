@@ -7,6 +7,7 @@ import { formatDate } from "services/utils/formatDate";
 
 const Preview = () => {
   const formData = useAppSelector((state) => state.inputFormData.data);
+  console.log('formData::: ', formData);
   const logoImg: any = formData?.logo || null;
   const formattedDate = formatDate(formData?.date);
   return (

@@ -97,9 +97,12 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCur
                   className="step-custom-select px-[12px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                   options={qrCodePreference}
                   onChange={(value) => {
-                    handleInputChange("qrCodePreference", value);
+                    handleInputChange("contact_info", {
+                      ...formData.contact_info,
+                      qrCodePreference: `${value}`,
+                    });
                   }}
-                  value={formData?.qrCodePreference}
+                  value={formData?.contact_info?.qrCodePreference}
                   // status="error"
                 />
               </Col>

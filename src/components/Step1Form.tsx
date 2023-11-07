@@ -155,6 +155,7 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
                         className="step-custom-input px-[12px] lg:px-[16px] xl:px-[24px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
                         onChange={(e) => {
                           handleInputChange("contact_info", {
+                            ...formData.contact_info,
                             business_phone: {
                               ...formData.contact_info.business_phone,
                               number: `${e.target.value}`,

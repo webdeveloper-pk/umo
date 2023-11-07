@@ -9,11 +9,15 @@ const Preview = () => {
   const formData = useAppSelector((state) => state.inputFormData.data);
   console.log("formData::: ", formData);
   const logoImg: any = formData?.logo || null;
-  const formattedDate = formatDate(formData?.contact_info?.expiryDate?.dateString);
+  const formattedDate = formatDate(
+    formData?.contact_info?.expiryDate?.dateString
+  );
   return (
     <div className="preview-outer-wrapper">
       <div className="step-preview">
-        <p className="preview-text">Preview</p>
+        <p className="preview-text">
+          Design your coupon. Entice, engage, and empower your customers.
+        </p>
         <div className="step-card-wrapper">
           <div className="preview-cutter">
             <img src={cutter} alt="design" className="card-left-cutter" />
@@ -34,7 +38,9 @@ const Preview = () => {
                 )}
               </div>
               {formData?.address?.plain_address ? (
-                <p className="step-card-phone-text mt-[5px]">{formData?.address?.plain_address}</p>
+                <p className="step-card-phone-text mt-[5px]">
+                  {formData?.address?.plain_address}
+                </p>
               ) : (
                 <div className="address-loading flex flex-col justify-center">
                   <div className="step-light-gray-line1"></div>
@@ -43,7 +49,9 @@ const Preview = () => {
               )}
               {formData?.percentage_off ? (
                 <div className="step-card-off-text-margin">
-                  <p className="step-card-off-text">{formData?.percentage_off}% Off</p>
+                  <p className="step-card-off-text">
+                    {formData?.percentage_off}% Off
+                  </p>
                 </div>
               ) : (
                 <div className="step-card-off-text-margin-loading flex flex-col justify-center">
@@ -83,7 +91,11 @@ const Preview = () => {
             <div className="preview-card-right">
               <div className="step-card-right-logo-image">
                 {logoImg !== null ? (
-                  <img src={URL.createObjectURL(logoImg)} alt="logo" className="step-card-right-logo-image-class" />
+                  <img
+                    src={URL.createObjectURL(logoImg)}
+                    alt="logo"
+                    className="step-card-right-logo-image-class"
+                  />
                 ) : (
                   <div className="step-card-right-logo-image-outer-loading">
                     <div className="step-card-right-logo-image rounded-full bg-white"></div>
@@ -91,9 +103,13 @@ const Preview = () => {
                 )}
               </div>
               <div className="step-right-div">
-                <button className="step-card-button">{formData?.umo_code}</button>
+                <button className="step-card-button">
+                  {formData?.umo_code}
+                </button>
                 <p className="step-card-date">
-                  {formData?.contact_info?.expiryDate?.dateString ? formattedDate : null}
+                  {formData?.contact_info?.expiryDate?.dateString
+                    ? formattedDate
+                    : null}
                 </p>
               </div>
             </div>

@@ -6,7 +6,10 @@ import ButtonFilled from "./common/ButtonFilled";
 // import cutter from "../assets/images/step-card-cutter.png";
 import Preview from "./preview/Preview";
 import { useAppSelector, useAppDispatch } from "services/hooks/hooks";
-import { createCheckoutAction, resetStatus } from "store/slices/createCheckoutSlice";
+import {
+  createCheckoutAction,
+  resetStatus,
+} from "store/slices/createCheckoutSlice";
 import SpinnerGrow from "./common/spinners/SpinnerGrow";
 import type { DatePickerProps } from "antd";
 import { DatePicker } from "antd";
@@ -40,7 +43,13 @@ const qrCodePreference = [
   },
 ];
 
-const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCurrentStep }: any) => {
+const Step4Form = ({
+  onNextStep,
+  onBackStep,
+  formData,
+  handleInputChange,
+  setCurrentStep,
+}: any) => {
   const dispatch = useAppDispatch();
 
   const createCheckoutReducer = useAppSelector((state) => ({
@@ -59,7 +68,10 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCur
   React.useEffect(() => {
     if (createCheckoutReducer.status === "succeeded") {
       if (createCheckoutReducer?.checkout?.data?.url) {
-        const newWindow = window.open(createCheckoutReducer.checkout.data.url, "_blank");
+        const newWindow = window.open(
+          createCheckoutReducer.checkout.data.url,
+          "_blank"
+        );
 
         if (newWindow) {
           newWindow.opener = null;
@@ -91,6 +103,13 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCur
                   format={dateFormat}
                   placeholder="Coupon Expiry"
                   value={formData?.contact_info?.expiryDate?.date}
+                  className="w-full px-[25px] lg:px-[20px] 2xl:px-[25px]"
+                  style={{
+                    border: "none",
+                    outline: "none",
+                    background: "transparent",
+                    boxShadow: "none",
+                  }}
                 />
               </Col>
             </Row>
@@ -121,7 +140,10 @@ const Step4Form = ({ onNextStep, onBackStep, formData, handleInputChange, setCur
               </Col>
             </Row>
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
-              <button className="back-btn" onClick={(event) => onBackStep(event)}>
+              <button
+                className="back-btn"
+                onClick={(event) => onBackStep(event)}
+              >
                 <span className="back-btn-inner">Back</span>
               </button>
               <ButtonFilled

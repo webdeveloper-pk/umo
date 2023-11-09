@@ -74,7 +74,7 @@ const SlectCity = ({
                 <div className="absolute top-[30px] lg:left-[22px] xl:left-[38px] lg:top-[45px] xl:top-[52px]">
                   <div className="flex items-center gap-x-[13px]">
                     <Link to="/">
-                      <button className="w-[50px] h-[50px] rounded-full bg-[#F6F6F6] flex justify-center items-center">
+                      <button className="w-[50px] h-[50px] rounded-full bg-[#1D6DE6] flex justify-center items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -84,7 +84,7 @@ const SlectCity = ({
                         >
                           <path
                             d="M15 19L8 12L15 5"
-                            stroke="black"
+                            stroke="#FEDB0D"
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -92,7 +92,7 @@ const SlectCity = ({
                         </svg>
                       </button>
                     </Link>
-                    <span className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[16px] custom-font-400 text-black uppercase">
+                    <span className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[16px] custom-font-900 text-[#1D6DE6] uppercase">
                       Back
                     </span>
                   </div>

@@ -88,7 +88,7 @@ h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 900;
   line-height: normal;
   text-transform: uppercase;
   height: 70px;
@@ -98,6 +98,7 @@ h1 {
 
 .filled-btn:before,
 .filled-btn:after {
+  color: #000;
   background: #fedb0d;
   transition: 0.7s ease;
   content: "";
@@ -137,9 +138,9 @@ h1 {
   overflow: hidden;
   transition: all 0.3s linear;
   border-radius: 35px;
-  background: #f6f6f6;
-  color: #000;
-  border: 1px solid #f6f6f6;
+  background: #156ceb;
+  color: #fedb0d;
+  border: 1px solid #156ceb;
   text-transform: uppercase;
   width: 138px;
   height: 70px;
@@ -148,7 +149,7 @@ h1 {
   align-items: center;
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 900;
   line-height: normal;
   font-size: 16px;
 }
@@ -165,18 +166,18 @@ h1 {
   left: 0;
   width: 0;
   height: 100%;
-  background: #1d6de6;
+  background: #fff;
   transition: all 0.6s;
-  color: white;
+  /* color: #1d6de6; */
 }
 
 .back-btn:hover {
-  color: white;
+  color: #1d6de6;
 }
 
 .back-btn:hover:after {
   width: 100%;
-  background: #1d6de6;
+  background: #fff;
   color: white;
 }
 

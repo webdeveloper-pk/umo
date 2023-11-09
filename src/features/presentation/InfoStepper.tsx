@@ -207,7 +207,7 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
                   <div className="flex items-center gap-x-[13px]">
                     {currentStep === 1 ? (
                       <Link to="/select-city">
-                        <button className="w-[50px] h-[50px] rounded-full bg-[#F6F6F6] flex justify-center items-center">
+                        <button className="w-[50px] h-[50px] rounded-full bg-[#1D6DE6] flex justify-center items-center">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -217,7 +217,7 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
                           >
                             <path
                               d="M15 19L8 12L15 5"
-                              stroke="black"
+                              stroke="#FEDB0D"
                               stroke-width="2"
                               stroke-linecap="round"
                               stroke-linejoin="round"
@@ -227,7 +227,7 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
                       </Link>
                     ) : (
                       <button
-                        className="w-[50px] h-[50px] rounded-full bg-[#F6F6F6] flex justify-center items-center"
+                        className="w-[50px] h-[50px] rounded-full bg-[#1D6DE6] flex justify-center items-center"
                         onClick={(event) => handleBackStep(event)}
                       >
                         <svg
@@ -239,7 +239,7 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
                         >
                           <path
                             d="M15 19L8 12L15 5"
-                            stroke="black"
+                            stroke="#FEDB0D"
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -248,7 +248,7 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
                       </button>
                     )}
 
-                    <span className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[16px] custom-font-400 text-black uppercase">
+                    <span className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[16px] custom-font-900 text-[#1D6DE6] uppercase">
                       Back
                     </span>
                   </div>

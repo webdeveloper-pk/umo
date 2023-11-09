@@ -1,0 +1,159 @@
+.step4-custom-input {
+  border-radius: 17.34px;
+  border: 1px solid #e3e3e3;
+  background: #fcfcfc;
+  color: #000000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 69px;
+}
+
+.step4-custom-input:hover {
+  border: 1px solid #1d6de6;
+  box-shadow: 0 0 0 0.5px #1d6de6 !important;
+}
+
+.step4-custom-input:focus {
+  border: 1px solid #1d6de6;
+  box-shadow: 0 0 0 0.5px #1d6de6 !important;
+}
+
+.step4-custom-input:active {
+  border: 1px solid #1d6de6;
+  box-shadow: 0 0 0 0.5px #1d6de6 !important;
+}
+
+.step4-custom-input::placeholder {
+  color: #8b8b8b;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* .step4-custom-select-wrapper */
+:where(.css-dev-only-do-not-override-18iikkb).ant-select:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  width: 100%;
+}
+
+.step4-custom-select-wrapper
+  :where(.css-dev-only-do-not-override-18iikkb).ant-select-single {
+  width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.step4-custom-select-wrapper
+  :where(.css-dev-only-do-not-override-18iikkb).ant-select
+  .ant-select-arrow {
+  margin-right: 10px;
+  color: #000;
+}
+
+.step4-custom-select-wrapper
+  :where(
+    .css-dev-only-do-not-override-18iikkb
+  ).ant-select-single.ant-select-show-arrow
+  .ant-select-selection-item,
+:where(
+    .css-dev-only-do-not-override-18iikkb
+  ).ant-select-single.ant-select-show-arrow
+  .ant-select-selection-placeholder {
+  font-size: 16px;
+  color: #000;
+}
+
+.step4-custom-select-wrapper
+  .ant-select-focused:where(
+    .css-dev-only-do-not-override-18iikkb
+  ).ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(
+    .ant-pagination-size-changer
+  )
+  .ant-select-selector {
+  box-shadow: 0 0 0 1px transparent !important;
+}
+
+.step4-custom-select-wrapper
+  :where(.css-18iikkb).ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+@media screen and (min-width: 1920px) {
+  .step4-custom-input {
+    border-radius: 17.34px;
+    border: 1px solid #e3e3e3;
+    background: #fcfcfc;
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 69px;
+  }
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1700px) {
+  .step4-custom-input {
+    border-radius: 17.34px;
+    height: 67px;
+  }
+}
+
+@media screen and (max-width: 1699px) and (min-width: 1536px) {
+  .step4-custom-input {
+    border-radius: 16px;
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 1535px) and (min-width: 1280px) {
+  .step4-custom-input {
+    border-radius: 15px;
+    height: 60px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .step4-custom-input {
+    border-radius: 15px;
+    height: 58px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 900px) {
+  .step4-custom-input {
+    border-radius: 15px;
+    height: 58px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 899px) and (min-width: 768px) {
+  .step4-custom-input {
+    border-radius: 13px;
+    height: 55px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .step4-custom-input {
+    border-radius: 12px;
+    height: 50px;
+    font-size: 14px;
+  }
+}

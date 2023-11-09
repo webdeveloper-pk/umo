@@ -5,8 +5,14 @@ import logo from "../assets/images/card-logo.png";
 import rightLogo from "../assets/images/card-right-logo.png";
 import cutter from "../assets/images/step-card-cutter.png";
 import Preview from "./preview/Preview";
+import "../assets/styles/step3.css";
 
-const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any) => {
+const Step3Form = ({
+  onNextStep,
+  onBackStep,
+  formData,
+  handleInputChange,
+}: any) => {
   const [checker, setChecker] = React.useState(false);
 
   const fileProps = {
@@ -41,7 +47,9 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
                 return (
                   <button
                     className={`percent-btn mr-[13px] mb-[20px] lg:mb-[25px] 2xl:mb-[30px] border border-[#e3e3e3] hover:border-[#1D6DE6] ${
-                      formData?.percentage_off === val ? `border-[#1D6DE6] activeBtn` : ""
+                      formData?.percentage_off === val
+                        ? `border-[#1D6DE6] activeBtn`
+                        : ""
                     }`}
                     key={id}
                     onClick={() => {
@@ -55,7 +63,13 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
               })}
             </div>
           </Col>
-          <Col xs={{ span: 24 }} md={{ span: 11 }} lg={{ span: 6 }} xl={{ span: 5 }} xxl={{ span: 5 }}>
+          <Col
+            xs={{ span: 24 }}
+            md={{ span: 11 }}
+            lg={{ span: 6 }}
+            xl={{ span: 5 }}
+            xxl={{ span: 5 }}
+          >
             <div className="mb-[20px] md:mb-0">
               <Input
                 placeholder="Custom Number"
@@ -76,7 +90,7 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
       </div>
       <div className=" flex flex-col lg:flex-row lg:justify-between items-start gap-y-[40px] gap-x-[20px]">
         <div className="w-[100%] lg:w-[44.5%]">
-          <form>
+          <form className="w-full">
             <Row>
               <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                 How much a customer should spend?
@@ -100,12 +114,18 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
               </Col>
             </Row>
             <Row>
-              <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
+              <p className="w-full form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                 Upload a Logo
               </p>
-              <Col xs={{ span: 24 }} className="w-full">
-                <div>
-                  <Upload {...fileProps} multiple={false} showUploadList={false} className="min-w-full">
+              <Col span={24} style={{ width: "100%" }}>
+                <div style={{ width: "100%" }}>
+                  <Upload
+                    {...fileProps}
+                    multiple={false}
+                    showUploadList={false}
+                    className="min-w-full"
+                    style={{ width: "100%" }}
+                  >
                     <Button className="min-w-full upload-custom upload-border">
                       <span>
                         <svg
@@ -131,7 +151,10 @@ const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any)
               </Col>
             </Row>
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
-              <button className="back-btn" onClick={(event) => onBackStep(event)}>
+              <button
+                className="back-btn"
+                onClick={(event) => onBackStep(event)}
+              >
                 <span className="back-btn-inner">Back</span>
               </button>
               <ButtonFilled

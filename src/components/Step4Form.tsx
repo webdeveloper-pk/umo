@@ -15,7 +15,10 @@ import type { DatePickerProps } from "antd";
 import { DatePicker } from "antd";
 import dayjs from "dayjs";
 import { formatDate } from "services/utils/formatDate";
+import "../assets/styles/step4.css";
+
 const dateFormat = "MM/DD/YYYY";
+
 const qrCodePreference = [
   {
     value: "email",
@@ -113,20 +116,18 @@ const Step4Form = ({
                 />
               </Col>
             </Row>
-            <Row className="mt-[20px] lg:mt-[25px] 2xl:mt-[30px]">
+            <Row className="w-full mt-[20px] lg:mt-[25px] 2xl:mt-[30px]">
               <p className="form-input-title text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px] ml-[10px] xl:ml-[30px] mb-[15px]">
                 QrCode preference *
               </p>
               <Col
-                xs={{ span: 24 }}
-                lg={{ span: 24 }}
-                xl={{ span: 24 }}
-                xxl={{ span: 24 }}
-                className="step-custom-input flex items-center step-custom-select-wrapper"
+                span={24}
+                className="step4-custom-input flex items-center step4-custom-select-wrapper"
+                style={{ width: "100%" }}
               >
                 <Select
                   placeholder="Select a QrCode Preference"
-                  className="step-custom-select px-[12px] text-[14px] lg:text-[15px] 2xl:text-[16px]"
+                  className="step4-custom-select px-[12px] text-[14px] lg:text-[15px] 2xl:text-[16px] w-full"
                   options={qrCodePreference}
                   onChange={(value) => {
                     handleInputChange("contact_info", {
@@ -135,6 +136,7 @@ const Step4Form = ({
                     });
                   }}
                   value={formData?.contact_info?.qrCodePreference}
+                  style={{ border: "none", outline: "none", width: "100%" }}
                   // status="error"
                 />
               </Col>

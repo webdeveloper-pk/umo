@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "assets/images/card-logo.png";
+import logo1 from "assets/images/logo1.png";
 import "assets/styles/pdfPreview.css";
 import { Font, Image, PDFViewer } from "@react-pdf/renderer";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
@@ -45,6 +46,9 @@ const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleC
         <PDFViewer>
           <Document>
             <Page size={{ width: 275 * 2.83465, height: 210 * 2.83465 }} style={styles.body}>
+              <View style={styles.logoWrapper}>
+                <Image src={logo1} style={styles.logoTop}></Image>
+              </View>
               <View style={styles.cardOuterGrid}>
                 {spotsListReducer?.spotsList?.map((data: any, index: number) => {
                   // console.log("data::: ", data?.logo);
@@ -75,18 +79,19 @@ const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleC
                               <Text style={styles.stepCardOffText}>{data?.percentage_off}% Off</Text>
                             </View>
                             {/* <Text style={styles.stepCardOffDescription}>When you spend 20£ or more</Text> */}
-                            {contact_info?.business_phone?.country_code&&contact_info?.business_phone?.number?<View>
-                              <View style={styles.contactWrapper}>
-                              <View style={styles.stepCardPhoneSvg}>
-                                <Image style={styles.phoneSvgInner} src={phone} />
-                              </View>
+                            {contact_info?.business_phone?.country_code && contact_info?.business_phone?.number ? (
+                              <View>
+                                <View style={styles.contactWrapper}>
+                                  <View style={styles.stepCardPhoneSvg}>
+                                    <Image style={styles.phoneSvgInner} src={phone} />
+                                  </View>
 
-                              <Text style={styles.stepCardPhoneText}>
-                                +{contact_info?.business_phone?.country_code} {contact_info?.business_phone?.number}
-                              </Text>
-                            </View>
-                            </View>:null}
-                            
+                                  <Text style={styles.stepCardPhoneText}>
+                                    +{contact_info?.business_phone?.country_code} {contact_info?.business_phone?.number}
+                                  </Text>
+                                </View>
+                              </View>
+                            ) : null}
                           </View>
                           <View style={styles.previewCardRight}>
                             <View style={styles.stepCardRightLogoImage}>
@@ -190,6 +195,18 @@ const styles = StyleSheet.create({
     paddingBottom: 65,
     paddingHorizontal: 15,
     backgroundColor: "#fedb0c",
+  },
+  logoWrapper: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    marginBottom: "40px",
+  },
+  logoTop: {
+    width: 220,
+    height: 60,
   },
   title: {
     fontSize: 24,

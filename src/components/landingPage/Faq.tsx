@@ -94,8 +94,8 @@ const Faq = () => {
               <div className="flex flex-row items-start">
                 <div className="pb-4 text-[#444] text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[17px]">
                   The launch price for your business to feature on our leaflet
-                  is a competitive £29.99, covering 1000 leaflets. That's a mere
-                  3p per leaflet! Not only does this modest investment help you
+                  is a competitive £49.99, covering 1000 leaflets. That's a mere
+                  5p per leaflet! Not only does this modest investment help you
                   reach potential customers, but it can also be written off as a
                   business expense.
                 </div>

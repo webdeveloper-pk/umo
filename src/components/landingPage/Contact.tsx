@@ -55,7 +55,7 @@ const Contact = () => {
           </p>
           <p className="w-full lg:w-[90%] xl:w-[90%] 2xl:w-[80%] text-center lg:text-left contact-description text-[15px] md:text-[16px] lg:text-[17px] xl:etxt-[18px] 2xl:text-[20px]">
             Dive into our movement. Be the first to know about our innovative
-            campaigns, partnerships, and community stories
+            campaigns, partnerships, and community stories.
           </p>
         </div>
         <div

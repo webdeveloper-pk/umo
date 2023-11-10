@@ -14,17 +14,18 @@ const PriceCard = ({ title, price1, price2 }: any) => {
           {title}
         </p>
         <p
-          className="description-text text-center md:text-left text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] mb-[11px]"
+          className="w-fit mx-auto md:mx-0 description-text text-center md:text-left text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[18px] mt-[10px] mb-[10px] bg-[#fedb0d] text-[#156ceb] py-[10px] px-[12px] rounded-[25px] md:rounded-[28px] lg:rounded-[30px] xl:rounded-[32px] 2xl:rounded-[35px]"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
         >
-          WAS
+          LIMITED TIME ONLY <b>£49.99</b>
+          {/* WAS
           <s>
             <span className="mx-1 description-text">{price1}</span>
           </s>
           NOW
-          <span className="mx-1 price-new-price">{price2}</span>
+          <span className="mx-1 price-new-price">{price2}</span> */}
         </p>
         <p
           className="price-get text-center md:text-left text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px]"

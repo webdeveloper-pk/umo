@@ -126,10 +126,9 @@ h1 {
 }
 
 .description-text {
-  color: #000;
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .back-btn {
@@ -573,14 +572,14 @@ nav.shift ul li a:hover:after {
 .contact-btn {
   border-radius: 34.5px;
   border: 0.847px solid #e3e3e3;
-  background: var(--Blue, #1d6de6);
+  background: #1d6de6;
   width: 169px;
   height: 69px;
-  color: #fff;
+  color: #fedb0d;
   text-align: center;
   font-family: Montserrat;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   line-height: normal;
 }
 
@@ -706,7 +705,7 @@ nav.shift ul li a:hover:after {
 }
 
 .location-search {
-  color: var(--Blue, #1d6de6);
+  color: #1d6de6;
   text-align: center;
   font-family: Montserrat;
   font-style: normal;
@@ -1988,6 +1987,9 @@ nav.shift ul li a:hover:after {
 }
 
 @media screen and (max-width: 425px) {
+  .hero-together-text {
+    width: 80%;
+  }
   .city-custom-vh {
     min-height: calc(100vh - 85px);
   }
@@ -2133,6 +2135,12 @@ nav.shift ul li a:hover:after {
   .finish-scanner-image {
     /* w-[200px] md:w-[250px] lg:w-auto xl:w-[250px] 2xl:w-[400px] */
     width: 180px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .hero-together-text {
+    width: 100%;
   }
 }
 

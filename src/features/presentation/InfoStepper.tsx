@@ -79,7 +79,7 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
       case 1:
         return "Enter Personal/Business Info";
       case 2:
-        return "Enter Address Or Social Address";
+        return "Enter Address and Social Media";
       case 3:
         return "Offer Configuration";
       case 4:
@@ -94,7 +94,7 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
   const renderSubTitle = () => {
     switch (currentStep) {
       case 1:
-        return "Connect with us. Let's create impactful campaigns that resonate";
+        return "Connect with us. Let's create impactful campaigns that resonate.";
       case 2:
         return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
       case 3:

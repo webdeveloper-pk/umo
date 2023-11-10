@@ -78,6 +78,7 @@ const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleC
                             <View style={styles.stepCardOffTextWrapper}>
                               <Text style={styles.stepCardOffText}>{data?.percentage_off}% Off</Text>
                             </View>
+                            <Text style={styles.stepCardAddress}>{data?.min_spend}</Text>
                             {/* <Text style={styles.stepCardOffDescription}>When you spend 20£ or more</Text> */}
                             {contact_info?.business_phone?.country_code && contact_info?.business_phone?.number ? (
                               <View>

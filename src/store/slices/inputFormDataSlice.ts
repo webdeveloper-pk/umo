@@ -10,7 +10,8 @@ interface Data {
   // date: Date;
   // qrCodePreference: any;
   percentage_off: any;
-  umo_code:string
+  umo_code: string;
+  min_spend: string;
 }
 
 interface InputFormDataState {
@@ -32,7 +33,8 @@ const initialState: InputFormDataState = {
     // date: new Date(),
     // qrCodePreference: "",
     percentage_off: "",
-    umo_code:""
+    umo_code: "",
+    min_spend: "",
   },
   status: "idle",
   error: null,

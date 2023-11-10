@@ -70,6 +70,16 @@ const Step5Form = () => {
                   </div>
                 )}
               </div>
+              {/* add here */}
+              {formData?.percentage_off ? (
+                <div className="mb-[10px] 2xl:mb-[20px]">
+                  <p className="card-phone-text">spend</p>
+                </div>
+              ) : (
+                <div className="final-step-card-spend-text-margin-loading flex flex-col justify-center">
+                  <div className="light-yellow-line1"></div>
+                </div>
+              )}
               {formData?.contact_info?.business_phone?.country_code ? (
                 <div className="flex items-center gap-x-[10px] 2xl:gap-x-[15px] mt-[5px] md:mt-[1px] 2xl:mt-[5px] w-[80%] md:w-[70%] xl:w-[60%]">
                   <div className="card-phone-svg">

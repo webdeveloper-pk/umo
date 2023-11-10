@@ -59,6 +59,16 @@ const Preview = () => {
                   <div className="step-light-yellow-line2"></div>
                 </div>
               )}
+              {/* add here */}
+              {formData?.percentage_off ? (
+                <div className="step-card-spend-text-margin">
+                  <p className="step-card-phone-text">spend</p>
+                </div>
+              ) : (
+                <div className="step-card-spend-text-margin-loading flex flex-col justify-center">
+                  <div className="step-light-yellow-line1"></div>
+                </div>
+              )}
               {formData?.contact_info?.business_phone?.country_code ? (
                 <div className="contact-wrapper">
                   <div className="step-card-phone-svg">

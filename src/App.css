@@ -946,6 +946,9 @@ nav.shift ul li a:hover:after {
   .final-step-card-off-text-margin-loading {
     min-height: 60px;
   }
+  .final-step-card-spend-text-margin-loading {
+    min-height: 50px;
+  }
   .final-contact-wrapper-loading {
     min-height: 60px;
   }
@@ -1080,6 +1083,9 @@ nav.shift ul li a:hover:after {
   .final-step-card-off-text-margin-loading {
     min-height: 60px;
   }
+  .final-step-card-spend-text-margin-loading {
+    min-height: 50px;
+  }
   .final-contact-wrapper-loading {
     min-height: 60px;
   }
@@ -1191,6 +1197,9 @@ nav.shift ul li a:hover:after {
   }
   .final-step-card-off-text-margin-loading {
     min-height: 60px;
+  }
+  .final-step-card-spend-text-margin-loading {
+    min-height: 50px;
   }
   .final-contact-wrapper-loading {
     min-height: 60px;
@@ -1313,6 +1322,9 @@ nav.shift ul li a:hover:after {
   }
   .final-step-card-off-text-margin-loading {
     min-height: 50px;
+  }
+  .final-step-card-spend-text-margin-loading {
+    min-height: 40px;
   }
   .final-contact-wrapper-loading {
     min-height: 50px;
@@ -1452,6 +1464,9 @@ nav.shift ul li a:hover:after {
   }
   .final-step-card-off-text-margin-loading {
     min-height: 40px;
+  }
+  .final-step-card-spend-text-margin-loading {
+    min-height: 20px;
   }
   .final-contact-wrapper-loading {
     min-height: 40px;
@@ -1604,6 +1619,9 @@ nav.shift ul li a:hover:after {
   .final-step-card-off-text-margin-loading {
     min-height: 50px;
   }
+  .final-step-card-spend-text-margin-loading {
+    min-height: 35px;
+  }
   .final-contact-wrapper-loading {
     min-height: 50px;
   }
@@ -1722,6 +1740,9 @@ nav.shift ul li a:hover:after {
   }
   .final-step-card-off-text-margin-loading {
     min-height: 40px;
+  }
+  .final-step-card-spend-text-margin-loading {
+    min-height: 25px;
   }
   .final-contact-wrapper-loading {
     min-height: 40px;
@@ -1853,13 +1874,16 @@ nav.shift ul li a:hover:after {
     min-height: 40px;
   }
   .final-step-card-off-text-margin-loading {
-    min-height: 30px;
+    min-height: 20px;
+  }
+  .final-step-card-spend-text-margin-loading {
+    min-height: 15px;
   }
   .final-contact-wrapper-loading {
     min-height: 30px;
   }
   .final-address-loading {
-    min-height: 30px;
+    min-height: 20px;
   }
   .final-step-card-right-logo-image-outer-loading {
     padding-right: 0px;
@@ -1997,6 +2021,9 @@ nav.shift ul li a:hover:after {
     min-height: 20px;
   }
   .final-step-card-off-text-margin-loading {
+    min-height: 20px;
+  }
+  .final-step-card-spend-text-margin-loading {
     min-height: 20px;
   }
   .final-contact-wrapper-loading {
@@ -2141,6 +2168,12 @@ nav.shift ul li a:hover:after {
 @media screen and (max-width: 390px) {
   .hero-together-text {
     width: 100%;
+  }
+  .final-step-card-off-text-margin-loading {
+    min-height: 15px;
+  }
+  .final-step-card-spend-text-margin-loading {
+    min-height: 15px;
   }
 }
 

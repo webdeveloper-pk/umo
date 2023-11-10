@@ -14,7 +14,7 @@ import Step5Form from "../../components/Step5Form";
 import { Link } from "react-router-dom";
 
 const InfoStepper = ({ formData, handleInputChange }: any) => {
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(5);
 
   const handleNextStep = (event: any) => {
     event.preventDefault();

@@ -68,6 +68,9 @@
 .step-card-off-text-margin {
   margin-top: -10px;
 }
+.step-card-spend-text-margin {
+  /* margin-top: -10px; */
+}
 
 .step-card-off-text {
   margin-top: 30px;
@@ -254,6 +257,10 @@
     min-height: 50px;
   }
 
+  .step-card-spend-text-margin-loading {
+    min-height: 30px;
+  }
+
   .step-card-off-text {
     margin-top: 30px;
     color: #fedb0d;
@@ -360,6 +367,9 @@
 @media screen and (max-width: 1919px) and (min-width: 1700px) {
   .step-card-off-text-margin-loading {
     min-height: 40px;
+  }
+  .step-card-spend-text-margin-loading {
+    min-height: 30px;
   }
   .contact-wrapper-loading {
     min-height: 30px;
@@ -490,6 +500,9 @@
   .step-card-off-text-margin-loading {
     min-height: 40px;
   }
+  .step-card-spend-text-margin-loading {
+    min-height: 30px;
+  }
   .contact-wrapper-loading {
     min-height: 30px;
   }
@@ -610,6 +623,9 @@
   }
   .step-card-off-text-margin-loading {
     min-height: 40px;
+  }
+  .step-card-spend-text-margin-loading {
+    min-height: 30px;
   }
   .contact-wrapper-loading {
     min-height: 30px;
@@ -732,6 +748,9 @@
   .step-card-off-text-margin-loading {
     min-height: 40px;
   }
+  .step-card-spend-text-margin-loading {
+    min-height: 30px;
+  }
   .contact-wrapper-loading {
     min-height: 30px;
   }
@@ -850,6 +869,9 @@
   }
   .step-card-off-text-margin-loading {
     min-height: 60px;
+  }
+  .step-card-spend-text-margin-loading {
+    min-height: 50px;
   }
   .contact-wrapper-loading {
     min-height: 50px;
@@ -1016,6 +1038,9 @@
   .step-card-off-text-margin-loading {
     min-height: 60px;
   }
+  .step-card-spend-text-margin-loading {
+    min-height: 50px;
+  }
   .contact-wrapper-loading {
     min-height: 50px;
   }
@@ -1181,6 +1206,9 @@
   .step-card-off-text-margin-loading {
     min-height: 40px;
   }
+  .step-card-spend-text-margin-loading {
+    min-height: 30px;
+  }
   .contact-wrapper-loading {
     min-height: 20px;
   }
@@ -1296,6 +1324,9 @@
   }
   .step-card-off-text-margin-loading {
     min-height: 40px;
+  }
+  .step-card-spend-text-margin-loading {
+    min-height: 30px;
   }
   .contact-wrapper-loading {
     min-height: 20px;

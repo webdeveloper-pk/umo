@@ -89,6 +89,14 @@
   background-color: transparent !important;
 }
 
+.step4-custom-select-wrapper
+  .ant-select-focused:where(.css-18iikkb).ant-select:not(
+    .ant-select-disabled
+  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
+  .ant-select-selector {
+  box-shadow: none !important;
+}
+
 @media screen and (min-width: 1920px) {
   .step4-custom-input {
     border-radius: 17.34px;

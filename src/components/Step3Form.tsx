@@ -1,9 +1,6 @@
 import React from "react";
-import { Row, Col, Input, Upload, Button, message } from "antd";
+import { Row, Col, Input, Upload, Button } from "antd";
 import ButtonFilled from "./common/ButtonFilled";
-import logo from "../assets/images/card-logo.png";
-import rightLogo from "../assets/images/card-right-logo.png";
-import cutter from "../assets/images/step-card-cutter.png";
 import Preview from "./preview/Preview";
 import "../assets/styles/step3.css";
 
@@ -26,10 +23,6 @@ const Step3Form = ({
         let reader = new FileReader();
         reader.readAsDataURL(info.file);
         handleInputChange("logo", info.file);
-        // setAdData((prevData: any) => ({
-        //   ...prevData,
-        //   files: [...prevData.files, info.file],
-        // }));
       }
     },
   };
@@ -109,7 +102,7 @@ const Step3Form = ({
                     handleInputChange("min_spend", e.target.value);
                   }}
                   value={formData?.min_spend}
-                  type="number"
+                  type="text"
                 />
               </Col>
             </Row>

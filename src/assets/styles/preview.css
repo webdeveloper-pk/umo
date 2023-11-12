@@ -119,7 +119,6 @@
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
   line-height: 131.5%; /* 23.765px */
   word-break: break-word;
 }
@@ -147,14 +146,14 @@
   width: 200.206px;
   height: 40.427px;
   border-radius: 23.355px;
-  border: 0.638px solid #fedb0d;
+  border: 1px solid rgb(255, 255, 255, 0.638);
   background-color: transparent;
   color: #fedb0d;
   text-align: right;
   font-family: Montserrat;
   font-size: 16.072px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 131.5%; /* 23.765px */
   display: flex;
   justify-content: center;
@@ -162,8 +161,8 @@
 }
 
 .step-card-button:hover {
-  border: 0.638px solid #fedb0d;
-  background-color: #fedb0d;
+  border: 1px solid rgb(255, 255, 255, 0.638);
+  background-color: #fff;
   color: #156ceb;
 }
 
@@ -173,8 +172,16 @@
   font-size: 13.06px;
   font-style: normal;
   font-weight: 500;
-  text-align: center;
   margin-top: 8px;
+  text-align: center;
+}
+
+.step-card-code {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 13.06px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 /* media queries */
@@ -218,7 +225,7 @@
   }
   .card-left-cutter {
     width: 100%;
-    max-height: 306px;
+    max-height: 310px;
   }
   .preview-card-left-logo {
     width: 60px;
@@ -306,7 +313,6 @@
     font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
     line-height: 131.5%; /* 23.765px */
   }
   .address-loading {
@@ -331,14 +337,14 @@
     width: 200.206px;
     height: 40.427px;
     border-radius: 23.355px;
-    border: 0.638px solid #fedb0d;
+    border: 1px solid rgb(255, 255, 255, 0.638);
     background-color: transparent;
     color: #fedb0d;
     text-align: right;
     font-family: Montserrat;
     font-size: 16.072px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 131.5%; /* 23.765px */
     display: flex;
     justify-content: center;
@@ -346,8 +352,8 @@
   }
 
   .step-card-button:hover {
-    border: 0.638px solid #fedb0d;
-    background-color: #fedb0d;
+    border: 1px solid rgb(255, 255, 255, 0.638);
+    background-color: #fff;
     color: #156ceb;
   }
 
@@ -358,6 +364,9 @@
     font-style: normal;
     font-weight: 500;
     margin-top: 11px;
+  }
+  .step-card-code {
+    font-size: 13.06px;
   }
   .step-card-right-logo-image-outer-loading {
     padding-right: 10px;
@@ -491,6 +500,9 @@
     font-size: 8.06px;
     margin-top: 11px;
   }
+  .step-card-code {
+    font-size: 8.06px;
+  }
 }
 
 @media screen and (max-width: 1699px) and (min-width: 1536px) {
@@ -614,6 +626,9 @@
   .step-card-date {
     font-size: 8.06px;
     margin-top: 11px;
+  }
+  .step-card-code {
+    font-size: 8.06px;
   }
 }
 
@@ -739,6 +754,9 @@
     font-size: 8.06px;
     margin-top: 11px;
   }
+  .step-card-code {
+    font-size: 8.06px;
+  }
 }
 
 @media screen and (max-width: 1279px) and (min-width: 1024px) {
@@ -860,6 +878,9 @@
   .step-card-date {
     font-size: 8.06px;
     margin-top: 9px;
+  }
+  .step-card-code {
+    font-size: 8.06px;
   }
 }
 
@@ -983,7 +1004,6 @@
     font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
     line-height: 131.5%; /* 23.765px */
   }
   .step-card-right-logo-image {
@@ -1002,14 +1022,14 @@
     width: 200.206px;
     height: 40.427px;
     border-radius: 23.355px;
-    border: 0.638px solid #fedb0d;
+    border: 1px solid rgb(255, 255, 255, 0.638);
     background-color: transparent;
     color: #fedb0d;
     text-align: right;
     font-family: Montserrat;
     font-size: 16.072px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 131.5%; /* 23.765px */
     display: flex;
     justify-content: center;
@@ -1017,8 +1037,8 @@
   }
 
   .step-card-button:hover {
-    border: 0.638px solid #fedb0d;
-    background-color: #fedb0d;
+    border: 1px solid rgb(255, 255, 255, 0.638);
+    background-color: #fff;
     color: #156ceb;
   }
   .step-card-date {
@@ -1028,6 +1048,9 @@
     font-style: normal;
     font-weight: 500;
     margin-top: 10px;
+  }
+  .step-card-code {
+    font-size: 13.06px;
   }
 }
 
@@ -1150,7 +1173,6 @@
     font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
     line-height: 131.5%; /* 23.765px */
   }
   .step-card-right-logo-image {
@@ -1169,14 +1191,14 @@
     width: 200.206px;
     height: 40.427px;
     border-radius: 23.355px;
-    border: 0.638px solid #fedb0d;
+    border: 1px solid rgb(255, 255, 255, 0.638);
     background-color: transparent;
     color: #fedb0d;
     text-align: right;
     font-family: Montserrat;
     font-size: 16.072px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 131.5%; /* 23.765px */
     display: flex;
     justify-content: center;
@@ -1184,8 +1206,8 @@
   }
 
   .step-card-button:hover {
-    border: 0.638px solid #fedb0d;
-    background-color: #fedb0d;
+    border: 1px solid rgb(255, 255, 255, 0.638);
+    background-color: #fff;
     color: #156ceb;
   }
 
@@ -1196,6 +1218,9 @@
     font-style: normal;
     font-weight: 500;
     margin-top: 10px;
+  }
+  .step-card-code {
+    font-size: 13.06px;
   }
 }
 
@@ -1246,6 +1271,7 @@
   }
   .card-left-cutter {
     width: 60%;
+    min-height: 209px;
   }
   .preview-card-left-logo {
     width: 50px;
@@ -1316,6 +1342,9 @@
     font-size: 8.06px;
     margin-top: 8px;
   }
+  .step-card-code {
+    font-size: 8.06px;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -1366,6 +1395,7 @@
   }
   .card-left-cutter {
     width: 60%;
+    min-height: 209px;
   }
   .preview-card-left-logo {
     width: 50px;
@@ -1434,5 +1464,8 @@
   .step-card-date {
     font-size: 8.06px;
     margin-top: 8px;
+  }
+  .step-card-code {
+    font-size: 8.06px;
   }
 }

@@ -395,7 +395,6 @@ nav.shift ul li a:hover:after {
   font-family: Montserrat;
   font-size: 18.072px;
   font-style: normal;
-  font-weight: 500;
   line-height: 131.5%; /* 23.765px */
   word-break: break-word;
 }
@@ -417,14 +416,14 @@ nav.shift ul li a:hover:after {
   width: 240.206px;
   height: 44.427px;
   border-radius: 26.355px;
-  border: 0.638px solid #fedb0d;
+  border: 1px solid rgb(255, 255, 255, 0.638);
   background-color: transparent;
   color: #fedb0d;
   text-align: right;
   font-family: Montserrat;
   font-size: 18.072px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 131.5%; /* 23.765px */
   display: flex;
   justify-content: center;
@@ -432,8 +431,8 @@ nav.shift ul li a:hover:after {
 }
 
 .card-button:hover {
-  border: 0.638px solid #fedb0d;
-  background-color: #fedb0d;
+  border: 1px solid rgb(255, 255, 255, 0.638);
+  background-color: #fff;
   color: #156ceb;
 }
 
@@ -2196,7 +2195,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 30px;
+    top: 25px;
     right: 75px;
   }
   .card-title {
@@ -2262,7 +2261,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 30px;
+    top: 20px;
     right: 63px;
   }
   .card-title {
@@ -2328,7 +2327,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 30px;
+    top: 20px;
     right: 53px;
   }
   .card-title {
@@ -2376,7 +2375,7 @@ nav.shift ul li a:hover:after {
   }
   .card-button {
     width: 170.206px;
-    height: 37.427px;
+    height: 33.427px;
     border-radius: 24.355px;
     font-size: 15.072px;
   }
@@ -2457,7 +2456,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 30px;
+    top: 20px;
     right: 55px;
   }
 
@@ -2505,7 +2504,7 @@ nav.shift ul li a:hover:after {
   }
   .card-button {
     width: 150.206px;
-    height: 35.427px;
+    height: 30.427px;
     border-radius: 20.355px;
     font-size: 15.072px;
     margin: 0 auto;
@@ -2522,7 +2521,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 25px;
+    top: 15px;
     right: 50px;
   }
 
@@ -2570,7 +2569,7 @@ nav.shift ul li a:hover:after {
   }
   .card-button {
     width: 140.206px;
-    height: 33.427px;
+    height: 27.427px;
     border-radius: 20.355px;
     font-size: 14.072px;
     margin: 0 auto;
@@ -2587,7 +2586,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 22px;
+    top: 12px;
     right: 50px;
   }
 
@@ -2635,7 +2634,7 @@ nav.shift ul li a:hover:after {
   }
   .card-button {
     width: 130.206px;
-    height: 30.427px;
+    height: 25.427px;
     border-radius: 20.355px;
     font-size: 14.072px;
     margin: 0 auto;
@@ -2652,7 +2651,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 35px;
+    top: 30px;
     right: 100px;
   }
 
@@ -2716,7 +2715,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 35px;
+    top: 30px;
     right: 100px;
   }
 
@@ -2781,7 +2780,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 30px;
+    top: 25px;
     right: 90px;
   }
 
@@ -2846,7 +2845,7 @@ nav.shift ul li a:hover:after {
   }
 
   .card-right-position {
-    top: 27px;
+    top: 23px;
     right: 85px;
   }
 
@@ -3187,7 +3186,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     position: absolute;
-    top: 35px;
+    top: 30px;
     right: 25px;
   }
 
@@ -3254,7 +3253,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     position: absolute;
-    top: 35px;
+    top: 30px;
     right: 25px;
   }
 
@@ -3320,7 +3319,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 15px;
   }
 
@@ -3386,7 +3385,7 @@ nav.shift ul li a:hover:after {
 
   .card-right-position {
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 15px;
   }
 
@@ -3560,7 +3559,7 @@ nav.shift ul li a:hover:after {
   }
   .card-right-position {
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 15px;
   }
 }
@@ -3610,17 +3609,18 @@ nav.shift ul li a:hover:after {
   }
   .card-button {
     width: 80.206px;
-    height: 20.427px;
+    height: 18.427px;
     border-radius: 18.355px;
     font-size: 7.072px;
     margin: 0 auto;
   }
   .card-date {
     font-size: 7.06px;
+    margin-top: 6px;
   }
   .card-right-position {
     position: absolute;
-    top: 15px;
+    top: 7px;
     right: 15px;
   }
 }

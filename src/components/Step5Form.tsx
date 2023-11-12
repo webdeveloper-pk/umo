@@ -20,16 +20,26 @@ const Step5Form = () => {
     twitter: formData.contact_info?.social_media?.twitter,
     // phone: {`${formData.business_phone?.country_code}+${formData.business_phone?.number}`}
   };
-  const formattedDate = formatDate(formData?.contact_info?.expiryDate?.dateString);
+  const formattedDate = formatDate(
+    formData?.contact_info?.expiryDate?.dateString
+  );
   return (
     <div className="mt-[20px]">
       <div className="flex flex-col lg:flex-row items-center gap-y-[0px] xl:gap-x-[0px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
         <div className="flex justify-start relative">
-          <img src={hero} alt="hero" className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto" />
+          <img
+            src={hero}
+            alt="hero"
+            className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto"
+          />
           <div>
             <div className="absolute card-left-position top-[12px] md:top-[20px] lg:top-[15px] xl:top-[18px] 2xl:top-[22px] left-[24px] md:left-[95px] lg:left-[60px] xl:left-[70px] 2xl:left-[50px]">
               <div className="">
-                <img src={logo} alt="logo" className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width" />
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width"
+                />
               </div>
               <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[15px]">
                 <p className="card-title min-h-[30px] lg:min-h-[40px] 2xl:min-h-[0px] w-[80%] md:w-[70%] xl:w-[60%]">
@@ -37,7 +47,10 @@ const Step5Form = () => {
                 </p>
               </div>
               {formData?.address?.plain_address ? (
-                <p className="card-phone-text w-[80%] md:w-[70%] xl:w-[60%] mt-[3px] 2xl:mt-0">
+                <p
+                  className="card-phone-text w-[80%] md:w-[70%] xl:w-[60%] mt-[3px] 2xl:mt-0"
+                  style={{ fontWeight: 300 }}
+                >
                   {formData?.address?.plain_address}
                 </p>
               ) : (
@@ -49,7 +62,9 @@ const Step5Form = () => {
               <div className="final-off-text-wrapper w-[80%] md:w-[70%] xl:w-[60%]">
                 {formData?.percentage_off ? (
                   <div className="">
-                    <p className="card-off-text">{formData?.percentage_off}% Off</p>
+                    <p className="card-off-text">
+                      {formData?.percentage_off}% Off
+                    </p>
                   </div>
                 ) : (
                   <div className="final-step-card-off-text-margin-loading flex flex-col justify-center">
@@ -58,10 +73,11 @@ const Step5Form = () => {
                   </div>
                 )}
               </div>
-              {/* add here */}
               {formData?.min_spend ? (
                 <div className="mb-[10px] 2xl:mb-[20px]">
-                  <p className="card-phone-text">{formData?.min_spend}</p>
+                  <p className="card-phone-text" style={{ fontWeight: 500 }}>
+                    {formData?.min_spend}
+                  </p>
                 </div>
               ) : (
                 <div className="final-step-card-spend-text-margin-loading flex flex-col justify-center">
@@ -85,7 +101,7 @@ const Step5Form = () => {
                       />
                     </svg>
                   </div>
-                  <p className="card-phone-text">
+                  <p className="card-phone-text" style={{ fontWeight: 500 }}>
                     {formData?.contact_info?.business_phone?.country_code}{" "}
                     {formData?.contact_info?.business_phone?.number}
                   </p>
@@ -114,9 +130,12 @@ const Step5Form = () => {
                 </div>
               </div>
               <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[38px]">
-                <button className="card-button ">{formData?.umo_code}</button>
+                <p className="card-date text-left mb-[3px]">UMO Code</p>
+                <button className="card-button">{formData?.umo_code}</button>
                 <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
-                  {formData?.contact_info?.expiryDate?.dateString ? formattedDate : null}
+                  {formData?.contact_info?.expiryDate?.dateString
+                    ? formattedDate
+                    : null}
                 </p>
               </div>
             </div>
@@ -127,7 +146,11 @@ const Step5Form = () => {
         <div className="scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px] flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center final-qr-wrapper">
             <QRCodeSVG
-              value={qrCodePreferenceMappings[formData.contact_info?.qrCodePreference]}
+              value={
+                qrCodePreferenceMappings[
+                  formData.contact_info?.qrCodePreference
+                ]
+              }
               size={128}
               bgColor={"#ffffff"}
               fgColor={"#000000"}

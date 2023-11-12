@@ -196,7 +196,8 @@ const Hero = () => {
                     />
                   </div>
                   <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[38px]">
-                    <button className="card-button ">UMHOO16</button>
+                    <p className="card-date text-left mb-[3px]">UMO Code</p>
+                    <button className="card-button">UMHOO16</button>
                     <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
                       01, 2023
                     </p>

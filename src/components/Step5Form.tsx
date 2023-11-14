@@ -42,7 +42,7 @@ const Step5Form = () => {
                 />
               </div>
               <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[15px]">
-                <p className="card-title min-h-[30px] lg:min-h-[40px] 2xl:min-h-[0px] w-[80%] md:w-[70%] xl:w-[60%]">
+                <p className="card-title min-h-[30px] lg:min-h-[40px] 2xl:min-h-[0px] w-[100%] md:w-[100%] lg:w-[100%] xl:w-[100%] 2xl:w-[90%]">
                   {formData?.business_name}
                 </p>
               </div>

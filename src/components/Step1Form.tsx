@@ -3,9 +3,24 @@ import { Link } from "react-router-dom";
 import { Row, Col, Input, Radio, Select } from "antd";
 import ButtonFilled from "./common/ButtonFilled";
 import Preview from "./preview/Preview";
-import countries from "../services/data/countries.json";
+import ireland from "../assets/images/ireland.png";
+import uk from "../assets/images/uk.png";
+import { count } from "console";
 
-// const { Option } = Select;
+// import countries from "../services/data/countries.json";
+
+const { Option } = Select;
+
+const countries = [
+  {
+    img: ireland,
+    code: "+353",
+  },
+  {
+    img: uk,
+    code: "+44",
+  },
+];
 
 const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
   const [value, setValue] = React.useState("email");
@@ -18,7 +33,7 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
     handleInputChange("contact_info", {
       business_phone: {
         ...formData.contact_info.business_phone,
-        country_code: `${value.target.value}`,
+        country_code: `${value?.target?.value}`,
       },
     });
   };
@@ -140,7 +155,7 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
                       id="select"
                       className="step-custom-input flex items-center step-custom-select-wrapper px-[10px]"
                     >
-                      <select
+                      {/* <select
                         className="w-full countries-custom-dropdown"
                         onChange={handleChange}
                         value={
@@ -155,7 +170,30 @@ const Step1Form = ({ onNextStep, formData, handleInputChange }: any) => {
                             + {country.label}
                           </option>
                         ))}
-                      </select>
+                      </select> */}
+                      <Select
+                        placeholder="Country Code"
+                        className="step-custom-select text-[14px] lg:text-[15px] 2xl:text-[16px]"
+                        onChange={handleChange}
+                        // value={
+                        //   formData?.contact_info?.business_phone?.country_code
+                        // }
+                      >
+                        {countries?.map((country: any) => (
+                          <Option key={country.code} value={country.code}>
+                            <div className="flex items-center gap-x-[8px]">
+                              <img
+                                src={country.img}
+                                alt={country.code}
+                                className="w-[18px] h-[18px] lg:w-[20px] lg:h-[20px] rounded-full"
+                              />
+                              <span className="text-[13px] md:text-[14px]">
+                                {country.code}
+                              </span>
+                            </div>
+                          </Option>
+                        ))}
+                      </Select>
                     </Col>
                     <Col
                       xs={{ span: 13, offset: 1 }}

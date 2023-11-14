@@ -77,9 +77,9 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
   const renderTitle = () => {
     switch (currentStep) {
       case 1:
-        return "Enter Personal/Business Info";
+        return "Your Personal/Business Information";
       case 2:
-        return "Enter Address and Social Media";
+        return "Enter Email or Social Address";
       case 3:
         return "Offer Configuration";
       case 4:
@@ -94,17 +94,17 @@ const InfoStepper = ({ formData, handleInputChange }: any) => {
   const renderSubTitle = () => {
     switch (currentStep) {
       case 1:
-        return "Connect with us. Let's create impactful campaigns that resonate.";
+        return "Enter your name and contact information for the leaflet";
       case 2:
-        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+        return "Enter the email or social media address you would like linked to the QR code on your coupon.";
       case 3:
-        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+        return "Design your coupon, choosing the percentage off you wish to offer your customer,, then upload a logo to make it your own.";
       case 4:
-        return "Invest in a movement. Affordable, transparent, and for a great cause.";
+        return "Invest in a movement by inputting your preferred payment information.";
       case 5:
-        return "You've taken a step towards building a stronger community. Let's journey together, shaping a brighter economic future for all.";
+        return "You've taken a big step towards building a stronger community. Let's journey together, shaping a brighter economic future for all.";
       default:
-        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut ex ac est laoreet mattis.";
+        return "Enter your name and contact information for the leaflet";
     }
   };
 

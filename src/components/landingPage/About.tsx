@@ -37,7 +37,7 @@ const About = () => {
             community spirit, and echoing our motto:{" "}
             <p className="font-semibold mt-[15px]">
               <span className="bg-[#fedb0d] text-[#156ceb] py-[10px] px-[12px] rounded-[25px] md:rounded-[28px] lg:rounded-[30px] xl:rounded-[32px] 2xl:rounded-[35px]">
-                "Becoming Stronger Together"
+                "Stronger Together"
               </span>
             </p>
           </p>

@@ -16,27 +16,13 @@ import rightLogo from "../../assets/images/card-right-logo.png";
 const Hero = () => {
   return (
     <div className="bg-lighter-white relative" id="home">
-      <div
-        className="absolute leftBox"
-        data-aos="fade-right"
-        data-aos-easing="linear"
-        data-aos-duration="3000"
-      >
+      <div className="absolute leftBox" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="3000">
         <Tilt className="Tilt" options={{ max: 50 }}>
           <img src={leftBox} alt="box" className="" />
         </Tilt>
       </div>
-      <div
-        className="absolute rightBox"
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="3000"
-      >
-        <img
-          src={rightBox}
-          alt="box"
-          className="w-[70%] md:w-[70%] lg:w-[100%]"
-        />
+      <div className="absolute rightBox" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="3000">
+        <img src={rightBox} alt="box" className="w-[70%] md:w-[70%] lg:w-[100%]" />
       </div>
       <div
         className="absolute left-[3px] md:left-[20px] lg:left-[20px] xl:left-[50px] bottom-[85px]"
@@ -44,11 +30,7 @@ const Hero = () => {
         data-aos-easing="linear"
         data-aos-duration="3000"
       >
-        <img
-          src={leftCircle}
-          alt="box"
-          className="w-[40%] md:w-[70%] lg:w-[100%]"
-        />
+        <img src={leftCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
       </div>
       <div
         className="absolute right-[-35px] md:right-[2px] lg:right-[30px] xl:right-[50px] 2xl:right-[80px] top-[90px]"
@@ -57,11 +39,7 @@ const Hero = () => {
         data-aos-duration="3000"
         data-aos-offset="800"
       >
-        <img
-          src={rightCircle}
-          alt="box"
-          className="w-[40%] md:w-[70%] lg:w-[100%]"
-        />
+        <img src={rightCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
       </div>
       <div
         className="absolute left-[3px] md:left-[40px] lg:left-[60px] xl:left-[110px] blueCircle top-[50%]"
@@ -70,11 +48,7 @@ const Hero = () => {
         data-aos-duration="3000"
         data-aos-offset="300"
       >
-        <img
-          src={blueCircle}
-          alt="box"
-          className="w-[40%] md:w-[70%] lg:w-[100%]"
-        />
+        <img src={blueCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
       </div>
       <a
         href="#!"
@@ -126,12 +100,10 @@ const Hero = () => {
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
-            At UMO, we’re dedicated to helping your business thrive through
-            effective leaflet marketing. Our platform makes it easy for you to
-            reach your target audience and grow your brand. In an era where
-            every penny counts, our coupon leaflets allow businesses to stand
-            alongside their communities, making essential goods and services
-            more affordable.
+            At UMO, we’re dedicated to helping your business thrive through effective leaflet marketing. Our platform
+            makes it easy for you to reach your target audience and grow your brand. In an era where every penny counts,
+            our coupon leaflets allow businesses to stand alongside their communities, making essential goods and
+            services more affordable.
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-y-[0px] xl:gap-x-[0px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
             <div
@@ -140,23 +112,15 @@ const Hero = () => {
               data-aos-easing="linear"
               data-aos-duration="2000"
             >
-              <img
-                src={hero}
-                alt="hero"
-                className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto"
-              />
+              <img src={hero} alt="hero" className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto" />
               <div>
                 <div className="absolute card-left-position top-[12px] md:top-[20px] lg:top-[15px] xl:top-[18px] 2xl:top-[22px] left-[24px] md:left-[95px] lg:left-[60px] xl:left-[70px] 2xl:left-[50px]">
                   <div className="">
-                    <img
-                      src={logo}
-                      alt="logo"
-                      className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width"
-                    />
+                    <img src={logo} alt="logo" className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width" />
                   </div>
                   <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[18px]">
                     <p className="card-title">
-                      Lloyds <br /> Pharmacy
+                      UMO <br /> Leaflets
                     </p>
                   </div>
                   <div className="light-gray-line1 mt-[4px] md:mt-[8px]"></div>
@@ -182,25 +146,24 @@ const Hero = () => {
                         />
                       </svg>
                     </div>
-                    <p className="card-phone-text">+1 234 5678</p>
+                    <p className="card-phone-text">+44 234 5678</p>
                   </div>
                 </div>
                 <div className="absolute card-right-position top-[13px] xl:top-[20px] 2xl:top-[30px] right-[-15px] md:right-[50px] lg:right-[20px] xl:right-[35px] 2xl:right-[39px]">
                   <div className="flex justify-center right-logo-wrapper">
-                    <img
+                    {/* <img
                       src={rightLogo}
                       alt="logo"
                       className="right-logo-image"
-                    />
+                    /> */}
+                    <div className="right-logo-image">
+                      <img src={logo} alt="" />
+                    </div>
                   </div>
                   <div className="mt-[10px] md:mt-[15px] lg:mt-[10px] xl:mt-[20px] 2xl:mt-[38px]">
-                    <p className="card-date text-left mt-[-8px] mb-[11px]">
-                      UMO Code
-                    </p>
-                    <button className="card-button">UMHOO16</button>
-                    <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
-                      01, 2023
-                    </p>
+                    <p className="card-date text-left mt-[-8px] mb-[11px]">UMO Code</p>
+                    <button className="card-button">UM0OO16</button>
+                    <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">01, 2023</p>
                   </div>
                 </div>
               </div>
@@ -223,11 +186,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="1500"
-          >
+          <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
             <Link to="/select-city">
               <ButtonFilled text="Get started Now" />
             </Link>

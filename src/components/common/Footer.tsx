@@ -24,12 +24,7 @@ const Footer = () => {
       <div className="bg-[#FCFCFC]">
         <div className="homepage-container mx-auto px-4 md:px-8 lg:px-[25px] xl:px-[30px] py-[30px]">
           <div className="flex flex-col gap-y-[40px] items-center md:flex-row md:justify-between md:items-center">
-            <nav
-              className="shift"
-              data-aos="fade-right"
-              data-aos-easing="linear"
-              data-aos-duration="1000"
-            >
+            <nav className="shift" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
               <ul className="nav-list flex flex-col gap-x-[25px] gap-y-[10px] md:flex-row uppercase text-center md:text-left">
                 <li>
                   <a href="#home">home</a>
@@ -78,7 +73,7 @@ const Footer = () => {
                   />
                 </svg>
               </a>
-              <a href="/">
+              <a href="https://www.instagram.com/myumouk/" target="_blank" rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="45"

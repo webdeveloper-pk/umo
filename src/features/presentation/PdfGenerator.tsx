@@ -5,6 +5,7 @@ import "assets/styles/pdfPreview.css";
 import { Font, Image, PDFViewer } from "@react-pdf/renderer";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 import phone from "assets/images/phone.png";
+import email from "assets/images/email.svg";
 import { QRCodeCanvas } from "qrcode.react";
 import QrCode from "components/pdf/qrCode";
 import { Select } from "antd";
@@ -20,12 +21,6 @@ const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleC
     value: location.spot_group,
     label: location.spot_group,
   }));
-  // console.log("spotsListReducer::: ", spotsListReducer);
-  // function returnSrc(path: string) {
-  //   console.log("LOG", path);
-  //   let selectedMethod = "GET";
-  //   return { uri: path, method: selectedMethod, body: "", headers: "" };
-  // }
 
   return (
     <div>
@@ -51,7 +46,6 @@ const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleC
               </View>
               <View style={styles.cardOuterGrid}>
                 {spotsListReducer?.spotsList?.map((data: any, index: number) => {
-                  // console.log("data::: ", data?.logo);
                   const contactParser = data.contact_info.replace(/'/g, '"');
                   const addressParser = data.address.replace(/'/g, '"');
                   const contact_info = contactParser ? JSON.parse(contactParser) : null;
@@ -80,7 +74,17 @@ const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleC
                             </View>
                             <Text style={styles.stepCardAddress}>{data?.min_spend}</Text>
                             {/* <Text style={styles.stepCardOffDescription}>When you spend 20£ or more</Text> */}
-                            {contact_info?.business_phone?.country_code && contact_info?.business_phone?.number ? (
+                            {data?.email ? (
+                              <View>
+                                <View style={styles.contactWrapper}>
+                                  <View style={styles.stepCardPhoneSvg}>
+                                    <Image style={styles.phoneSvgInner} src={email} />
+                                  </View>
+
+                                  <Text style={styles.stepCardPhoneText}>{data?.email}</Text>
+                                </View>
+                              </View>
+                            ) : contact_info?.business_phone?.country_code && contact_info?.business_phone?.number ? (
                               <View>
                                 <View style={styles.contactWrapper}>
                                   <View style={styles.stepCardPhoneSvg}>
@@ -137,7 +141,6 @@ const PdfGenerator = ({ locationListReducer, spotsReducer, handleChange, handleC
 
         <div style={{ visibility: "hidden", height: 0, position: "absolute", left: "-100%" }}>
           {spotsListReducer?.spotsList?.map((val: any, index: number) => {
-            console.log("val::: ", val?.logo);
             const contactParser = val.contact_info.replace(/'/g, '"');
             const addressParser = val.address.replace(/'/g, '"');
             const contact_info = contactParser ? JSON.parse(contactParser) : null;
@@ -179,15 +182,15 @@ export default PdfGenerator;
 Font.register({
   family: "Montserrat",
   fonts: [
-    { src: "http://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-Y3tcoqK5.ttf" },
-    { src: "http://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-Y3tcoqK5.ttf" },
-    { src: "http://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-Y3tcoqK5.ttf" },
-    { src: "http://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-Y3tcoqK5.ttf" },
-    { src: "http://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-Y3tcoqK5.ttf" },
-    { src: "http://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-Y3tcoqK5.ttf" },
-    { src: "http://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-Y3tcoqK5.ttf" },
-    { src: "http://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-Y3tcoqK5.ttf" },
-    { src: "http://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-Y3tcoqK5.ttf" },
+    { src: "https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-Y3tcoqK5.ttf" },
+    { src: "https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-Y3tcoqK5.ttf" },
+    { src: "https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-Y3tcoqK5.ttf" },
+    { src: "https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-Y3tcoqK5.ttf" },
+    { src: "https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-Y3tcoqK5.ttf" },
+    { src: "https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-Y3tcoqK5.ttf" },
+    { src: "https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-Y3tcoqK5.ttf" },
+    { src: "https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-Y3tcoqK5.ttf" },
+    { src: "https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-Y3tcoqK5.ttf" },
   ],
 });
 const styles = StyleSheet.create({
@@ -310,6 +313,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     width: "100%",
+    justifyContent: "space-between",
   },
   previewCardLeft: {
     maxWidth: 90,

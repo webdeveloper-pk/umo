@@ -4,12 +4,7 @@ import ButtonFilled from "./common/ButtonFilled";
 import Preview from "./preview/Preview";
 import "../assets/styles/step3.css";
 
-const Step3Form = ({
-  onNextStep,
-  onBackStep,
-  formData,
-  handleInputChange,
-}: any) => {
+const Step3Form = ({ onNextStep, onBackStep, formData, handleInputChange }: any) => {
   const [checker, setChecker] = React.useState(false);
 
   const fileProps = {
@@ -36,13 +31,11 @@ const Step3Form = ({
         <Row>
           <Col>
             <div className="w-full flex justify-center md:justify-start text-[14px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px]">
-              {["05", "10", "25", "50"].map((val, id) => {
+              {["5", "10", "25", "50"].map((val, id) => {
                 return (
                   <button
                     className={`percent-btn mr-[13px] mb-[20px] lg:mb-[25px] 2xl:mb-[30px] border border-[#e3e3e3] hover:border-[#1D6DE6] ${
-                      formData?.percentage_off === val
-                        ? `border-[#1D6DE6] activeBtn`
-                        : ""
+                      formData?.percentage_off === val ? `border-[#1D6DE6] activeBtn` : ""
                     }`}
                     key={id}
                     onClick={() => {
@@ -56,13 +49,7 @@ const Step3Form = ({
               })}
             </div>
           </Col>
-          <Col
-            xs={{ span: 24 }}
-            md={{ span: 11 }}
-            lg={{ span: 6 }}
-            xl={{ span: 5 }}
-            xxl={{ span: 5 }}
-          >
+          <Col xs={{ span: 24 }} md={{ span: 11 }} lg={{ span: 6 }} xl={{ span: 5 }} xxl={{ span: 5 }}>
             <div className="mb-[20px] md:mb-0">
               <Input
                 placeholder="Custom Number"
@@ -144,10 +131,7 @@ const Step3Form = ({
               </Col>
             </Row>
             <div className="flex items-center gap-x-[20px] mt-[30px] lg:mt-[40px]">
-              <button
-                className="back-btn"
-                onClick={(event) => onBackStep(event)}
-              >
+              <button className="back-btn" onClick={(event) => onBackStep(event)}>
                 <span className="back-btn-inner">Back</span>
               </button>
               <ButtonFilled

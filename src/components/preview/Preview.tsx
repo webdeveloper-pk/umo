@@ -9,15 +9,11 @@ const Preview = () => {
   const formData = useAppSelector((state) => state.inputFormData.data);
   console.log("formData::: ", formData);
   const logoImg: any = formData?.logo || null;
-  const formattedDate = formatDate(
-    formData?.contact_info?.expiryDate?.dateString
-  );
+  const formattedDate = formatDate(formData?.contact_info?.expiryDate?.dateString);
   return (
     <div className="preview-outer-wrapper">
       <div className="step-preview">
-        <p className="preview-text">
-          Design your coupon. Entice, engage, and empower your customers.
-        </p>
+        <p className="preview-text">Design your coupon. Entice, engage, and empower your customers.</p>
         <div className="step-card-wrapper">
           <div className="preview-cutter">
             <img src={cutter} alt="design" className="card-left-cutter" />
@@ -38,10 +34,7 @@ const Preview = () => {
                 )}
               </div>
               {formData?.address?.plain_address ? (
-                <p
-                  className="step-card-phone-text mt-[5px]"
-                  style={{ fontWeight: 300 }}
-                >
+                <p className="step-card-phone-text mt-[5px]" style={{ fontWeight: 300 }}>
                   {formData?.address?.plain_address}
                 </p>
               ) : (
@@ -52,9 +45,7 @@ const Preview = () => {
               )}
               {formData?.percentage_off ? (
                 <div className="step-card-off-text-margin">
-                  <p className="step-card-off-text">
-                    {formData?.percentage_off}% Off
-                  </p>
+                  <p className="step-card-off-text">{formData?.percentage_off}% Off</p>
                 </div>
               ) : (
                 <div className="step-card-off-text-margin-loading flex flex-col justify-center">
@@ -64,10 +55,7 @@ const Preview = () => {
               )}
               {formData?.min_spend ? (
                 <div className="step-card-spend-text-margin">
-                  <p
-                    className="step-card-phone-text"
-                    style={{ fontWeight: 500 }}
-                  >
+                  <p className="step-card-phone-text" style={{ fontWeight: 500 }}>
                     {formData?.min_spend}
                   </p>
                 </div>
@@ -76,7 +64,37 @@ const Preview = () => {
                   <div className="step-light-yellow-line1"></div>
                 </div>
               )}
-              {formData?.contact_info?.business_phone?.country_code ? (
+
+              {formData?.email ? (
+                <div className="contact-wrapper">
+                  <div className="step-card-phone-svg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 64 64"
+                      id="email"
+                      width="19"
+                      height="19"
+                      className="w-[15px] h-[15px] step-card-phone-svg-class"
+                    >
+                      <path
+                        fill="#222"
+                        d="M53.42 53.32H10.58a8.51 8.51 0 0 1-8.5-8.5V19.18a8.51 8.51 0 0 1 8.5-8.5h42.84a8.51 8.51 0 0 1 8.5 8.5v25.64a8.51 8.51 0 0 1-8.5 8.5ZM10.58 13.68a5.5 5.5 0 0 0-5.5 5.5v25.64a5.5 5.5 0 0 0 5.5 5.5h42.84a5.5 5.5 0 0 0 5.5-5.5V19.18a5.5 5.5 0 0 0-5.5-5.5Z"
+                      ></path>
+                      <path
+                        fill="#222"
+                        d="M32 38.08a8.51 8.51 0 0 1-5.13-1.71L3.52 18.71a1.5 1.5 0 1 1 1.81-2.39L28.68 34a5.55 5.55 0 0 0 6.64 0l23.35-17.68a1.5 1.5 0 1 1 1.81 2.39L37.13 36.37A8.51 8.51 0 0 1 32 38.08Z"
+                      ></path>
+                      <path
+                        fill="#222"
+                        d="M4.17 49.14a1.5 1.5 0 0 1-1-2.62l18.4-16.41a1.5 1.5 0 0 1 2 2.24L5.17 48.76a1.46 1.46 0 0 1-1 .38zm55.66 0a1.46 1.46 0 0 1-1-.38l-18.4-16.41a1.5 1.5 0 1 1 2-2.24l18.39 16.41a1.5 1.5 0 0 1-1 2.62z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <p className="step-card-phone-text" style={{ fontWeight: 500 }}>
+                    {formData?.email}
+                  </p>
+                </div>
+              ) : formData?.contact_info?.business_phone?.country_code ? (
                 <div className="contact-wrapper">
                   <div className="step-card-phone-svg">
                     <svg
@@ -93,10 +111,7 @@ const Preview = () => {
                       />
                     </svg>
                   </div>
-                  <p
-                    className="step-card-phone-text"
-                    style={{ fontWeight: 500 }}
-                  >
+                  <p className="step-card-phone-text" style={{ fontWeight: 500 }}>
                     {formData?.contact_info?.business_phone?.country_code}{" "}
                     {formData?.contact_info?.business_phone?.number}
                   </p>
@@ -111,11 +126,7 @@ const Preview = () => {
             <div className="preview-card-right">
               <div className="step-card-right-logo-image">
                 {logoImg !== null ? (
-                  <img
-                    src={URL.createObjectURL(logoImg)}
-                    alt="logo"
-                    className="step-card-right-logo-image-class"
-                  />
+                  <img src={URL.createObjectURL(logoImg)} alt="logo" className="step-card-right-logo-image-class" />
                 ) : (
                   <div className="step-card-right-logo-image-outer-loading">
                     <div className="step-card-right-logo-image rounded-full bg-white"></div>
@@ -124,13 +135,9 @@ const Preview = () => {
               </div>
               <div className="step-right-div">
                 <p className="step-card-code mb-[5px] text-left">UMO Code</p>
-                <button className="step-card-button">
-                  {formData?.umo_code}
-                </button>
+                <button className="step-card-button">{formData?.umo_code}</button>
                 <p className="step-card-date">
-                  {formData?.contact_info?.expiryDate?.dateString
-                    ? formattedDate
-                    : null}
+                  {formData?.contact_info?.expiryDate?.dateString ? formattedDate : null}
                 </p>
               </div>
             </div>

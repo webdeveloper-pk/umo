@@ -7,6 +7,7 @@ const Homepage = lazy(() => import("../pages/Homepage"));
 const SlectCity = lazy(() => import("../pages/SelectCity"));
 const InfoStepper = lazy(() => import("../pages/infoStepper"));
 const PdfGenerator = lazy(() => import("../pages/PdfGenerator"));
+const Thankyou = lazy(() => import("../pages/Thankyou"));
 
 const appRouter = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const appRouter = createBrowserRouter([
   {
     path: "pdf",
     element: <PdfGenerator />,
+  },
+  {
+    path: "thankyou",
+    element: <Thankyou />,
   },
 ]);
 

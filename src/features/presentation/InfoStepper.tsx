@@ -13,7 +13,11 @@ import Step4Form from "../../components/Step4Form";
 import Step5Form from "../../components/Step5Form";
 import { Link } from "react-router-dom";
 
-const InfoStepper = ({ formData, handleInputChange, setEmailObserver }: any) => {
+const InfoStepper = ({
+  formData,
+  handleInputChange,
+  setEmailObserver,
+}: any) => {
   const [currentStep, setCurrentStep] = useState(1);
 
   const handleNextStep = (event: any) => {
@@ -129,7 +133,11 @@ const InfoStepper = ({ formData, handleInputChange, setEmailObserver }: any) => 
           // data-aos-easing="linear"
           // data-aos-duration="3000"
         >
-          <img src={rightBox} alt="box" className="w-[70%] md:w-[70%] lg:w-[100%]" />
+          <img
+            src={rightBox}
+            alt="box"
+            className="w-[70%] md:w-[70%] lg:w-[100%]"
+          />
         </div>
         <div
           className="absolute left-[3px] md:left-[20px] lg:left-[20px] xl:left-[50px] bottom-[85px]"
@@ -137,7 +145,11 @@ const InfoStepper = ({ formData, handleInputChange, setEmailObserver }: any) => 
           // data-aos-easing="linear"
           // data-aos-duration="3000"
         >
-          <img src={leftCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
+          <img
+            src={leftCircle}
+            alt="box"
+            className="w-[40%] md:w-[70%] lg:w-[100%]"
+          />
         </div>
         <div
           className="absolute right-[-35px] md:right-[2px] lg:right-[30px] xl:right-[50px] 2xl:right-[80px] top-[90px]"
@@ -146,7 +158,11 @@ const InfoStepper = ({ formData, handleInputChange, setEmailObserver }: any) => 
           // data-aos-duration="3000"
           // data-aos-offset="800"
         >
-          <img src={rightCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
+          <img
+            src={rightCircle}
+            alt="box"
+            className="w-[40%] md:w-[70%] lg:w-[100%]"
+          />
         </div>
         <div
           className="absolute left-[3px] md:left-[40px] lg:left-[60px] xl:left-[110px] blueCircle top-[50%]"
@@ -155,7 +171,11 @@ const InfoStepper = ({ formData, handleInputChange, setEmailObserver }: any) => 
           // data-aos-duration="3000"
           // data-aos-offset="300"
         >
-          <img src={blueCircle} alt="box" className="w-[40%] md:w-[70%] lg:w-[100%]" />
+          <img
+            src={blueCircle}
+            alt="box"
+            className="w-[40%] md:w-[70%] lg:w-[100%]"
+          />
         </div>
         <a
           href="#!"
@@ -215,7 +235,13 @@ const InfoStepper = ({ formData, handleInputChange, setEmailObserver }: any) => 
                         className="w-[50px] h-[50px] rounded-full bg-[#1D6DE6] flex justify-center items-center"
                         onClick={(event) => handleBackStep(event)}
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
                           <path
                             d="M15 19L8 12L15 5"
                             stroke="#FEDB0D"
@@ -248,7 +274,9 @@ const InfoStepper = ({ formData, handleInputChange, setEmailObserver }: any) => 
                 >
                   {renderSubTitle()}
                 </p>
-                <div className="mt-[25px] lg:mt-[30px] w-full xl:ml-[20px] 2xl:ml-[50px]">{renderComponent()}</div>
+                <div className="mt-[25px] lg:mt-[30px] w-full xl:ml-[20px] 2xl:ml-[50px]">
+                  {renderComponent()}
+                </div>
               </div>
             </div>
           </div>

@@ -20,16 +20,26 @@ const Step5Form = () => {
     twitter: formData.contact_info?.social_media?.twitter,
     // phone: {`${formData.business_phone?.country_code}+${formData.business_phone?.number}`}
   };
-  const formattedDate = formatDate(formData?.contact_info?.expiryDate?.dateString);
+  const formattedDate = formatDate(
+    formData?.contact_info?.expiryDate?.dateString
+  );
   return (
     <div className="mt-[20px]">
       <div className="flex flex-col lg:flex-row items-center gap-y-[0px] xl:gap-x-[0px] my-[25px] md:my-[40px] lg:my-[50px] justify-center lg:px-[20px] xl:px-0">
         <div className="flex justify-start relative">
-          <img src={hero} alt="hero" className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto" />
+          <img
+            src={hero}
+            alt="hero"
+            className="w-[100%] md:w-[80%] lg:w-[90%] xl:w-[90%] 2xl:w-[100%] mx-auto"
+          />
           <div>
             <div className="absolute card-left-position top-[12px] md:top-[20px] lg:top-[15px] xl:top-[18px] 2xl:top-[22px] left-[24px] md:left-[95px] lg:left-[60px] xl:left-[70px] 2xl:left-[50px]">
               <div className="">
-                <img src={logo} alt="logo" className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width" />
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="w-[50px] lg:w-[40px] 2xl:w-[60px] card-logo-width"
+                />
               </div>
               <div className="mt-[7px] xl:mt-[10px] 2xl:mt-[15px]">
                 <p className="card-title min-h-[30px] lg:min-h-[40px] 2xl:min-h-[0px] w-[100%] md:w-[100%] lg:w-[100%] xl:w-[100%] 2xl:w-[90%]">
@@ -52,7 +62,9 @@ const Step5Form = () => {
               <div className="final-off-text-wrapper w-[80%] md:w-[70%] xl:w-[60%]">
                 {formData?.percentage_off ? (
                   <div className="">
-                    <p className="card-off-text">{formData?.percentage_off}% Off</p>
+                    <p className="card-off-text">
+                      {formData?.percentage_off}% Off
+                    </p>
                   </div>
                 ) : (
                   <div className="final-step-card-off-text-margin-loading flex flex-col justify-center">
@@ -73,7 +85,7 @@ const Step5Form = () => {
                 </div>
               )}
               {formData?.email ? (
-                <div className="flex items-center gap-x-[10px] 2xl:gap-x-[15px] mt-[5px] md:mt-[1px] 2xl:mt-[5px] w-[80%] md:w-[70%] xl:w-[60%]">
+                <div className="flex items-center gap-x-[10px] 2xl:gap-x-[15px] mt-[5px] md:mt-[1px] 2xl:mt-[5px] w-[100%] md:w-[100%] xl:w-[100%]">
                   <div className="card-phone-svg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +93,7 @@ const Step5Form = () => {
                       id="email"
                       width="19"
                       height="19"
-                      className="w-[15px] h-[15px] md:w-[14px] md:h-[14px] xl:w-[19px] xl:h-[19px]"
+                      className="w-[10px] h-[10px] md:w-[13px] md:h-[13px] xl:w-[17px] xl:h-[17px]"
                     >
                       <path
                         fill="#222"
@@ -132,12 +144,12 @@ const Step5Form = () => {
             </div>
             <div className="absolute card-right-position top-[13px] xl:top-[20px] 2xl:top-[30px] right-[-15px] md:right-[50px] lg:right-[20px] xl:right-[35px] 2xl:right-[39px]">
               <div className="flex justify-center right-logo-wrapper">
-                <div className="right-logo-image">
+                <div className="right-logo-wrapper">
                   {logoImg !== null ? (
                     <img
                       src={URL.createObjectURL(logoImg)}
                       alt="logo"
-                      className="object-cover rounded-full w-full h-full"
+                      className="right-logo-image object-cover rounded-full w-full h-full"
                     />
                   ) : (
                     <div className="final-step-card-right-logo-image-outer-loading">
@@ -150,7 +162,9 @@ const Step5Form = () => {
                 <p className="card-date text-left mb-[3px]">UMO Code</p>
                 <button className="card-button">{formData?.umo_code}</button>
                 <p className="card-date mt-[8px] md:mt-[10px] lg:mt-[9px] 2xl:mt-[11px] text-center">
-                  {formData?.contact_info?.expiryDate?.dateString ? formattedDate : null}
+                  {formData?.contact_info?.expiryDate?.dateString
+                    ? formattedDate
+                    : null}
                 </p>
               </div>
             </div>
@@ -161,7 +175,11 @@ const Step5Form = () => {
         <div className="scanner-wrapper p-[10px] lg:p-[5px] 2xl:p-[20px] flex flex-col justify-center items-center">
           <div className="flex flex-col justify-center items-center final-qr-wrapper">
             <QRCodeSVG
-              value={qrCodePreferenceMappings[formData.contact_info?.qrCodePreference]}
+              value={
+                qrCodePreferenceMappings[
+                  formData.contact_info?.qrCodePreference
+                ]
+              }
               size={128}
               bgColor={"#ffffff"}
               fgColor={"#000000"}
